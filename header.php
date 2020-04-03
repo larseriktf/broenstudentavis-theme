@@ -90,28 +90,29 @@
 								<ul class="primary-menu reset-list-style">
 
 								<?php
-								if ( has_nav_menu( 'primary' ) ) {
+								
+									if ( has_nav_menu( 'primary' ) ) {
 
-									wp_nav_menu(
-										array(
-											'container'  => '',
-											'items_wrap' => '%3$s',
-											'theme_location' => 'primary',
-										)
-									);
+										wp_nav_menu(
+											array(
+												'container'  => '',
+												'items_wrap' => '%3$s',
+												'theme_location' => 'primary',
+											)
+										);
 
-								} elseif ( ! has_nav_menu( 'expanded' ) ) {
+									} elseif ( ! has_nav_menu( 'expanded' ) ) {
 
-									wp_list_pages(
-										array(
-											'match_menu_classes' => true,
-											'show_sub_menu_icons' => true,
-											'title_li' => false,
-											'walker'   => new TwentyTwenty_Walker_Page(),
-										)
-									);
+										wp_list_pages(
+											array(
+												'match_menu_classes' => true,
+												'show_sub_menu_icons' => true,
+												'title_li' => false,
+												'walker'   => new TwentyTwenty_Walker_Page(),
+											)
+										);
 
-								}
+									}
 								?>
 
 								</ul>
