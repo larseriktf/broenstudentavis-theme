@@ -26,6 +26,27 @@ get_header();
                 <h1 class="entry-title">Skriv det</h1>
             </div><!-- .entry-header-inner -->
         </header><!-- .entry-header -->
+
+        <div class="post-inner thin entry-content ">
+                
+                <?php if ($_POST['submit']) { ?>
+                    <p>Du sendte inn et leserinnlegg!</p>
+                <?php } else { ?>
+
+                
+
+                <?php } ?>
+                
+                <div class="leserinnlegg-form">
+                    <label>Overskrift</label>
+                    <input type="text" name="title"/>
+                    <label>Tekst</label>
+                    <input type="text" name="content"/>
+                    <br>
+                    <button id="legg-til-leserinnlegg">Legg til</button>
+                </div>
+            
+        </div>
                         
         <?php
         // the query

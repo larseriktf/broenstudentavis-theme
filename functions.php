@@ -1,5 +1,4 @@
 <?php
-add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 function my_theme_enqueue_styles() {
 
     $parent_style = 'twentytwenty-style';
@@ -10,4 +9,12 @@ function my_theme_enqueue_styles() {
         array( $parent_style ),
         wp_get_theme()->get('Version')
     );
+
+    wp_enqueue_script('customscripts',  get_theme_root_uri() . "/twentytwenty-child/customscripts/leserinnlegg.js", NULL, 1.0, true);
+
+    wp_localize_script('customscripts', 'theSecretNumber', array(
+        'nonce' => wp_create_nonce('wp_rest')
+    ));
 }
+
+add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
