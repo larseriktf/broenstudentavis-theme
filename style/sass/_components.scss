@@ -1,0 +1,37 @@
+// File: _components.scss
+
+// Anything reusable (buttons, navbars, etc.)
+
+button:not(.toggle), .button, .faux-button, .wp-block-button__link, .wp-block-file .wp-block-file__button, input[type="button"], input[type="reset"], input[type="submit"], .bg-accent, .bg-accent-hover:hover, .bg-accent-hover:focus, :root .has-accent-background-color, .comment-reply-link {
+	background: #347e84;
+}
+
+main#main {
+	font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+	text-align:center;
+	font-size: 1.9rem;
+}
+main#main h1 {
+	font-size: 5rem;
+}
+main#main h2 {
+	font-size: 3.7rem
+}
+
+/*Gjør den stygge "om oss" teksten i bunnen usynlig på en hackete måte*/
+div#sidebar {
+	display: none;
+}
+
+/*Får footeren til å ikke legge seg midt på siden når sideinnholdet er kort*/
+body {
+	position: relative;
+	min-height: 100vh;
+	padding-bottom: 113px;
+}
+
+#site-footer {
+	width: 100%;
+  position: absolute;
+  bottom: 0px;
+}
