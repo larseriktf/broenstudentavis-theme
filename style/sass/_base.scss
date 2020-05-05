@@ -2,4 +2,22 @@
 
 // Containing resets, variables, mixins etc.
 
-$broen-main: #487c81;
+$broen-base-blue:               #487c81;
+$broen-base-hover:              lighten($broen-base-blue, 10);
+$background-white:              #FFFFFF;
+$text-color-black:              #252626;
+
+/*Fjerner underline og endrer fargen på linker som er overskrifter*/
+h6, h5, h4, h3, h2, h1 {
+    a {
+        text-decoration: none;
+	    color: $text-color-black;
+    }
+}
+
+/*Får footeren til å ikke legge seg midt på siden når sideinnholdet er kort*/
+body {
+	position: relative;
+	min-height: 100vh;
+	padding-bottom: 113px;
+}

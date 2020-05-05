@@ -3,8 +3,54 @@
  Theme Name:   Twenty Twenty Child
  Template:     twentytwenty
 */
-button:not(.toggle), .button, .faux-button, .wp-block-button__link, .wp-block-file .wp-block-file__button, input[type="button"], input[type="reset"], input[type="submit"], .bg-accent, .bg-accent-hover:hover, .bg-accent-hover:focus, :root .has-accent-background-color, .comment-reply-link {
-  background: #347e84;
+/*Fjerner underline og endrer fargen på linker som er overskrifter*/
+h6 a, h5 a, h4 a, h3 a, h2 a, h1 a {
+  text-decoration: none;
+  color: #252626;
+}
+
+/*Får footeren til å ikke legge seg midt på siden når sideinnholdet er kort*/
+body {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 113px;
+}
+
+/*knapper*/
+button:not(.toggle),
+.button,
+.faux-button,
+.wp-block-button__link,
+.wp-block-file .wp-block-file__button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.bg-accent,
+.bg-accent-hover:hover,
+.bg-accent-hover:focus,
+:root .has-accent-background-color,
+.comment-reply-link {
+  background: #487c81;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+button:not(.toggle):hover,
+.button:hover,
+.faux-button:hover,
+.wp-block-button__link:hover,
+.wp-block-file .wp-block-file__button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+.bg-accent:hover,
+.bg-accent-hover:hover:hover,
+.bg-accent-hover:focus:hover,
+:root .has-accent-background-color:hover,
+.comment-reply-link:hover {
+  background: #5a9ba2;
+  text-decoration: none;
+  border-radius: 2em;
 }
 
 main#main {
@@ -26,17 +72,43 @@ div#sidebar {
   display: none;
 }
 
-/*Får footeren til å ikke legge seg midt på siden når sideinnholdet er kort*/
-body {
-  position: relative;
-  min-height: 100vh;
-  padding-bottom: 113px;
-}
-
 #site-footer {
   width: 100%;
   position: absolute;
   bottom: 0px;
+}
+
+/*Setter bakgrunnsfarger på overskrifter i kalender etter hvilken arrangementstype*/
+#sos h2 {
+  background-color: #38893d;
+}
+
+#fsp h2 {
+  background-color: #822e2e;
+}
+
+#for h2 {
+  background-color: #c97f3a;
+}
+
+#sih h2 {
+  background-color: #2e4782;
+}
+
+#andre h2 {
+  background-color: #5539b2;
+}
+
+/* titlebox */
+.titlebox {
+  border-left: 6px solid #487c81;
+  padding: 10px;
+  background-color: #dedede;
+}
+
+div.textwidget p {
+  font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.9rem;
 }
 
 /*Gjør sidetittel og header usynlig på en hackete måte*/
@@ -74,42 +146,21 @@ div.class-content {
   color: #347e84;
 }
 
-/*Setter bakgrunnsfarger på overskrifter i kalender etter hvilken arrangementstype*/
-#sos h2 {
-  background-color: #38893d;
-}
-
-#fsp h2 {
-  background-color: #822e2e;
-}
-
-#for h2 {
-  background-color: #c97f3a;
-}
-
-#sih h2 {
-  background-color: #2e4782;
-}
-
-#andre h2 {
-  background-color: #5539b2;
-}
-
 /*Gjelder kun for mobile enheter (600 px og under)*/
 @media only screen and (max-width: 600px) {
-  /*Bestemmer bredde på kalender på mobile enheter*/
   .arrangementskort h2 {
+    /*Bestemmer bredde på kalender på mobile enheter*/
     color: white;
     width: 100%;
     margin-top: 10px;
     font-size: 22px !important;
   }
-  /*endrer fontstørrelse på kalender på mobile enheter*/
-  .arrangementskort p, a {
+  .arrangementskort p, .arrangementskort a {
+    /*endrer fontstørrelse på kalender på mobile enheter*/
     font-size: 17px;
   }
-  /*endrer størrelse på overskrifter på mobile enheter*/
   h1 {
+    /*endrer størrelse på overskrifter på mobile enheter*/
     font-size: 35px !important;
   }
 }
@@ -125,53 +176,5 @@ div.class-content {
     margin-left: 20%;
     margin-right: 20%;
   }
-}
-
-/*Setter en margin mellom kalender og footer*/
-.arrangementskort {
-  margin-bottom: 60px;
-}
-
-div.textwidget p {
-  font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 1.9rem;
-}
-
-/*Legger til margin på bunnen av skjemaer og tabeller*/
-form, table {
-  margin-bottom: 70px;
-}
-
-/*Gjorde logoen større etter insisterende ordre fra redaktør (sorry Vetle)*/
-@media (min-width: 700px) {
-  .site-logo img {
-    max-height: 15rem;
-  }
-}
-
-/*Fjernet padding i header så den ikke ble så stor når logoen ble større*/
-@media (min-width: 1000px) {
-  .header-inner {
-    padding-top: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    padding-left: 0px;
-  }
-}
-
-/*Fjerner underline og endrer fargen på linker som er overskrifter*/
-h6 a, h5 a, h4 a, h3 a, h2 a, h1 a {
-  text-decoration: none;
-  color: #252626;
-}
-
-.post-inner {
-  padding-top: 2rem;
-}
-
-.titlebox {
-  border-left: 6px solid #487c81;
-  padding: 10px;
-  background-color: #dedede;
 }
 /*# sourceMappingURL=style.css.map */

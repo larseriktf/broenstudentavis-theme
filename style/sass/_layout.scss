@@ -38,44 +38,26 @@ div.class-content {
 }
 
 
-/*Setter bakgrunnsfarger på overskrifter i kalender etter hvilken arrangementstype*/
-#sos h2 {
-		background-color: #38893d;
-	}
 
-#fsp h2 {
-	background-color: #822e2e;
-}
-
-#for h2 {
-	background-color: #c97f3a;
-}
-
-#sih h2 {
-	background-color: #2e4782;
-}
-
-#andre h2 {
-	background-color: #5539b2;
-}
 
 /*Gjelder kun for mobile enheter (600 px og under)*/
 @media only screen and (max-width: 600px) {
 	
-/*Bestemmer bredde på kalender på mobile enheter*/
-	.arrangementskort h2 {
-		color: white;
-		width: 100%;
-		margin-top: 10px;
-		font-size: 22px !important;
-	}
 	
-/*endrer fontstørrelse på kalender på mobile enheter*/
-	.arrangementskort p, a {
-		font-size: 17px;
+	.arrangementskort {
+		h2 { /*Bestemmer bredde på kalender på mobile enheter*/
+			color: white;
+			width: 100%;
+			margin-top: 10px;
+			font-size: 22px !important;
+		}
+		p, a { /*endrer fontstørrelse på kalender på mobile enheter*/
+			font-size: 17px;
+		}
 	}
-/*endrer størrelse på overskrifter på mobile enheter*/
-	h1 {
+
+	
+	h1 { /*endrer størrelse på overskrifter på mobile enheter*/
 		font-size: 35px !important;
 	}
 }
@@ -94,53 +76,5 @@ div.class-content {
 	}
 }
 
-/*Setter en margin mellom kalender og footer*/
-.arrangementskort {
-	margin-bottom: 60px;
-}
 
 
-div.textwidget p {
-		font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
-	font-size: 1.9rem;
-}
-
-
-
-/*Legger til margin på bunnen av skjemaer og tabeller*/
-form, table {
-	margin-bottom: 70px;
-}
-
-/*Gjorde logoen større etter insisterende ordre fra redaktør (sorry Vetle)*/
-@media (min-width: 700px){
-	.site-logo img {
-			max-height: 15rem;
-	}
-}
-
-/*Fjernet padding i header så den ikke ble så stor når logoen ble større*/
-@media (min-width: 1000px){
-	.header-inner {
-			padding-top: 0px;
-			padding-right: 0px;
-			padding-bottom: 0px;
-			padding-left: 0px;
-	}
-}
-
-/*Fjerner underline og endrer fargen på linker som er overskrifter*/
-h6 a, h5 a, h4 a, h3 a, h2 a, h1 a{
-	text-decoration: none;
-	color: #252626;
-}
-
-.post-inner {
-    padding-top: 2rem;
-}
-
-.titlebox {
-	border-left: 6px solid $broen-main;
-	padding: 10px;
-	background-color: #dedede;
-}
