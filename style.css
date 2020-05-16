@@ -146,6 +146,23 @@ div.class-content {
   color: #347e84;
 }
 
+.section-middle {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 1000px;
+  background-color: white;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+.section-middle h1, .section-middle h2, .section-middle h3, .section-middle h4, .section-middle p, .section-middle a {
+  color: #487c81;
+}
+
+.section-middle a {
+  text-decoration: none;
+}
+
 /*Gjelder kun for mobile enheter (600 px og under)*/
 @media only screen and (max-width: 600px) {
   .arrangementskort h2 {

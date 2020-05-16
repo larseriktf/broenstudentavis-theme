@@ -4,7 +4,8 @@
 
 $broen-base-blue:               #487c81;
 $broen-base-hover:              lighten($broen-base-blue, 10);
-$background-white:              #FFFFFF;
+$background-white:              #f0f0f0;
+$container-white:				lighten($background-white, 20);
 $text-color-black:              #252626;
 
 /*Fjerner underline og endrer fargen på linker som er overskrifter*/

@@ -37,6 +37,19 @@ div.class-content {
 	color: #347e84;
 }
 
+.section-middle {
+	box-sizing: border-box;
+	width: 1000px;
+	background-color: $container-white;
+	margin:0 auto;
+	padding: 0 2em;
+
+	h1, h2, h3, h4, p, a { color: $broen-base-blue }
+	a {
+		text-decoration: none;
+	}
+}
+
 
 
 
