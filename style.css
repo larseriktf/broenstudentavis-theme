@@ -14,6 +14,7 @@ body {
   position: relative;
   min-height: 100vh;
   padding-bottom: 113px;
+  background: black;
 }
 
 /*knapper*/
@@ -149,10 +150,21 @@ div.class-content {
 .section-middle {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 1000px;
   background-color: white;
   margin: 0 auto;
-  padding: 0em;
+  padding: 8em 0em;
+}
+
+.section-middle > div {
+  margin: 1em;
 }
 
 .section-middle h1, .section-middle h2, .section-middle h3, .section-middle h4, .section-middle p, .section-middle a {
@@ -163,35 +175,32 @@ div.class-content {
   text-decoration: none;
 }
 
-.frontpage-main-thread {
-  width: calc(200% / 3);
+#site-content {
+  background: #e0e0e0;
 }
 
-.frontpage-main-boxes {
+.frontpage-main-boxes, .frontpage-minor-boxes {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: solid #d1d1d1;
-  border-width: thin;
-  border-radius: 1em;
   overflow: hidden;
   margin-bottom: 2em;
 }
 
-.frontpage-main-boxes h1, .frontpage-main-boxes h2, .frontpage-main-boxes h3, .frontpage-main-boxes h4, .frontpage-main-boxes h5, .frontpage-main-boxes h6, .frontpage-main-boxes p {
-  margin: 0 .25em;
+.frontpage-main-boxes h1, .frontpage-main-boxes h2, .frontpage-main-boxes h3, .frontpage-main-boxes h4, .frontpage-main-boxes h5, .frontpage-main-boxes h6, .frontpage-main-boxes p, .frontpage-minor-boxes h1, .frontpage-minor-boxes h2, .frontpage-minor-boxes h3, .frontpage-minor-boxes h4, .frontpage-minor-boxes h5, .frontpage-minor-boxes h6, .frontpage-minor-boxes p {
+  margin: 0;
   padding: 0;
 }
 
-.frontpage-main-boxes img {
+.frontpage-main-boxes img, .frontpage-minor-boxes img {
   width: 100%;
   height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.frontpage-main-boxes .category-boxes {
+.frontpage-main-boxes .category-boxes, .frontpage-minor-boxes .category-boxes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -203,7 +212,7 @@ div.class-content {
   height: 1.5em;
 }
 
-.frontpage-main-boxes .category-boxes div {
+.frontpage-main-boxes .category-boxes > div, .frontpage-minor-boxes .category-boxes > div {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0 .5em;
@@ -214,24 +223,47 @@ div.class-content {
   color: #f0f0f0;
 }
 
-.frontpage-main-boxes .category-boxes .post-category-1 {
+.frontpage-main-boxes .category-boxes .post-category-1, .frontpage-minor-boxes .category-boxes .post-category-1 {
   background: #d1d1d1;
 }
 
-.frontpage-main-boxes .category-boxes .post-category-41 {
+.frontpage-main-boxes .category-boxes .post-category-41, .frontpage-minor-boxes .category-boxes .post-category-41 {
   background: #43a872;
 }
 
-.frontpage-main-boxes .category-boxes .post-category-46 {
+.frontpage-main-boxes .category-boxes .post-category-46, .frontpage-minor-boxes .category-boxes .post-category-46 {
   background: #a89543;
 }
 
-.frontpage-main-boxes .category-boxes .post-category-44 {
+.frontpage-main-boxes .category-boxes .post-category-44, .frontpage-minor-boxes .category-boxes .post-category-44 {
   background: #4397a8;
 }
 
-.frontpage-minor-thread {
+.frontpage-main-boxes .category-boxes .post-category-42, .frontpage-minor-boxes .category-boxes .post-category-42 {
+  background: #9dbf3d;
+}
+
+.frontpage-main-boxes .category-boxes .post-category-45, .frontpage-minor-boxes .category-boxes .post-category-45 {
+  background: #bf603d;
+}
+
+.frontpage-minor-boxes h1, .frontpage-minor-boxes h2, .frontpage-minor-boxes h3, .frontpage-minor-boxes h4, .frontpage-minor-boxes h5, .frontpage-minor-boxes h6 {
+  font-size: 3rem;
+}
+
+.frontpage-minor-boxes img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.frontpage-main-thread {
   width: calc(200% / 3);
+}
+
+.frontpage-minor-thread {
+  width: calc(100% / 3);
 }
 
 /*Gjelder kun for mobile enheter (600 px og under)*/

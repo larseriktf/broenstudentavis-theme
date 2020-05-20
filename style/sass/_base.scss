@@ -5,6 +5,7 @@
 $broen-base-blue:               #487c81;
 $broen-base-hover:              lighten($broen-base-blue, 10);
 $background-white:              #f0f0f0;
+$background-grey:				#e0e0e0;
 $broen-base-white:				#f0f0f0;
 $container-white:				lighten($background-white, 20);
 $box-grey:						#d1d1d1;
@@ -13,10 +14,12 @@ $text-color-black:              #252626;
 $placeholder-color:				#a8329e;
 
 // situational
+$broen-uncategorized:			$box-grey;
 $broen-leserinnlegg:			#43a872;
 $broen-nyheter:					#4397a8;
 $broen-meninger:				#a89543;
-$broen-uncategorized:			$box-grey;
+$broen-kultur:					#9dbf3d;
+$broen-spisekammeret:			#bf603d;
 
 
 /*Fjerner underline og endrer fargen på linker som er overskrifter*/
@@ -32,5 +35,6 @@ body {
 	position: relative;
 	min-height: 100vh;
 	padding-bottom: 113px;
+	background: black;
 }
 

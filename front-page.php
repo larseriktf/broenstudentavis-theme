@@ -31,32 +31,90 @@ get_header();
             ));
 
             if ( $homepagePosts->have_posts() ) : 
-                while ( $homepagePosts->have_posts() ) : $homepagePosts->the_post();?>
+                while ( $homepagePosts->have_posts() ) :
+                    
+                    $homepagePosts->the_post();
                 
-                <a href="<?php echo the_permalink() ?>">
-                    <div class="frontpage-main-boxes">
-                        <?php //echo wp_get_attachment_image_srcset(get_post_thumbnail_id())?>
-                        <!-- category boxes -->
-                        <div class="category-boxes">
-                            <?php
-                            $post_categories = wp_get_post_categories(get_the_ID());
-                            foreach ($post_categories AS $cat_id) {
-                                $cat = get_category( $cat_id );?>
+                    // setup variables
+                    $post_categories = wp_get_post_categories(get_the_ID()); // array of categories for current post
+                    $check = array();
+                    $allowed = array('41', '44', '46', '42'); // allowed categories
 
-                                <div class="<?php echo 'post-category-' . $cat_id; ?>"><?php echo $cat->name; ?></div>
-                            <?php } ?>
+                    foreach ($post_categories AS $cat_id) { array_push($check, $cat_id); }
+
+                    $contains = count(array_intersect($check, $allowed)) == count($check); // all values exists within 'allowed' array
+                    if ($contains) : ?>
+
+                    <!-- html boxes -->
+                    <a href="<?php echo the_permalink() ?>">
+                        <div class="frontpage-main-boxes">
+                            <!-- category boxes -->
+                            <div class="category-boxes">
+                                <?php
+                                    
+                                foreach ($post_categories AS $cat_id) {
+                                    $cat = get_category( $cat_id );?>
+
+                                    <div class="<?php echo 'post-category-' . $cat_id; ?>"><?php echo $cat->name; ?></div>
+                                <?php } ?>
+                            </div>
+                            <div class="box-image"><?php // display image if exists, or replace
+                            if (has_post_thumbnail()) {
+                                the_post_thumbnail('medium_large');
+                            } else {
+                                echo wp_get_attachment_image(162, 'medium_large');
+                            } ?></div>
+                            <h2><?php echo the_title(); ?></h2>
                         </div>
+                    </a>
 
-                        <div class="box-image"><?php echo the_post_thumbnail('medium_large'); ?></div>
-                        <h2><?php echo the_title(); ?></h2>
-                    </div>
-                </a>
-                
-                <?endwhile; 
-            endif;
-            ?>
+                    <?php endif;
+                endwhile; 
+            endif; ?>
         </div>
-        <div class="fontpage-minor-thread">
+        <div class="frontpage-minor-thread">
+            <?php
+             if ( $homepagePosts->have_posts() ) : 
+                while ( $homepagePosts->have_posts() ) :
+
+                    $homepagePosts->the_post();
+
+                    // setup variables
+                    $post_categories = wp_get_post_categories(get_the_ID()); // array of categories for current post
+                    $check = array();
+                    $allowed = array('1', '45'); // allowed categories
+
+                    foreach ($post_categories AS $cat_id) { array_push($check, $cat_id); }
+
+                    $contains = count(array_intersect($check, $allowed)) == count($check); // all values exists within 'allowed' array
+                    if ($contains) : ?>
+
+                    <!-- html boxes -->
+                    <a href="<?php echo the_permalink() ?>">
+                        <div class="frontpage-minor-boxes">
+                            <!-- category boxes -->
+                            <div class="category-boxes">
+                                <?php
+                                    
+                                foreach ($post_categories AS $cat_id) {
+                                    $cat = get_category( $cat_id );?>
+
+                                    <div class="<?php echo 'post-category-' . $cat_id; ?>"><?php echo $cat->name; ?></div>
+                                <?php } ?>
+                            </div>
+                            <div class="box-image"><?php // display image if exists, or replace
+                            if (has_post_thumbnail()) {
+                                the_post_thumbnail('medium');
+                            } else {
+                                echo wp_get_attachment_image(162, 'medium');
+                            } ?></div>
+                            <h2><?php echo the_title(); ?></h2>
+                        </div>
+                    </a>
+
+                    <?php endif;
+                endwhile; 
+            endif; ?>
         </div>
     </section>
 
