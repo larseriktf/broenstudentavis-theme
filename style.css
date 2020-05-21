@@ -31,7 +31,7 @@ input[type="submit"],
 .bg-accent-hover:focus,
 :root .has-accent-background-color,
 .comment-reply-link {
-  background: #487c81;
+  background: #006387;
   -webkit-transition: .2s;
   transition: .2s;
 }
@@ -49,7 +49,7 @@ input[type="submit"]:hover,
 .bg-accent-hover:focus:hover,
 :root .has-accent-background-color:hover,
 .comment-reply-link:hover {
-  background: #5a9ba2;
+  background: #0088ba;
   text-decoration: none;
   border-radius: 2em;
 }
@@ -102,7 +102,7 @@ div#sidebar {
 
 /* titlebox */
 .titlebox {
-  border-left: 6px solid #487c81;
+  border-left: 6px solid #006387;
   padding: 10px;
   background-color: #dedede;
 }
@@ -158,7 +158,7 @@ div.class-content {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 1000px;
-  background-color: white;
+  background-color: #f9f9f9;
   margin: 0 auto;
   padding: 8em 0em;
 }
@@ -168,7 +168,7 @@ div.class-content {
 }
 
 .section-middle h1, .section-middle h2, .section-middle h3, .section-middle h4, .section-middle p, .section-middle a {
-  color: #487c81;
+  color: #006387;
 }
 
 .section-middle a {
@@ -177,6 +177,20 @@ div.class-content {
 
 #site-content {
   background: #e0e0e0;
+}
+
+#site-footer {
+  background: #006387;
+}
+
+.footer-nav-widgets-wrapper {
+  margin: 0;
+  background: #006387;
+}
+
+.header-footer-group {
+  margin: 0;
+  background: #006387;
 }
 
 .frontpage-main-boxes, .frontpage-minor-boxes {
@@ -209,7 +223,9 @@ div.class-content {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
-  height: 1.5em;
+  height: .5em;
+  border-radius: .25em .25em 0 0;
+  overflow: hidden;
 }
 
 .frontpage-main-boxes .category-boxes > div, .frontpage-minor-boxes .category-boxes > div {
@@ -228,23 +244,23 @@ div.class-content {
 }
 
 .frontpage-main-boxes .category-boxes .post-category-41, .frontpage-minor-boxes .category-boxes .post-category-41 {
-  background: #43a872;
+  background: #2bb169;
 }
 
 .frontpage-main-boxes .category-boxes .post-category-46, .frontpage-minor-boxes .category-boxes .post-category-46 {
-  background: #a89543;
+  background: #f08b08;
 }
 
 .frontpage-main-boxes .category-boxes .post-category-44, .frontpage-minor-boxes .category-boxes .post-category-44 {
-  background: #4397a8;
+  background: #18b1cf;
 }
 
 .frontpage-main-boxes .category-boxes .post-category-42, .frontpage-minor-boxes .category-boxes .post-category-42 {
-  background: #9dbf3d;
+  background: #8fb91a;
 }
 
 .frontpage-main-boxes .category-boxes .post-category-45, .frontpage-minor-boxes .category-boxes .post-category-45 {
-  background: #bf603d;
+  background: #ad3d14;
 }
 
 .frontpage-minor-boxes h1, .frontpage-minor-boxes h2, .frontpage-minor-boxes h3, .frontpage-minor-boxes h4, .frontpage-minor-boxes h5, .frontpage-minor-boxes h6 {
@@ -266,8 +282,30 @@ div.class-content {
   width: calc(100% / 3);
 }
 
+#site-header {
+  background: #006387;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  padding: 1.5em;
+}
+
+#site-header .header-inner {
+  padding: 0;
+}
+
+#site-header .header-inner img.custom-logo {
+  height: 8rem;
+}
+
 /*Gjelder kun for mobile enheter (600 px og under)*/
 @media only screen and (max-width: 600px) {
+  .footer-top-visible .footer-nav-widgets-wrapper,
+  .footer-top-hidden #site-footer {
+    margin: 0;
+  }
   .arrangementskort h2 {
     /*Bestemmer bredde på kalender på mobile enheter*/
     color: white;
@@ -287,6 +325,10 @@ div.class-content {
 
 /*Gjelder kun for enheter over 600 px*/
 @media only screen and (min-width: 601px) {
+  .footer-top-visible .footer-nav-widgets-wrapper,
+  .footer-top-hidden #site-footer {
+    margin: 0;
+  }
   .arrangementskort h2 {
     color: white;
     max-width: 55%;

@@ -2,9 +2,9 @@
 
 // Containing resets, variables, mixins etc.
 
-$broen-base-blue:               #487c81;
+$broen-base-blue:               #006387; // previusly #487c81 and #36a7f7
 $broen-base-hover:              lighten($broen-base-blue, 10);
-$background-white:              #f0f0f0;
+$background-white:              #f9f9f9;
 $background-grey:				#e0e0e0;
 $broen-base-white:				#f0f0f0;
 $container-white:				lighten($background-white, 20);
@@ -15,11 +15,11 @@ $placeholder-color:				#a8329e;
 
 // situational
 $broen-uncategorized:			$box-grey;
-$broen-leserinnlegg:			#43a872;
-$broen-nyheter:					#4397a8;
-$broen-meninger:				#a89543;
-$broen-kultur:					#9dbf3d;
-$broen-spisekammeret:			#bf603d;
+$broen-leserinnlegg:			#2bb169;
+$broen-nyheter:					#18b1cf;
+$broen-meninger:				#f08b08;
+$broen-kultur:					#8fb91a;
+$broen-spisekammeret:			#ad3d14;
 
 
 /*Fjerner underline og endrer fargen på linker som er overskrifter*/

@@ -15,6 +15,18 @@
  */
 
 get_header();
+
+// functions etc.
+
+function custom_categories($categories) {
+    foreach ($categories AS $cat_id) :
+        $cat = get_category( $cat_id );?>
+
+        <div class="<?php echo 'post-category-' . $cat_id; ?>"></div>
+    <?php endforeach;
+}
+
+
 ?>
 
 <main id="site-content" role="main">
@@ -49,15 +61,7 @@ get_header();
                     <a href="<?php echo the_permalink() ?>">
                         <div class="frontpage-main-boxes">
                             <!-- category boxes -->
-                            <div class="category-boxes">
-                                <?php
-                                    
-                                foreach ($post_categories AS $cat_id) {
-                                    $cat = get_category( $cat_id );?>
-
-                                    <div class="<?php echo 'post-category-' . $cat_id; ?>"><?php echo $cat->name; ?></div>
-                                <?php } ?>
-                            </div>
+                            <div class="category-boxes"><?php custom_categories($post_categories); ?></div>
                             <div class="box-image"><?php // display image if exists, or replace
                             if (has_post_thumbnail()) {
                                 the_post_thumbnail('medium_large');
@@ -93,15 +97,7 @@ get_header();
                     <a href="<?php echo the_permalink() ?>">
                         <div class="frontpage-minor-boxes">
                             <!-- category boxes -->
-                            <div class="category-boxes">
-                                <?php
-                                    
-                                foreach ($post_categories AS $cat_id) {
-                                    $cat = get_category( $cat_id );?>
-
-                                    <div class="<?php echo 'post-category-' . $cat_id; ?>"><?php echo $cat->name; ?></div>
-                                <?php } ?>
-                            </div>
+                            <div class="category-boxes"><?php custom_categories($post_categories); ?></div>
                             <div class="box-image"><?php // display image if exists, or replace
                             if (has_post_thumbnail()) {
                                 the_post_thumbnail('medium');
