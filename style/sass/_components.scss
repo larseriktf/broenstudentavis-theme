@@ -81,3 +81,23 @@ div.textwidget {
 		font-size: 1.9rem;
 	}
 }
+
+.btn {
+    &.btn-loadmore {
+        max-width: 16em;
+        margin: auto;
+        padding: 1em;
+        background: $background-white;
+        border: solid $broen-base-blue;
+        border-radius: 1em;
+        border-width: thin;
+        text-align: center;
+        color: $broen-base-blue;
+
+        &:hover {
+            background: $broen-base-blue;
+            color: $background-white;
+            cursor: pointer;
+        }
+    }
+}

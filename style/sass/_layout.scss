@@ -39,16 +39,16 @@ div.class-content {
 
 .section-middle {
 	box-sizing: border-box;
-	display: flex;
-	flex-direction: row;
 	width: 1000px;
 	background-color: $background-white;
 	margin:0 auto;
-	padding: 8em 0em;
+    padding: 8em 0em;
 
-	> div { // space between threads
-		margin: 1em;
-	}
+    > .flex-row {
+        > div { // space between threads
+            margin: 1em;
+        }
+    }
 
 	h1, h2, h3, h4, p, a { color: $broen-base-blue }
 	a {
@@ -56,6 +56,11 @@ div.class-content {
 	}
 }
 
+.flex-row {
+    box-sizing: border-box;
+    display: flex;
+	flex-direction: row;
+}
 
 
 #site-content {
