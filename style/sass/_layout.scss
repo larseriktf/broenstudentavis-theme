@@ -153,37 +153,6 @@ div.class-content {
 }
 
 
-// header
-
-#site-header {
-
-	background: $broen-base-blue;
-	position: fixed;
-	width: 100%;
-    top: 0;
-    transition: 0.2s;
-    padding: 1.5em;
-
-	.header-inner {
-		padding: 0;
-    
-        img.custom-logo {
-            height: 8rem;
-        }
-
-    }
-
-	.header-navigation-wrapper {
-
-	}
-}
-
-
-
-
-
-
-
 /*Gjelder kun for mobile enheter (600 px og under)*/
 @media only screen and (max-width: 600px) {
 

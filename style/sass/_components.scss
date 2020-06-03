@@ -101,3 +101,44 @@ div.textwidget {
         }
     }
 }
+
+// header
+
+#site-header {
+
+	background: $broen-base-blue;
+	position: fixed;
+	width: 100%;
+    top: 0;
+    transition: 0.2s;
+    padding: 0;
+    height: 8em;
+
+	.header-inner {
+        height: 100%;
+        padding: 0;
+    
+        img.custom-logo {
+            transition: 0.2s;
+            opacity: 1;
+        }
+
+    }
+
+    #site-title {
+        display: none;
+        font-size: 2rem;
+        padding: 0;
+        margin: 0;
+        letter-spacing: 0.5em;
+        text-transform: uppercase;
+        font-family: Georgia, serif;
+        padding-top: 2px;
+        transition: 0.2s;
+        opacity: 1;
+    }
+
+	.header-navigation-wrapper {
+
+	}
+}

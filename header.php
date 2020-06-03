@@ -60,8 +60,10 @@
 
 						<?php
 							// Site title or logo.
-							twentytwenty_site_logo();
-
+                            twentytwenty_site_logo();
+                        ?>
+                            <h1 id="site-title"><?php echo (get_bloginfo('name')); ?></h1>
+                        <?php
 							// Site description.
 							twentytwenty_site_description();
 						?>
