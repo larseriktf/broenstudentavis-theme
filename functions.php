@@ -8,7 +8,9 @@ function my_theme_enqueue_styles() {
     wp_enqueue_style( 'broen-style', get_stylesheet_directory_uri() . '/style.css', array( $parent_style ), wp_get_theme()->get('Version') );
 }
 
+
 function my_theme_enqueue_scripts() {
-    wp_enqueue_script( 'menu-scroll', get_stylesheet_directory_uri() . '/js/menu-scroll.js', false, '1.0.0', true );
+    // disabled menu scroll script for now
+    // wp_enqueue_script( 'menu-scroll', get_stylesheet_directory_uri() . '/js/menu-scroll.js', false, '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_scripts' );
