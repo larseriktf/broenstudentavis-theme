@@ -105,39 +105,30 @@ div.textwidget {
 // header
 
 #site-header {
-
-	background: $broen-base-blue;
-	position: fixed;
-	width: 100%;
-    top: 0;
-    transition: 0.2s;
-    padding: 0;
+    background: $broen-base-blue;
     height: 8em;
+    box-sizing: border-box;
+    padding: 2em;
 
-	.header-inner {
-        height: 100%;
-        padding: 0;
-    
-        img.custom-logo {
-            transition: 0.2s;
-            opacity: 1;
-        }
-
-    }
-
-    #site-title {
-        font-size: 2rem;
-        padding: 0;
+    h1 {
         margin: 0;
-        letter-spacing: 0.5em;
-        text-transform: uppercase;
-        font-family: Georgia, serif;
-        padding-top: 2px;
-        transition: 0.2s;
-        opacity: 1;
     }
+}
 
-	.header-navigation-wrapper {
+.navigation-wrapper {
+    background: $broen-base-blue;
+    min-height: 2em;
+    position: sticky;
+    top: 0;
 
-	}
+    .primary-menu-wrapper {
+        height: 2em;
+
+        .primary-menu {
+            
+            .primary-menu {
+                text-align: left;
+            }
+        }
+    }
 }

@@ -132,37 +132,30 @@ div.textwidget p {
 
 #site-header {
   background: #006387;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  padding: 0;
   height: 8em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 2em;
 }
 
-#site-header .header-inner {
-  height: 100%;
-  padding: 0;
-}
-
-#site-header .header-inner img.custom-logo {
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  opacity: 1;
-}
-
-#site-header #site-title {
-  font-size: 2rem;
-  padding: 0;
+#site-header h1 {
   margin: 0;
-  letter-spacing: 0.5em;
-  text-transform: uppercase;
-  font-family: Georgia, serif;
-  padding-top: 2px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  opacity: 1;
+}
+
+.navigation-wrapper {
+  background: #006387;
+  min-height: 2em;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.navigation-wrapper .primary-menu-wrapper {
+  height: 2em;
+}
+
+.navigation-wrapper .primary-menu-wrapper .primary-menu .primary-menu {
+  text-align: left;
 }
 
 /*Gjør sidetittel og header usynlig på en hackete måte*/
