@@ -131,8 +131,9 @@ div.textwidget p {
 }
 
 #site-header {
-  background: #006387;
-  height: 8em;
+  background-image: url("images/header_placeholder.jpg");
+  background-position-y: 40%;
+  height: 12em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 2em;

@@ -26,7 +26,10 @@
 		<?php wp_body_open(); ?>
 
 		<header id="site-header" class="header-footer-group" role="banner">
-			<h1><?php echo get_bloginfo('name'); ?></h1>
+			<div class="site-logo-wrapper">
+            </div>
+            <div class="site-title-wrapper">
+            </div>
         </header><!-- #site-header -->
 
 

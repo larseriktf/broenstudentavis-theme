@@ -105,8 +105,9 @@ div.textwidget {
 // header
 
 #site-header {
-    background: $broen-base-blue;
-    height: 8em;
+    background-image: url("images/header_placeholder.jpg");
+    background-position-y: 40%;
+    height: 12em;
     box-sizing: border-box;
     padding: 2em;
 
