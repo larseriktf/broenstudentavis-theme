@@ -213,14 +213,21 @@ div.textwidget p {
 
 #site-header .site-header-bottom .navigation-wrapper {
   width: 100%;
-  background: #006387;
 }
 
 #site-header .site-header-bottom .navigation-wrapper .primary-menu-wrapper {
   height: 2em;
 }
 
-#site-header .site-header-bottom .navigation-wrapper .primary-menu-wrapper .primary-menu a {
+#site-header .site-header-bottom .navigation-wrapper .primary-menu-wrapper #menu-primary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+
+#site-header .site-header-bottom .navigation-wrapper .primary-menu-wrapper #menu-primary a {
+  color: #f9f9f9;
   text-decoration: none;
   background: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9));
   background: linear-gradient(#f9f9f9);
@@ -231,7 +238,7 @@ div.textwidget p {
   transition: background-size .1s;
 }
 
-#site-header .site-header-bottom .navigation-wrapper .primary-menu-wrapper .primary-menu a:hover {
+#site-header .site-header-bottom .navigation-wrapper .primary-menu-wrapper #menu-primary a:hover {
   background-size: 100% 8%;
 }
 

@@ -173,25 +173,17 @@ div.textwidget {
 
         .navigation-wrapper {
             width: 100%;
-            background: $broen-base-blue;
         
             .primary-menu-wrapper {
                 height: 2em;
-        
-                .primary-menu {
-                    a {
-                        text-decoration: none;
-                        // underline animation
-                        background: linear-gradient( $background-white );
-                        background-position: bottom left; // also try bottom
-                        background-repeat: no-repeat;
-                        background-size: 0% 8%; // last is thickness of line
-                        transition: background-size .1s;
 
-                        &:hover {
-                            background-size: 100% 8%;
-                        }
+                #menu-primary {
+                    display: flex;
+                    margin: 0;
+                    li {
+
                     }
+                    -
                 }
             }
         }

@@ -41,35 +41,13 @@
                 </div>
 
                 <div class="navigation-wrapper">
-                    <?php if (has_nav_menu( 'primary' ) || !has_nav_menu( 'expanded' )) { // Primary Menu ?>
-                        <nav class="primary-menu-wrapper" aria-label="<?php esc_attr_e( 'Horizontal', 'twentytwenty' ); ?>" role="navigation">
-                            <ul class="primary-menu reset-list-style">
-                                <?php
-                                if (has_nav_menu( 'primary' )) {
-
-                                    wp_nav_menu(
-                                            array(
-                                                'container'  => '',
-                                                'items_wrap' => '%3$s',
-                                                'theme_location' => 'primary',
-                                            )
-                                        );
-
-                                    } elseif (!has_nav_menu( 'expanded' )) {
-
-                                        wp_list_pages(
-                                            array(
-                                                'match_menu_classes' => true,
-                                                'show_sub_menu_icons' => true,
-                                                'title_li' => false,
-                                                'walker'   => new TwentyTwenty_Walker_Page(),
-                                            )
-                                        );
-                                    }
-                                ?>
-                            </ul>
-                        </nav><!-- .primary-menu-wrapper -->
-                    <?php } ?>
+                    <nav class="primary-menu-wrapper" aria-label="<?php esc_attr_e( 'Horizontal', 'twentytwenty' ); ?>" role="navigation">
+                        <?php
+                            wp_nav_menu(array(
+                                'container' => ''
+                            )); 
+                        ?>
+                    </nav><!-- .primary-menu-wrapper -->
                 </div><!-- navigation-wrapper -->
             </div><!-- site-navbar-wrapper -->
         </header><!-- #site-header -->
