@@ -105,30 +105,94 @@ div.textwidget {
 // header
 
 #site-header {
-    background-image: url("images/header_placeholder.jpg");
-    background-position-y: 40%;
-    height: 12em;
     box-sizing: border-box;
-    padding: 2em;
 
-    h1 {
-        margin: 0;
-    }
-}
+    .site-header-top {
+        // adds transparent color ontop of background image, faking with a linear gradient
+        // stolen from https://css-tricks.com/tinted-images-multiple-backgrounds/
+        background: linear-gradient(
+            rgba($broen-base-blue, 0.45), 
+            rgba($broen-base-blue, 0.45)
+        ),
+        url("images/header_placeholder.jpg");
+        background-position-y: 40%;
+        height: 12em;
+        display: flex;
 
-.navigation-wrapper {
-    background: $broen-base-blue;
-    min-height: 2em;
-    position: sticky;
-    top: 0;
-
-    .primary-menu-wrapper {
-        height: 2em;
-
-        .primary-menu {
+        .site-logo-wrapper {
+            background-image: url("images/collage.png");
+            background-repeat: no-repeat;
+            height: 100%; width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
             
-            .primary-menu {
-                text-align: left;
+    
+            img {
+                margin-left: 4em;
+                height: 16rem;
+                width: 16rem;
+            }
+        }
+
+        .site-tagline-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            
+            p {
+                font-size: 6rem;
+                margin: 0;
+                @include text-stroke(8, $broen-base-blue);
+            }
+        }
+    }
+    
+
+    .site-header-bottom {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        background: $broen-base-blue;
+        padding: .5em 4em;
+
+        .site-title-wrapper {
+            width: 100%;
+            h1 {
+                font-size: 2rem;
+                margin: 0;
+                letter-spacing: .25em;
+                text-transform: uppercase;
+
+                a { // remove text effects, could add 'cursor: auto' too
+                    text-decoration: inherit;
+                    color: inherit;
+                }
+            }
+        }
+
+        .navigation-wrapper {
+            width: 100%;
+            background: $broen-base-blue;
+        
+            .primary-menu-wrapper {
+                height: 2em;
+        
+                .primary-menu {
+                    a {
+                        text-decoration: none;
+                        // underline animation
+                        background: linear-gradient( $background-white );
+                        background-position: bottom left; // also try bottom
+                        background-repeat: no-repeat;
+                        background-size: 0% 8%; // last is thickness of line
+                        transition: background-size .1s;
+
+                        &:hover {
+                            background-size: 100% 8%;
+                        }
+                    }
+                }
             }
         }
     }
