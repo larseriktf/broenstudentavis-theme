@@ -13,4 +13,4 @@ function my_theme_enqueue_scripts() {
     wp_enqueue_script( 'jquery' );
     wp_enqueue_script( 'menu-scroll', get_stylesheet_directory_uri() . '/js/menu-scroll.js', false, '1.0.0', true );
 }
-add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_scripts' );
+//add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_scripts' );
