@@ -140,38 +140,30 @@ header#site-header {
 }
 
 header#site-header div.header-content {
-  padding-top: 2em;
+  height: 4em;
   width: 1000px;
   margin: auto;
 }
 
-header#site-header div.header-content div.site-logo-background {
+header#site-header div.header-content div.site-logo {
   position: absolute;
   width: 250px;
   height: 250px;
   display: -ms-grid;
   display: grid;
   place-items: center;
-  -webkit-transform: translateY(-6em);
-          transform: translateY(-6em);
-}
-
-header#site-header div.header-content div.site-logo-background::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
+  -webkit-transform: translateY(-4em);
+          transform: translateY(-4em);
   background-image: url("images/splatter.png");
   background-size: cover;
-  -webkit-filter: brightness(0) invert(100%) sepia() saturate(10000%) hue-rotate(170deg) brightness(0.5) saturate(200%);
-          filter: brightness(0) invert(100%) sepia() saturate(10000%) hue-rotate(170deg) brightness(0.5) saturate(200%);
 }
 
-header#site-header div.header-content div.site-logo {
+header#site-header div.header-content div.site-logo img.custom-logo {
   position: relative;
 }
 
 header#site-header div.header-content nav.primary-menu-wrapper {
+  padding-top: 1.5em;
   width: auto;
   float: right;
   -ms-flex-pack: distribute;
@@ -193,6 +185,16 @@ header#site-header div.header-content nav.primary-menu-wrapper ul#menu-primary l
   font-size: 1.8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(white)) no-repeat bottom;
+  background: linear-gradient(to bottom, white, white) no-repeat bottom;
+  background-size: 0% 6px;
+  height: 4em;
+  -webkit-transition: background .1s;
+  transition: background .1s;
+}
+
+header#site-header div.header-content nav.primary-menu-wrapper ul#menu-primary li.menu-item > a:hover {
+  background-size: 100% 6px;
 }
 
 /*Gjør sidetittel og header usynlig på en hackete måte*/
