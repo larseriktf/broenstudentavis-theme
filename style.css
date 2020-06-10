@@ -145,12 +145,30 @@ header#site-header div.header-content {
   margin: auto;
 }
 
-header#site-header div.header-content div.site-logo {
+header#site-header div.header-content div.site-logo-background {
   position: absolute;
-  padding: 6em;
+  width: 250px;
+  height: 250px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -webkit-transform: translateY(-6em);
+          transform: translateY(-6em);
+}
+
+header#site-header div.header-content div.site-logo-background::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
   background-image: url("images/splatter.png");
   background-size: cover;
-  top: 5;
+  -webkit-filter: brightness(0) invert(100%) sepia() saturate(10000%) hue-rotate(170deg) brightness(0.5) saturate(200%);
+          filter: brightness(0) invert(100%) sepia() saturate(10000%) hue-rotate(170deg) brightness(0.5) saturate(200%);
+}
+
+header#site-header div.header-content div.site-logo {
+  position: relative;
 }
 
 header#site-header div.header-content nav.primary-menu-wrapper {

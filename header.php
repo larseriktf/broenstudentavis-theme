@@ -27,8 +27,10 @@
 
 		<header id="site-header" class="header-footer-group" role="banner">
             <div class="header-content">
-                <div class="site-logo">
-                    <?php echo the_custom_logo(); ?>
+                <div class="site-logo-background">
+                    <div class="site-logo">
+                        <?php echo the_custom_logo(); ?>
+                    </div>
                 </div>
 
                 <nav class="primary-menu-wrapper" aria-label="<?php esc_attr_e( 'Horizontal', 'twentytwenty' ); ?>" role="navigation">

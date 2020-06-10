@@ -115,13 +115,26 @@ header#site-header {
         width: $content-size;
         margin: auto;
 
-        div.site-logo {
+        div.site-logo-background {
             position: absolute;
-            padding:6em;
-            background-image: url("images/splatter.png");
-            background-size: cover;
-            top: 5;
+            width: 250px;
+            height: 250px;
+            display: grid;
+            place-items: center;
+            transform: translateY(-6em);
+
+            &::before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                background-image: url("images/splatter.png");
+                background-size: cover;
+                filter: ;
+                
+            }
         }
+        div.site-logo { position: relative; }
     
         nav.primary-menu-wrapper {
             width: auto;
