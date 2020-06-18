@@ -164,3 +164,100 @@ header#site-header {
         }
     }
 }
+
+
+.section-middle {
+	box-sizing: border-box;
+	width: $content-size;
+	background-color: $background-white;
+	margin:0 auto;
+    padding: 8em 0em;
+
+    > .flex-row {
+        > div { // space between threads
+            margin: 1em;
+        }
+    }
+
+	h1, h2, h3, h4, p, a { color: $broen-base-blue }
+	a {
+		text-decoration: none;
+	}
+}
+
+.flex-row {
+    box-sizing: border-box;
+    display: flex;
+	flex-direction: row;
+}
+
+
+#site-content {
+	background: $background-grey;
+}
+
+.frontpage-main-boxes, .frontpage-minor-boxes {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	overflow: hidden;
+	margin-bottom: 2em;
+
+	h1, h2, h3, h4, h5, h6, p {
+        margin: 0; padding: 0;
+        
+        &::first-letter { text-transform: uppercase; }
+	}
+	img {
+		width: 100%;
+		height: 400px;
+		object-fit: cover;
+	}
+	.category-boxes {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		height: .5em;
+		border-radius: .25em .25em 0 0;
+		overflow: hidden;
+
+		> div {
+			box-sizing: border-box;
+			padding: 0 .5em;
+			width: 100%;
+			height: 100%;
+			font-size: 2rem;
+			background: $placeholder-color;
+			color: $broen-base-white;
+		}
+
+		.post-category-1 { background: $broen-uncategorized; } // uncategorized
+		.post-category-41 { background: $broen-leserinnlegg; } // leserinnlegg
+		.post-category-46 { background: $broen-meninger; } // meninger
+		.post-category-44 { background: $broen-nyheter; } // nyheter
+		.post-category-42 { background: $broen-kultur; } // kultur
+		.post-category-45 { background: $broen-spisekammeret; } // spisekammeret
+	}
+}
+
+.frontpage-minor-boxes {
+	h1, h2, h3, h4, h5, h6 {
+		font-size: 3rem;
+	}
+
+	img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+	}
+}
+
+.frontpage-main-thread { width: calc(200% / 3); }
+.frontpage-minor-thread { width: calc(100% / 3); }
+
+
+// footer
+
+#site-footer {
+    background: $broen-base-blue;
+}

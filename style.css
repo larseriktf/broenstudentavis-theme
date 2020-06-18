@@ -198,41 +198,6 @@ header#site-header div.header-content nav.primary-menu-wrapper ul#menu-primary l
   background-size: 100% 2px;
 }
 
-/*Gjør sidetittel og header usynlig på en hackete måte*/
-.entry-title {
-  display: none !important;
-}
-
-.entry-header {
-  display: none !important;
-}
-
-.post div.post-inner p, li {
-  font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 1.7rem;
-}
-
-div.post-inner div {
-  margin: 0px auto;
-  max-width: 1000px;
-}
-
-div.post-inner p {
-  font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
-}
-
-div.class-content {
-  margin: 0px auto;
-}
-
-.entry-content > :not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-  max-width: 1000px;
-}
-
-.color-accent, .color-accent-hover:hover, .color-accent-hover:focus, :root .has-accent-color, .has-drop-cap:not(:focus)::first-letter, .wp-block-button.is-style-outline, a {
-  color: #347e84;
-}
-
 .section-middle {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -270,20 +235,6 @@ div.class-content {
   background: #e0e0e0;
 }
 
-#site-footer {
-  background: #006387;
-}
-
-.footer-nav-widgets-wrapper {
-  margin: 0;
-  background: #006387;
-}
-
-.header-footer-group {
-  margin: 0;
-  background: #006387;
-}
-
 .frontpage-main-boxes, .frontpage-minor-boxes {
   margin: 0;
   padding: 0;
@@ -296,6 +247,10 @@ div.class-content {
 .frontpage-main-boxes h1, .frontpage-main-boxes h2, .frontpage-main-boxes h3, .frontpage-main-boxes h4, .frontpage-main-boxes h5, .frontpage-main-boxes h6, .frontpage-main-boxes p, .frontpage-minor-boxes h1, .frontpage-minor-boxes h2, .frontpage-minor-boxes h3, .frontpage-minor-boxes h4, .frontpage-minor-boxes h5, .frontpage-minor-boxes h6, .frontpage-minor-boxes p {
   margin: 0;
   padding: 0;
+}
+
+.frontpage-main-boxes h1::first-letter, .frontpage-main-boxes h2::first-letter, .frontpage-main-boxes h3::first-letter, .frontpage-main-boxes h4::first-letter, .frontpage-main-boxes h5::first-letter, .frontpage-main-boxes h6::first-letter, .frontpage-main-boxes p::first-letter, .frontpage-minor-boxes h1::first-letter, .frontpage-minor-boxes h2::first-letter, .frontpage-minor-boxes h3::first-letter, .frontpage-minor-boxes h4::first-letter, .frontpage-minor-boxes h5::first-letter, .frontpage-minor-boxes h6::first-letter, .frontpage-minor-boxes p::first-letter {
+  text-transform: uppercase;
 }
 
 .frontpage-main-boxes img, .frontpage-minor-boxes img {
@@ -371,6 +326,10 @@ div.class-content {
 
 .frontpage-minor-thread {
   width: calc(100% / 3);
+}
+
+#site-footer {
+  background: #006387;
 }
 
 /*Gjelder kun for mobile enheter (600 px og under)*/

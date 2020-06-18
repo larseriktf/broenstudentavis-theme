@@ -29,7 +29,7 @@ function custom_categories($categories) {
 // query
 $mainPosts = new WP_Query(array(
     'posts_per_page' => -1,
-    'cat' => '41, 44, 46', // leserinnlegg, nyheter, meninger
+    'cat' => '41, 44', // leserinnlegg, nyheter
     'post_type' => 'post',
     'orderby' => 'date',
     'order' => 'DESC',
@@ -38,7 +38,7 @@ $mainPosts = new WP_Query(array(
 
 $sidePosts = new WP_Query(array(
     'posts_per_page' => -1,
-    'cat' => '1, 45, 42', // uncategorized, spisekammeret, kultur
+    'cat' => '1, 45, 42, 46', // uncategorized, spisekammeret, kultur, meninger
     'post_type' => 'post',
     'orderby' => 'date',
     'order' => 'DESC',
