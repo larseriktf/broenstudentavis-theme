@@ -177,6 +177,7 @@ header#site-header div.header-content nav.primary-menu-wrapper ul#menu-primary {
 
 header#site-header div.header-content nav.primary-menu-wrapper ul#menu-primary li.menu-item {
   display: inline-block;
+  height: 2em;
 }
 
 header#site-header div.header-content nav.primary-menu-wrapper ul#menu-primary li.menu-item > a {
@@ -187,14 +188,14 @@ header#site-header div.header-content nav.primary-menu-wrapper ul#menu-primary l
   letter-spacing: 2px;
   background: -webkit-gradient(linear, left top, left bottom, from(white), to(white)) no-repeat bottom;
   background: linear-gradient(to bottom, white, white) no-repeat bottom;
-  background-size: 0% 6px;
+  background-size: 0% 2px;
   height: 4em;
   -webkit-transition: background .1s;
   transition: background .1s;
 }
 
 header#site-header div.header-content nav.primary-menu-wrapper ul#menu-primary li.menu-item > a:hover {
-  background-size: 100% 6px;
+  background-size: 100% 2px;
 }
 
 /*Gjør sidetittel og header usynlig på en hackete måte*/

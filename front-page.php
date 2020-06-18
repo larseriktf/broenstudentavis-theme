@@ -114,10 +114,12 @@ function custom_categories($categories) {
                 endif; ?>
             </div>
         </div>
-        <?php 
+        <?php
+        
+        
         // don't display the button if there are not enough posts
         if (  $homepagePosts->max_num_pages > 1 )
-            echo '<div class="btn btn-loadmore">More posts</div>'; // you can use <a> as well
+            echo '<div class="misha_loadmore">More posts</div>'; // you can use <a> as well
         ?>
     </section>
 

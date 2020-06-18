@@ -144,19 +144,19 @@ header#site-header {
                     display: inline-block;
                     height: 2em;
         
-                    > a {
+                    > a { // styling and underline animation
                         color: $background-white;
                         text-decoration: none;
                         font-size: 1.8rem;
                         text-transform: uppercase;
                         letter-spacing: 2px;
                         background: linear-gradient(to bottom, white, white) no-repeat bottom;
-                        background-size: 0% 6px;
+                        background-size: 0% 2px;
                         height: 4em;
                         transition: background .1s;
     
                         &:hover {
-                            background-size: 100% 6px;
+                            background-size: 100% 2px;
                         }
                     }
                 }
