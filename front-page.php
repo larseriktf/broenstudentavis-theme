@@ -26,6 +26,24 @@ function custom_categories($categories) {
     <?php endforeach;
 }
 
+// query
+$mainPosts = new WP_Query(array(
+    'posts_per_page' => -1,
+    'cat' => '41, 44, 46', // leserinnlegg, nyheter, meninger
+    'post_type' => 'post',
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'paged' => $paged
+));
+
+$sidePosts = new WP_Query(array(
+    'posts_per_page' => -1,
+    'cat' => '1, 45, 42', // uncategorized, spisekammeret, kultur
+    'post_type' => 'post',
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'paged' => $paged
+));
 
 ?>
 
@@ -35,92 +53,59 @@ function custom_categories($categories) {
         <div class="flex-row">
             <div class="frontpage-main-thread">
                 <?php // the first loop
-                $homepagePosts = new WP_Query(array(
-                    'posts_per_page' => 10,
-                    'post_type' => 'post',
-                    'orderby' => 'date',
-                    'order' => 'DESC',
-                    'paged' => $paged
-                ));
 
-                if ( $homepagePosts->have_posts() ) : 
-                    while ( $homepagePosts->have_posts() ) :
-                        
-                        $homepagePosts->the_post();
-                    
-                        // setup variables
-                        $post_categories = wp_get_post_categories(get_the_ID()); // array of categories for current post
-                        $check = array();
-                        $allowed = array('41', '44', '46', '42'); // allowed categories
+                    if ($mainPosts->have_posts()) :
+                        while ($mainPosts->have_posts()) :
+                            
+                            $mainPosts->the_post();
+                            $post_categories = wp_get_post_categories(get_the_ID()); // array of categories for current post
+                            ?>
 
-                        foreach ($post_categories AS $cat_id) { array_push($check, $cat_id); }
+                            <!-- html boxes -->
+                            <a href="<?php echo the_permalink() ?>">
+                                <div class="frontpage-main-boxes">
+                                    <!-- category boxes -->
+                                    <div class="category-boxes"><?php custom_categories($post_categories); ?></div>
+                                    <div class="box-image"><?php // display image if exists, or replace
+                                    if (has_post_thumbnail()) {
+                                        the_post_thumbnail('medium_large');
+                                    } else {
+                                        echo wp_get_attachment_image(162, 'medium_large');
+                                    } ?></div>
+                                    <h2><?php echo the_title(); ?></h2>
+                                </div>
+                            </a>
 
-                        $contains = count(array_intersect($check, $allowed)) == count($check); // all values exists within 'allowed' array
-                        if ($contains) : ?>
-
-                        <!-- html boxes -->
-                        <a href="<?php echo the_permalink() ?>">
-                            <div class="frontpage-main-boxes">
-                                <!-- category boxes -->
-                                <div class="category-boxes"><?php custom_categories($post_categories); ?></div>
-                                <div class="box-image"><?php // display image if exists, or replace
-                                if (has_post_thumbnail()) {
-                                    the_post_thumbnail('medium_large');
-                                } else {
-                                    echo wp_get_attachment_image(162, 'medium_large');
-                                } ?></div>
-                                <h2><?php echo the_title(); ?></h2>
-                            </div>
-                        </a>
-
-                        <?php endif;
-                    endwhile; 
-                endif; ?>
+                <?php endwhile; endif; ?>
             </div>
             <div class="frontpage-minor-thread">
                 <?php // the second loop
-                if ( $homepagePosts->have_posts() ) : 
-                    while ( $homepagePosts->have_posts() ) :
 
-                        $homepagePosts->the_post();
+                    if ($sidePosts->have_posts()) :
+                        while ($sidePosts->have_posts()) :
+                            
+                            $sidePosts->the_post();
+                            $post_categories = wp_get_post_categories(get_the_ID()); // array of categories for current post
+                            ?>
 
-                        // setup variables
-                        $post_categories = wp_get_post_categories(get_the_ID()); // array of categories for current post
-                        $check = array();
-                        $allowed = array('1', '45'); // allowed categories
+                            <!-- html boxes -->
+                            <a href="<?php echo the_permalink() ?>">
+                                <div class="frontpage-minor-boxes">
+                                    <!-- category boxes -->
+                                    <div class="category-boxes"><?php custom_categories($post_categories); ?></div>
+                                    <div class="box-image"><?php // display image if exists, or replace
+                                    if (has_post_thumbnail()) {
+                                        the_post_thumbnail('medium');
+                                    } else {
+                                        echo wp_get_attachment_image(162, 'medium');
+                                    } ?></div>
+                                    <h2><?php echo the_title(); ?></h2>
+                                </div>
+                            </a>
 
-                        foreach ($post_categories AS $cat_id) { array_push($check, $cat_id); }
-
-                        $contains = count(array_intersect($check, $allowed)) == count($check); // all values exists within 'allowed' array
-                        if ($contains) : ?>
-
-                        <!-- html boxes -->
-                        <a href="<?php echo the_permalink() ?>">
-                            <div class="frontpage-minor-boxes">
-                                <!-- category boxes -->
-                                <div class="category-boxes"><?php custom_categories($post_categories); ?></div>
-                                <div class="box-image"><?php // display image if exists, or replace
-                                if (has_post_thumbnail()) {
-                                    the_post_thumbnail('medium');
-                                } else {
-                                    echo wp_get_attachment_image(162, 'medium');
-                                } ?></div>
-                                <h2><?php echo the_title(); ?></h2>
-                            </div>
-                        </a>
-
-                        <?php endif;
-                    endwhile; 
-                endif; ?>
+                    <?php endwhile; endif; ?>
             </div>
         </div>
-        <?php
-        
-        
-        // don't display the button if there are not enough posts
-        if (  $homepagePosts->max_num_pages > 1 )
-            echo '<div class="misha_loadmore">More posts</div>'; // you can use <a> as well
-        ?>
     </section>
 
 </main><!-- #site-content -->
