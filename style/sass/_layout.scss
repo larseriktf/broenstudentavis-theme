@@ -2,6 +2,10 @@
 
 // This contains everything layout related, such as containers, grids etc.
 
+body {
+    padding: 0;
+}
+
 /*Gjelder kun for mobile enheter (600 px og under)*/
 @media only screen and (max-width: 600px) {
 

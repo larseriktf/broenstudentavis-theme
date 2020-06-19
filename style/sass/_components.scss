@@ -258,6 +258,37 @@ header#site-header {
 
 // footer
 
-#site-footer {
+footer#site-footer.header-footer-group {
     background: $broen-base-blue;
+    position: relative;
+    padding: 0;
+
+    .footer-content {
+        width: 100%;
+        display: flex;
+        
+        > * {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 1em;
+
+            h2 {
+                margin: 0 0 .5em 0;
+            }
+        }
+    }
+
+    div.footer-copyright {
+        padding: 1em;
+        width: 100%;
+        background: $broen-blue-dark;
+        
+        div.footer-credits {
+            float: left;
+            p.footer-copyright {
+                
+            }
+        }
+        a.to-the-top { float: right; }
+    }
 }

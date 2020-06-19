@@ -328,8 +328,46 @@ header#site-header div.header-content nav.primary-menu-wrapper ul#menu-primary l
   width: calc(100% / 3);
 }
 
-#site-footer {
+footer#site-footer.header-footer-group {
   background: #006387;
+  position: relative;
+  padding: 0;
+}
+
+footer#site-footer.header-footer-group .footer-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer#site-footer.header-footer-group .footer-content > * {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1em;
+}
+
+footer#site-footer.header-footer-group .footer-content > * h2 {
+  margin: 0 0 .5em 0;
+}
+
+footer#site-footer.header-footer-group div.footer-copyright {
+  padding: 1em;
+  width: 100%;
+  background: #03475f;
+}
+
+footer#site-footer.header-footer-group div.footer-copyright div.footer-credits {
+  float: left;
+}
+
+footer#site-footer.header-footer-group div.footer-copyright a.to-the-top {
+  float: right;
+}
+
+body {
+  padding: 0;
 }
 
 /*Gjelder kun for mobile enheter (600 px og under)*/
