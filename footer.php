@@ -30,7 +30,7 @@
 							<?php _e( '', 'twentytwenty' ); ?>
 						</a>
 					</p><!-- .powered-by-wordpress -->
-				</div><!-- .footer-credits -->
+				</div><!-- .footer-credits --><!-- -->
                    
                 <a class="to-the-top" href="#site-header">
 					<span class="to-the-top-long">
