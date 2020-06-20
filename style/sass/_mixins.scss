@@ -41,3 +41,10 @@
 @mixin text-stroke($size: 2, $color: #fff, $correction: 0) {
 	text-shadow: text-stroke($size, $color, $correction);
 }
+
+// emphasize text, like menu links or certain headers
+@mixin text-emphasize() {
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}

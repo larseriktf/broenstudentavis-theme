@@ -122,7 +122,7 @@ header#site-header {
             display: grid;
             place-items: center;
             transform: translateY(-4em);
-            background-image: url("images/splatter.png");
+            background-image: url("images/wavy_circle.svg");
             background-size: cover;
 
             img.custom-logo {
@@ -148,12 +148,11 @@ header#site-header {
                         color: $background-white;
                         text-decoration: none;
                         font-size: 1.8rem;
-                        text-transform: uppercase;
-                        letter-spacing: 2px;
                         background: linear-gradient(to bottom, white, white) no-repeat bottom;
                         background-size: 0% 2px;
                         height: 4em;
                         transition: background .1s;
+                        @include text-emphasize();
     
                         &:hover {
                             background-size: 100% 2px;
@@ -205,7 +204,6 @@ header#site-header {
 
 	h1, h2, h3, h4, h5, h6, p {
         margin: 0; padding: 0;
-        
         &::first-letter { text-transform: uppercase; }
 	}
 	img {
@@ -264,31 +262,43 @@ footer#site-footer.header-footer-group {
     padding: 0;
 
     .footer-content {
-        width: 100%;
+        padding: 4em 8em;
         display: flex;
-        
+        @media only screen and (max-width: $content-size) { flex-direction: column; }
+
         > * {
+            min-width: 300px;
             width: 100%;
             box-sizing: border-box;
-            padding: 1em;
 
-            h2 {
-                margin: 0 0 .5em 0;
+            h1, h2, h3, h4, h5, h6 {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                @include text-emphasize;
+                margin: .5em 0;
+            }
+            p {
+                margin-right: 2em;
+                opacity: .8;
             }
         }
     }
 
     div.footer-copyright {
-        padding: 1em;
-        width: 100%;
+        padding: 2em 8em;
+        display: flex;
         background: $broen-blue-dark;
+        justify-content: space-between;
         
-        div.footer-credits {
-            float: left;
-            p.footer-copyright {
-                
-            }
+        @media only screen and (max-width: $content-size) {
+            flex-direction: column;
+            div.footer-credits { display: flex; justify-content: center;}
+            * { text-align: center; }
         }
-        a.to-the-top { float: right; }
+
+        p, a {
+            @include text-emphasize;
+        }
     }
 }
