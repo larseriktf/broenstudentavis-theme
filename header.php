@@ -31,13 +31,18 @@
                     <?php echo the_custom_logo(); ?>
                 </div>
 
-                <nav class="primary-menu-wrapper" aria-label="<?php esc_attr_e( 'Horizontal', 'twentytwenty' ); ?>" role="navigation">
-                    <?php
-                        wp_nav_menu(array(
-                            'container' => ''
-                        )); 
-                    ?>
-                </nav><!-- .primary-menu-wrapper -->
+                <div class="header-menu-wrapper">
+                    <nav class="primary-menu-wrapper" aria-label="<?php esc_attr_e( 'Horizontal', 'twentytwenty' ); ?>" role="navigation">
+                        <?php
+                            wp_nav_menu(array(
+                                'container' => ''
+                            )); 
+                        ?>
+                    </nav><!-- .primary-menu-wrapper -->
+                </div><!-- header-menu-wrapper -->   
+                
+                <div class="header-tips-oss">
+                </div>
             </div> 
         </header><!-- #site-header -->
 

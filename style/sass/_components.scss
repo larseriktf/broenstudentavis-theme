@@ -106,14 +106,15 @@ div.textwidget {
 
 header#site-header {
     box-sizing: border-box;
-    width: 100%; height: auto;
-    background-color: $broen-base-blue;
-    position: absolute; // this, fixed or sticky or else breaks
+    width: 100%; height: 10em;
+    background: red;
+    display: block;
 
     div.header-content {
         height: 4em;
-        width: $content-size;
+        width: 100%;
         margin: auto;
+        background-color: $broen-base-blue;
 
         div.site-logo {
             position: absolute;
@@ -121,7 +122,7 @@ header#site-header {
             height: 250px;
             display: grid;
             place-items: center;
-            transform: translateY(-4em);
+            transform: translateY(-4em) translateX(12em);
             background-image: url("images/wavy_circle.svg");
             background-size: cover;
 
@@ -129,38 +130,47 @@ header#site-header {
                 position: relative;
             }
         }
-    
-        nav.primary-menu-wrapper {
-            padding-top: 1.5em;
-            width: auto;
-            float: right;
-            justify-content: space-around;
-            text-align: right;
+
+        div.header-menu-wrapper {
+            width: $content-size;
+            margin: auto;
+            display: flex;
+
+            nav.primary-menu-wrapper {
+                width: 100%;
+                padding-top: 1.5em;;
+                text-align: right;
+                
+                ul#menu-primary {
+                    margin: 0;
+                
+                    li.menu-item {
+                        display: inline-block;
+                        height: 2em;
+                
+                        > a { // styling and underline animation
+                            color: $background-white;
+                            text-decoration: none;
+                            font-size: 1.8rem;
+                            background: linear-gradient(to bottom, white, white) no-repeat bottom;
+                            background-size: 0% 2px;
+                            height: 4em;
+                            transition: background .1s;
+                            @include text-emphasize();
         
-            ul#menu-primary {
-                margin: 0;
-        
-                li.menu-item {
-                    display: inline-block;
-                    height: 2em;
-        
-                    > a { // styling and underline animation
-                        color: $background-white;
-                        text-decoration: none;
-                        font-size: 1.8rem;
-                        background: linear-gradient(to bottom, white, white) no-repeat bottom;
-                        background-size: 0% 2px;
-                        height: 4em;
-                        transition: background .1s;
-                        @include text-emphasize();
-    
-                        &:hover {
-                            background-size: 100% 2px;
+                            &:hover {
+                                background-size: 100% 2px;
+                            }
                         }
                     }
                 }
             }
         }
+    }
+    div.header-tips-oss {
+        background: blue;
+        margin-top: 2em;
+        width: 8em; height: 4em,
     }
 }
 
