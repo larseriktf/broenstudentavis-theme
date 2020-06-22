@@ -26,21 +26,21 @@
 		<?php wp_body_open(); ?>
 
 		<header id="site-header" class="header-footer-group" role="banner">
-            <div class="site-logo">
-                <?php echo the_custom_logo(); ?>
-            </div>
+            <div class="header-content">
+                <div class="site-logo">
+                    <?php echo the_custom_logo(); ?>
+                </div>
 
-            <nav class="primary-menu-wrapper" aria-label="<?php esc_attr_e( 'Horizontal', 'twentytwenty' ); ?>" role="navigation">
-                <?php
-                    wp_nav_menu(array(
-                        'container' => ''
-                    )); 
-                ?>
-            </nav><!-- .primary-menu-wrapper -->
+                <nav class="primary-menu-wrapper" aria-label="<?php esc_attr_e( 'Horizontal', 'twentytwenty' ); ?>" role="navigation">
+                    <?php
+                        wp_nav_menu(array(
+                            'container' => ''
+                        )); 
+                    ?>
+                </nav><!-- .primary-menu-wrapper -->
 
-            <div class="header-addons">
                 <div class="header-tips-oss">
-
+                    <p>Tips oss!</p>
                 </div>
             </div> 
         </header><!-- #site-header -->

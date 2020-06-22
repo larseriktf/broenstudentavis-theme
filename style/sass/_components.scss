@@ -103,71 +103,91 @@ div.textwidget {
 }
 
 // header
+$h_column_size: 75px;
 
 header#site-header {
-    background-color: transparent;
-    box-sizing: border-box;
-    border: 1px solid $broen-base-blue;
+    background-color: $background-grey;
     width: 100%; height: 250px;
-    
-    div.site-logo {
-        position: absolute;
-        width: 250px; height: 250px;
+    display: flex;
+    flex-direction: column;
+
+    div.header-content {
+        width: $content-size; height: 100%;
+        margin: auto;
         display: grid;
-        place-items: center;
-        background-image: url("images/wavy_circle.svg");
-        background-size: cover;
+        grid-template-columns: 250px 1fr 1fr 1fr;
+        grid-template-rows: $h_column_size $h_column_size;
+        grid-template-areas:
+            "header_logo                header_nav          header_nav      header_nav"
+            "header_logo                .                   .               header_tips_oss"
+        ;
+        grid-row-gap: 20px;
 
-        img.custom-logo {
-            position: relative;
+
+        div.site-logo {
+            position: absolute;
+            width: 250px; height: 250px;
+            display: grid;
+            place-items: center;
+            background-image: url("images/wavy_circle.svg");
+            background-size: cover;
+            grid-area: header_logo;
+            transform: translateY(-60px);
+    
+            img.custom-logo {
+                position: relative;
+            }
         }
-    }
+    
+        nav.primary-menu-wrapper {
+            width: 100%;
+            padding-top: 1.5em;;
+            text-align: right;
+            grid-area: header_nav;
 
-    nav.primary-menu-wrapper {
-        width: 100%;
-        padding-top: 1.5em;;
-        text-align: right;
-        background-color: $broen-base-blue;
-        
-        ul#menu-primary {
-            margin: 0;
-        
-            li.menu-item {
-                display: inline-block;
-                height: 2em;
-        
-                > a { // styling and underline animation
-                    color: $background-white;
-                    text-decoration: none;
-                    font-size: 1.8rem;
-                    background: linear-gradient(to bottom, white, white) no-repeat bottom;
-                    background-size: 0% 2px;
-                    height: 4em;
-                    transition: background .1s;
-                    @include text-emphasize();
-
-                    &:hover {
-                        background-size: 100% 2px;
+            &::before { // banner background
+                content: "";
+                position: absolute;
+                top: 0; left: 0;
+                height: $h_column_size;
+                width: 100%;
+                z-index: -100;
+                background-color: $broen-base-blue;
+            }
+            
+            ul#menu-primary {
+                margin: 0;
+            
+                li.menu-item {
+                    display: inline-block;
+                    height: 2em;
+            
+                    > a { // styling and underline animation
+                        color: $background-white;
+                        text-decoration: none;
+                        font-size: 1.8rem;
+                        background: linear-gradient(to bottom, white, white) no-repeat bottom;
+                        background-size: 0% 2px;
+                        height: 4em;
+                        transition: background .1s;
+                        @include text-emphasize();
+    
+                        &:hover {
+                            background-size: 100% 2px;
+                        }
                     }
                 }
             }
         }
-    }
-
-    div.header-addons {
-        width: $content-size; height: 100%;
-        margin: auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas:
-            "1 2 3 4"
-            "5 6 7 8"
-        ;
 
         div.header-tips-oss {
-            background: blue;
-            width: 1em; height: 1em;
+            background-color: $broen-base-blue;
+            width: 100%; height: 100%;
+            grid-area: header_tips_oss;
+
+            p {
+                margin: 0;
+            }
         }
     }
 }
