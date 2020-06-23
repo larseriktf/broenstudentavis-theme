@@ -10,7 +10,12 @@ function my_theme_enqueue_styles() {
 
 
 function my_theme_enqueue_scripts() {
+    // jquery
     wp_enqueue_script( 'jquery' );
-    wp_enqueue_script( 'menu-scroll', get_stylesheet_directory_uri() . '/js/menu-scroll.js', false, '1.0.0', true );
+    // anime.js
+    wp_register_script( 'anime', 'https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js', null, false, true );
+    wp_enqueue_script( 'anime' );
+    wp_register_script( 'logo-animation', get_stylesheet_directory_uri() . '/js/logo-animation.js', null, false, true );
+    wp_enqueue_script( 'logo-animation' );
 }
-//add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_scripts' );
+add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_scripts' );
