@@ -46,9 +46,15 @@
                     ?>
                 </nav><!-- .primary-menu-wrapper -->
 
-                <div class="header-tips-oss">
-                    <p>Tips oss!</p>
-                </div>
+                <a class="header-tips-oss">
+                    <div class="tips-oss-text">
+                        <p>Tips Oss!</p>
+                    </div>
+                    <div class="tips-oss-icon">
+                        
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons_mail.svg" alt="mail" />
+                    </div>
+                    </a>
             </div> 
         </header><!-- #site-header -->
 
