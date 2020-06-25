@@ -17,6 +17,14 @@ body {
   background: black;
 }
 
+.abs-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 /*knapper*/
 button:not(.toggle),
 .button,
@@ -164,7 +172,6 @@ header#site-header div.header-content div.site-logo {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  background-image: url("images/wavy_circle.svg");
   background-size: cover;
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
@@ -174,7 +181,15 @@ header#site-header div.header-content div.site-logo {
           transform: translateY(-60px);
 }
 
-header#site-header div.header-content div.site-logo img.custom-logo {
+header#site-header div.header-content div.site-logo a.custom-logo-link {
+  display: block;
+  position: relative;
+  z-index: 1;
+  padding: 4em;
+  margin: -2em;
+}
+
+header#site-header div.header-content div.site-logo a.custom-logo-link img.custom-logo {
   position: relative;
 }
 

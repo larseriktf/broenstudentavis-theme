@@ -2,6 +2,13 @@
 
 // Anything reusable (buttons, navbars, etc.)
 
+.abs-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /*knapper*/
 button:not(.toggle),
 .button,
@@ -123,20 +130,26 @@ header#site-header {
         ;
         grid-row-gap: 20px;
 
-
         div.site-logo {
             position: absolute;
             width: 250px; height: 250px;
             display: grid;
             place-items: center;
-            background-image: url("images/wavy_circle.svg");
             background-size: cover;
             grid-area: header_logo;
             transform: translateY(-60px);
     
-            img.custom-logo {
-                position: relative;
-            }
+            a.custom-logo-link {
+                display: block;     
+                position: relative;    
+                z-index: 1;     
+                padding: 4em;     
+                margin: -2em; 
+
+                img.custom-logo {
+                    position: relative;
+                }
+            } 
         }
     
         nav.primary-menu-wrapper {
