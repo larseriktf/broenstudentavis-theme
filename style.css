@@ -25,6 +25,11 @@ body {
           transform: translate(-50%, -50%);
 }
 
+.mail-animation {
+  -webkit-animation: mailshift .5s ease-in-out forwards;
+          animation: mailshift .5s ease-in-out forwards;
+}
+
 /*knapper*/
 button:not(.toggle),
 .button,
@@ -277,10 +282,41 @@ header#site-header div.header-content a.header-tips-oss div.tips-oss-text p {
 header#site-header div.header-content a.header-tips-oss div.tips-oss-icon {
   width: 40%;
   background-color: #006387;
+  overflow-x: hidden;
 }
 
 header#site-header div.header-content a.header-tips-oss div.tips-oss-icon img {
   width: 50%;
+}
+
+@-webkit-keyframes mailshift {
+  0%, 100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  50% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  50.1% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+}
+
+@keyframes mailshift {
+  0%, 100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  50% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  50.1% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
 }
 
 header#site-header div.header-content a.header-tips-oss:hover {

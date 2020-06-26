@@ -9,6 +9,9 @@
     transform: translate(-50%, -50%);
 }
 
+// for tips-oss animasjonen
+.mail-animation { animation: mailshift .5s ease-in-out forwards; }
+
 /*knapper*/
 button:not(.toggle),
 .button,
@@ -220,19 +223,28 @@ header#site-header {
             div.tips-oss-icon {
                 width: 40%;
                 background-color: $broen-base-blue;
-                // overflow-x: hidden;
+                overflow-x: hidden;
                 
 
                 img { width: 50%; }
+
+                @keyframes mailshift {
+                    0%, 100% {
+                        transform: translateX(0px);
+                    }
+                    50% {
+                        transform: translateX(100px);
+                    }
+                    50.1% {
+                        transform: translateX(-100px);
+                    }
+                }
             }
 
-            &:hover {
-                cursor: pointer;
-            }            
+            &:hover { cursor: pointer; }            
         }
     }
 }
-
 
 .section-middle {
 	box-sizing: border-box;

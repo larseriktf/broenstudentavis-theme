@@ -7,44 +7,44 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="31.985477mm"
-   height="22.516645mm"
-   viewBox="0 0 31.985477 22.516645"
-   version="1.1"
-   id="svg8"
+   sodipodi:docname="icons_mail.svg"
    inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
-   sodipodi:docname="icons_mail.svg">
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 31.985477 22.516645"
+   height="22.516645mm"
+   width="31.985477mm">
   <defs
      id="defs2" />
   <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="7.2407735"
-     inkscape:cx="81.295191"
-     inkscape:cy="32.178983"
-     inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
-     inkscape:document-rotation="0"
-     showgrid="true"
-     showguides="false"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0"
-     inkscape:window-width="1852"
-     inkscape:window-height="1057"
-     inkscape:window-x="60"
+     inkscape:window-maximized="1"
      inkscape:window-y="-8"
-     inkscape:window-maximized="1">
+     inkscape:window-x="60"
+     inkscape:window-height="1057"
+     inkscape:window-width="1852"
+     fit-margin-bottom="0"
+     fit-margin-right="0"
+     fit-margin-left="0"
+     fit-margin-top="0"
+     showguides="false"
+     showgrid="true"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="32.178983"
+     inkscape:cx="81.295191"
+     inkscape:zoom="7.2407735"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base">
     <inkscape:grid
-       type="xygrid"
-       id="grid833"
+       originy="-69.189591"
        originx="-133.90832"
-       originy="-69.189591" />
+       id="grid833"
+       type="xygrid" />
   </sodipodi:namedview>
   <metadata
      id="metadata5">
@@ -59,14 +59,14 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
+     transform="translate(-60.074968,-29.752094)"
      id="layer1"
-     transform="translate(-60.074968,-29.752094)">
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
     <path
-       style="fill:none;stroke:#f9f9f9;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;fill-opacity:1"
-       d="M 61.864418,31.541544 V 50.479289 H 90.270996 V 31.541544 L 76.055496,43.1547 61.864418,31.541544 h 28.406578"
+       sodipodi:nodetypes="ccccccc"
        id="path843"
-       sodipodi:nodetypes="ccccccc" />
+       d="M 61.864418,31.541544 V 50.479289 H 90.270996 V 31.541544 L 76.055496,43.1547 61.864418,31.541544 h 28.406578"
+       style="fill:none;stroke:#f9f9f9;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;fill-opacity:1" />
   </g>
 </svg>

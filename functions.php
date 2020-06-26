@@ -15,7 +15,9 @@ function my_theme_enqueue_scripts() {
     // anime.js
     wp_register_script( 'anime', 'https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js', null, false, true );
     wp_enqueue_script( 'anime' );
-    wp_register_script( 'logo-animation', get_stylesheet_directory_uri() . '/js/logo-animation.js', null, false, true );
-    wp_enqueue_script( 'logo-animation' );
+    // logo-animation
+    wp_enqueue_script( 'logo-animation', get_stylesheet_directory_uri() . '/js/logo-animation.js', null, false, true );
+    // mail-animation
+    wp_enqueue_script( 'mail-animation', get_stylesheet_directory_uri() . '/js/mail-animation.js', null, false, true );
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_scripts' );

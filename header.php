@@ -51,8 +51,7 @@
                         <p>Tips Oss!</p>
                     </div>
                     <div class="tips-oss-icon">
-                        
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons_mail.svg" alt="mail" />
+                        <img id="tips-oss-img" src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons_mail.svg" alt="mail" />
                     </div>
                     </a>
             </div> 
