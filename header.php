@@ -27,6 +27,7 @@
 
 		<header id="site-header" class="header-footer-group" role="banner">
             <div class="header-content">
+                    <h1 id="site-title"><?php the_title(); ?></h1>
                     <div class="site-logo">
                         <svg id="logo-graphic" class="abs-centered" height="250px" width="250px" viewBox = "0 0 250 250" preserveAspectRatio="none">
                             <path
@@ -36,7 +37,7 @@
                         </svg>
                         <?php echo the_custom_logo(); ?>
                     </div>
-                
+
 
                 <nav class="primary-menu-wrapper" aria-label="<?php esc_attr_e( 'Horizontal', 'twentytwenty' ); ?>" role="navigation">
                     <?php

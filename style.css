@@ -3,6 +3,35 @@
  Theme Name:   Twenty Twenty Child
  Template:     twentytwenty
 */
+/*
+    @todo: figure out what to do with this pretty handsome code
+    
+-- Just hiding the code because all visual sees are errors --
+
+@function text-stroke($size: 2, $color: #fff, $correction: 0) {
+	$radius: $size - $correction;
+	$stroke: ();
+
+	@for $i from -$size through $size {
+		@for $k from -$size through $size {
+
+			$x: $k;
+			$y: $i;
+
+			@if $k > 0 { $x: $k - 0.5; }
+            @elseif $k < 0 { $x: $k + 0.5; }
+
+			@if $i > 0 { $y: $i - 0.5; }
+            @elseif $i < 0 { $y: $i + 0.5; }
+
+			@if ($x*$x + $y*$y <= $radius*$radius) {
+				$stroke: append($stroke, $i*1px $k*1px 0 $color, comma);
+			}
+		}
+	}
+
+	@return $stroke;
+}*/
 /*Fjerner underline og endrer fargen på linker som er overskrifter*/
 h6 a, h5 a, h4 a, h3 a, h2 a, h1 a {
   text-decoration: none;
@@ -15,6 +44,10 @@ body {
   min-height: 100vh;
   padding-bottom: 113px;
   background: black;
+}
+
+#site-title {
+  display: none;
 }
 
 .abs-centered {
@@ -79,38 +112,6 @@ main#main h1 {
 
 main#main h2 {
   font-size: 3.7rem;
-}
-
-/*Gjør den stygge "om oss" teksten i bunnen usynlig på en hackete måte*/
-div#sidebar {
-  display: none;
-}
-
-#site-footer {
-  width: 100%;
-  position: absolute;
-  bottom: 0px;
-}
-
-/*Setter bakgrunnsfarger på overskrifter i kalender etter hvilken arrangementstype*/
-#sos h2 {
-  background-color: #38893d;
-}
-
-#fsp h2 {
-  background-color: #822e2e;
-}
-
-#for h2 {
-  background-color: #c97f3a;
-}
-
-#sih h2 {
-  background-color: #2e4782;
-}
-
-#andre h2 {
-  background-color: #5539b2;
 }
 
 /* titlebox */
@@ -293,15 +294,12 @@ header#site-header div.header-content a.header-tips-oss div.tips-oss-icon img {
   49% {
     -webkit-transform: translateX(100px);
             transform: translateX(100px);
-    /* force it's `z-index = 0` to this point */
     z-index: 0;
   }
   50% {
-    /* hide it while moving from right to left */
     z-index: -1;
   }
   51% {
-    /* Show it again when it's already at left side */
     -webkit-transform: translateX(-100px);
             transform: translateX(-100px);
     z-index: 0;
@@ -312,15 +310,12 @@ header#site-header div.header-content a.header-tips-oss div.tips-oss-icon img {
   49% {
     -webkit-transform: translateX(100px);
             transform: translateX(100px);
-    /* force it's `z-index = 0` to this point */
     z-index: 0;
   }
   50% {
-    /* hide it while moving from right to left */
     z-index: -1;
   }
   51% {
-    /* Show it again when it's already at left side */
     -webkit-transform: translateX(-100px);
             transform: translateX(-100px);
     z-index: 0;

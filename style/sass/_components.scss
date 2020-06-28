@@ -2,6 +2,8 @@
 
 // Anything reusable (buttons, navbars, etc.)
 
+#site-title { display: none; }
+
 .abs-centered {
     position: absolute;
     top: 50%;
@@ -38,43 +40,11 @@ input[type="submit"],
 
 main#main {
 	font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
-	text-align:center;
+	text-align: center;
 	font-size: 1.9rem;
 
 	h1 { font-size: 5rem; }
 	h2 { font-size: 3.7rem }
-}
-
-/*Gjør den stygge "om oss" teksten i bunnen usynlig på en hackete måte*/
-div#sidebar {
-	display: none;
-}
-
-#site-footer {
-	width: 100%;
-  position: absolute;
-  bottom: 0px;
-}
-
-/*Setter bakgrunnsfarger på overskrifter i kalender etter hvilken arrangementstype*/
-#sos h2 {
-	background-color: #38893d;
-}
-
-#fsp h2 {
-background-color: #822e2e;
-}
-
-#for h2 {
-background-color: #c97f3a;
-}
-
-#sih h2 {
-background-color: #2e4782;
-}
-
-#andre h2 {
-background-color: #5539b2;
 }
 
 /* titlebox */
@@ -113,6 +83,7 @@ div.textwidget {
 }
 
 // header
+
 $h_column_size: 75px;
 
 header#site-header {
@@ -196,6 +167,9 @@ header#site-header {
             }
         }
 
+        
+        // tips oss
+
         a.header-tips-oss {
             text-decoration: none;
             border-radius: $border-base;
@@ -230,19 +204,15 @@ header#site-header {
 
                 @keyframes mailshift {
                     // Taken from stack overflow -> Leo
-                    49% {
+                    49% { // force it's `z-index = 0` to this point
                         transform: translateX(100px);
-                        /* force it's `z-index = 0` to this point */
+                        
                         z-index: 0;
                     }
-                    
-                    50% {
-                        /* hide it while moving from right to left */
+                    50% { // hide it while moving from right to left
                         z-index: -1;
                     }
-                    
-                    51% {
-                        /* Show it again when it's already at left side */
+                    51% { // Show it again when it's already at left side
                         transform: translateX(-100px);
                         z-index: 0;
                     }
@@ -253,6 +223,9 @@ header#site-header {
         }
     }
 }
+
+
+// main content
 
 .section-middle {
 	box-sizing: border-box;
