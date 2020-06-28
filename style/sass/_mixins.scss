@@ -48,3 +48,12 @@
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+
+// breakpoints
+@mixin for-screen-max($size) {
+    @media (max-width: $size) { @content; }
+}
+
+@mixin for-screen-min($size) {
+    @media (min-width: $size) { @content; }
+}

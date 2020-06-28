@@ -229,14 +229,22 @@ header#site-header {
                 img { width: 50%; }
 
                 @keyframes mailshift {
-                    0%, 100% {
-                        transform: translateX(0px);
-                    }
-                    50% {
+                    // Taken from stack overflow -> Leo
+                    49% {
                         transform: translateX(100px);
+                        /* force it's `z-index = 0` to this point */
+                        z-index: 0;
                     }
-                    50.1% {
+                    
+                    50% {
+                        /* hide it while moving from right to left */
+                        z-index: -1;
+                    }
+                    
+                    51% {
+                        /* Show it again when it's already at left side */
                         transform: translateX(-100px);
+                        z-index: 0;
                     }
                 }
             }
@@ -345,7 +353,8 @@ footer#site-footer.header-footer-group {
     .footer-content {
         padding: 4em 8em;
         display: flex;
-        @media only screen and (max-width: $content-size) { flex-direction: column; }
+        @include for-screen-max($bp-laptop) {flex-direction: column;}
+
 
         > * {
             min-width: 300px;
@@ -372,7 +381,7 @@ footer#site-footer.header-footer-group {
         background: $broen-blue-dark;
         justify-content: space-between;
         
-        @media only screen and (max-width: $content-size) {
+        @include for-screen-max($bp-laptop) {
             flex-direction: column;
             div.footer-credits { display: flex; justify-content: center;}
             * { text-align: center; }

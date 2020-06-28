@@ -290,32 +290,40 @@ header#site-header div.header-content a.header-tips-oss div.tips-oss-icon img {
 }
 
 @-webkit-keyframes mailshift {
-  0%, 100% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-  50% {
+  49% {
     -webkit-transform: translateX(100px);
             transform: translateX(100px);
+    /* force it's `z-index = 0` to this point */
+    z-index: 0;
   }
-  50.1% {
+  50% {
+    /* hide it while moving from right to left */
+    z-index: -1;
+  }
+  51% {
+    /* Show it again when it's already at left side */
     -webkit-transform: translateX(-100px);
             transform: translateX(-100px);
+    z-index: 0;
   }
 }
 
 @keyframes mailshift {
-  0%, 100% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-  50% {
+  49% {
     -webkit-transform: translateX(100px);
             transform: translateX(100px);
+    /* force it's `z-index = 0` to this point */
+    z-index: 0;
   }
-  50.1% {
+  50% {
+    /* hide it while moving from right to left */
+    z-index: -1;
+  }
+  51% {
+    /* Show it again when it's already at left side */
     -webkit-transform: translateX(-100px);
             transform: translateX(-100px);
+    z-index: 0;
   }
 }
 
@@ -466,7 +474,7 @@ footer#site-footer.header-footer-group .footer-content {
   display: flex;
 }
 
-@media only screen and (max-width: 1000px) {
+@media (max-width: 1200px) {
   footer#site-footer.header-footer-group .footer-content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -508,7 +516,7 @@ footer#site-footer.header-footer-group div.footer-copyright {
           justify-content: space-between;
 }
 
-@media only screen and (max-width: 1000px) {
+@media (max-width: 1200px) {
   footer#site-footer.header-footer-group div.footer-copyright {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
