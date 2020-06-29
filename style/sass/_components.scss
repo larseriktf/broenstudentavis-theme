@@ -44,7 +44,9 @@ main#main {
 	font-size: 1.9rem;
 
 	h1 { font-size: 5rem; }
-	h2 { font-size: 3.7rem }
+    h2 { font-size: 3.7rem }
+
+    
 }
 
 /* titlebox */
@@ -82,15 +84,24 @@ div.textwidget {
     }
 }
 
+// body
+
+body.custom-background { background-color: $background-grey; }
+
 // header
 
 $h_column_size: 75px;
 
 header#site-header {
-    background-color: $background-grey;
+    background-color: transparent;
     width: 100%; height: 250px;
     display: flex;
     flex-direction: column;
+
+    @include for-screen-max($bp-tablet) {
+        height: 200px;
+        margin-bottom: $h_column_size;
+    }
 
     div.header-content {
         width: $content-size; height: 100%;
@@ -103,6 +114,18 @@ header#site-header {
             "header_logo                .                   .               header_tips_oss"
         ;
         grid-row-gap: 20px;
+
+        @include for-screen-max($bp-tablet) {
+            width: 100%;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas:
+                "header_logo        header_nav          header_nav          header_nav"
+                ".                  header_tips_oss     header_tips_oss     ."
+            ;
+            grid-row-gap: $h_column_size;
+            
+        }
 
         div.site-logo {
             position: absolute;
@@ -123,7 +146,26 @@ header#site-header {
                 img.custom-logo {
                     position: relative;
                 }
-            } 
+            }
+
+            @include for-screen-max($bp-tablet) {
+                transform: translateY(0px);
+                position: relative;
+                width: 100%; height: 100%;
+
+                a.custom-logo-link {
+                    padding: 0; margin: 0;
+                    $indent: 24px;
+                    width: $h_column_size - $indent;
+                    height: $h_column_size - $indent;
+
+                    img.custom-logo {
+                         height: 100%; width: 100%;
+                    }
+                }
+                #logo-graphic { display: none; }
+            }
+
         }
     
         nav.primary-menu-wrapper {
@@ -234,6 +276,10 @@ header#site-header {
 	margin:0 auto;
     padding: 8em 0em;
 
+    @include for-screen-max($bp-tablet) {
+        width: 100%;
+    }
+
     > .flex-row {
         > div { // space between threads
             margin: 1em;
@@ -253,9 +299,7 @@ header#site-header {
 }
 
 
-#site-content {
-	background: $background-grey;
-}
+#site-content { background: $background-grey; }
 
 .frontpage-main-boxes, .frontpage-minor-boxes {
 	margin: 0;
@@ -291,12 +335,12 @@ header#site-header {
 			color: $broen-base-white;
 		}
 
-		.post-category-1 { background: $broen-uncategorized; } // uncategorized
-		.post-category-41 { background: $broen-leserinnlegg; } // leserinnlegg
-		.post-category-46 { background: $broen-meninger; } // meninger
-		.post-category-44 { background: $broen-nyheter; } // nyheter
-		.post-category-42 { background: $broen-kultur; } // kultur
-		.post-category-45 { background: $broen-spisekammeret; } // spisekammeret
+		div.post-category-1 { background: $broen-uncategorized; } // uncategorized
+		div.post-category-41 { background: $broen-leserinnlegg; } // leserinnlegg
+		div.post-category-46 { background: $broen-meninger; } // meninger
+		div.post-category-44 { background: $broen-nyheter; } // nyheter
+		div.post-category-42 { background: $broen-kultur; } // kultur
+		div.post-category-45 { background: $broen-spisekammeret; } // spisekammeret
 	}
 }
 

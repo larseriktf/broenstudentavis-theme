@@ -144,8 +144,12 @@ div.textwidget p {
   cursor: pointer;
 }
 
-header#site-header {
+body.custom-background {
   background-color: #e0e0e0;
+}
+
+header#site-header {
+  background-color: transparent;
   width: 100%;
   height: 250px;
   display: -webkit-box;
@@ -155,6 +159,13 @@ header#site-header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (max-width: 900px) {
+  header#site-header {
+    height: 200px;
+    margin-bottom: 75px;
+  }
 }
 
 header#site-header div.header-content {
@@ -169,6 +180,18 @@ header#site-header div.header-content {
       grid-template-rows: 75px 75px;
       grid-template-areas: "header_logo                header_nav          header_nav      header_nav" "header_logo                .                   .               header_tips_oss";
   grid-row-gap: 20px;
+}
+
+@media (max-width: 900px) {
+  header#site-header div.header-content {
+    width: 100%;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "header_logo        header_nav          header_nav          header_nav" ".                  header_tips_oss     header_tips_oss     .";
+    grid-row-gap: 75px;
+  }
 }
 
 header#site-header div.header-content div.site-logo {
@@ -197,6 +220,29 @@ header#site-header div.header-content div.site-logo a.custom-logo-link {
 
 header#site-header div.header-content div.site-logo a.custom-logo-link img.custom-logo {
   position: relative;
+}
+
+@media (max-width: 900px) {
+  header#site-header div.header-content div.site-logo {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  header#site-header div.header-content div.site-logo a.custom-logo-link {
+    padding: 0;
+    margin: 0;
+    width: 51px;
+    height: 51px;
+  }
+  header#site-header div.header-content div.site-logo a.custom-logo-link img.custom-logo {
+    height: 100%;
+    width: 100%;
+  }
+  header#site-header div.header-content div.site-logo #logo-graphic {
+    display: none;
+  }
 }
 
 header#site-header div.header-content nav.primary-menu-wrapper {
@@ -335,6 +381,12 @@ header#site-header div.header-content a.header-tips-oss:hover {
   padding: 8em 0em;
 }
 
+@media (max-width: 900px) {
+  .section-middle {
+    width: 100%;
+  }
+}
+
 .section-middle > .flex-row > div {
   margin: 1em;
 }
@@ -413,27 +465,27 @@ header#site-header div.header-content a.header-tips-oss:hover {
   color: #f0f0f0;
 }
 
-.frontpage-main-boxes .category-boxes .post-category-1, .frontpage-minor-boxes .category-boxes .post-category-1 {
+.frontpage-main-boxes .category-boxes div.post-category-1, .frontpage-minor-boxes .category-boxes div.post-category-1 {
   background: #d1d1d1;
 }
 
-.frontpage-main-boxes .category-boxes .post-category-41, .frontpage-minor-boxes .category-boxes .post-category-41 {
+.frontpage-main-boxes .category-boxes div.post-category-41, .frontpage-minor-boxes .category-boxes div.post-category-41 {
   background: #2bb169;
 }
 
-.frontpage-main-boxes .category-boxes .post-category-46, .frontpage-minor-boxes .category-boxes .post-category-46 {
+.frontpage-main-boxes .category-boxes div.post-category-46, .frontpage-minor-boxes .category-boxes div.post-category-46 {
   background: #f08b08;
 }
 
-.frontpage-main-boxes .category-boxes .post-category-44, .frontpage-minor-boxes .category-boxes .post-category-44 {
+.frontpage-main-boxes .category-boxes div.post-category-44, .frontpage-minor-boxes .category-boxes div.post-category-44 {
   background: #18b1cf;
 }
 
-.frontpage-main-boxes .category-boxes .post-category-42, .frontpage-minor-boxes .category-boxes .post-category-42 {
+.frontpage-main-boxes .category-boxes div.post-category-42, .frontpage-minor-boxes .category-boxes div.post-category-42 {
   background: #8fb91a;
 }
 
-.frontpage-main-boxes .category-boxes .post-category-45, .frontpage-minor-boxes .category-boxes .post-category-45 {
+.frontpage-main-boxes .category-boxes div.post-category-45, .frontpage-minor-boxes .category-boxes div.post-category-45 {
   background: #ad3d14;
 }
 
