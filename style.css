@@ -144,7 +144,7 @@ div.textwidget p {
   cursor: pointer;
 }
 
-body.custom-background {
+body#site-body {
   background-color: #e0e0e0;
 }
 
@@ -161,7 +161,7 @@ header#site-header {
           flex-direction: column;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   header#site-header {
     height: 200px;
     margin-bottom: 75px;
@@ -182,7 +182,7 @@ header#site-header div.header-content {
   grid-row-gap: 20px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   header#site-header div.header-content {
     width: 100%;
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
@@ -222,7 +222,7 @@ header#site-header div.header-content div.site-logo a.custom-logo-link img.custo
   position: relative;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   header#site-header div.header-content div.site-logo {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
@@ -316,7 +316,7 @@ header#site-header div.header-content a.header-tips-oss > div {
 }
 
 header#site-header div.header-content a.header-tips-oss div.tips-oss-text {
-  width: 60%;
+  width: 100%;
   color: #f9f9f9;
   background-color: #00425a;
 }
@@ -327,7 +327,7 @@ header#site-header div.header-content a.header-tips-oss div.tips-oss-text p {
 }
 
 header#site-header div.header-content a.header-tips-oss div.tips-oss-icon {
-  width: 40%;
+  width: 150px;
   background-color: #006387;
   overflow-x: hidden;
 }
@@ -381,7 +381,7 @@ header#site-header div.header-content a.header-tips-oss:hover {
   padding: 8em 0em;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .section-middle {
     width: 100%;
   }

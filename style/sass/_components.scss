@@ -86,7 +86,7 @@ div.textwidget {
 
 // body
 
-body.custom-background { background-color: $background-grey; }
+body#site-body { background-color: $background-grey; }
 
 // header
 
@@ -227,7 +227,7 @@ header#site-header {
             }
 
             div.tips-oss-text {
-                width: 60%;
+                width: 100%;
                 color: $background-white;
                 background-color: $broen-blue-dark;
                 
@@ -237,7 +237,7 @@ header#site-header {
                 }
             }
             div.tips-oss-icon {
-                width: 40%;
+                width: 150px;
                 background-color: $broen-base-blue;
                 overflow-x: hidden;
                 
