@@ -50,61 +50,59 @@ $sidePosts = new WP_Query(array(
 <main id="site-content" role="main">
 
     <section class="section-middle">
-        <div class="flex-row">
-            <div class="frontpage-main-thread">
-                <?php // the first loop
+        <div class="frontpage-main-thread">
+            <?php // the first loop
 
-                    if ($mainPosts->have_posts()) :
-                        while ($mainPosts->have_posts()) :
-                            
-                            $mainPosts->the_post();
-                            $post_categories = wp_get_post_categories(get_the_ID()); // array of categories for current post
-                            ?>
+                if ($mainPosts->have_posts()) :
+                    while ($mainPosts->have_posts()) :
+                        
+                        $mainPosts->the_post();
+                        $post_categories = wp_get_post_categories(get_the_ID()); // array of categories for current post
+                        ?>
 
-                            <!-- html boxes -->
-                            <a href="<?php echo the_permalink() ?>">
-                                <div class="frontpage-main-boxes">
-                                    <!-- category boxes -->
-                                    <div class="category-boxes"><?php custom_categories($post_categories); ?></div>
-                                    <div class="box-image"><?php // display image if exists, or replace
-                                    if (has_post_thumbnail()) {
-                                        the_post_thumbnail('medium_large');
-                                    } else {
-                                        echo wp_get_attachment_image(162, 'medium_large');
-                                    } ?></div>
-                                    <h2><?php echo the_title(); ?></h2>
-                                </div>
-                            </a>
+                        <!-- html boxes -->
+                        <a href="<?php echo the_permalink() ?>">
+                            <div class="frontpage-main-boxes">
+                                <!-- category boxes -->
+                                <div class="category-boxes"><?php custom_categories($post_categories); ?></div>
+                                <div class="box-image"><?php // display image if exists, or replace
+                                if (has_post_thumbnail()) {
+                                    the_post_thumbnail('medium_large');
+                                } else {
+                                    echo wp_get_attachment_image(162, 'medium_large');
+                                } ?></div>
+                                <h2><?php echo the_title(); ?></h2>
+                            </div>
+                        </a>
+
+            <?php endwhile; endif; ?>
+        </div>
+        <div class="frontpage-minor-thread">
+            <?php // the second loop
+
+                if ($sidePosts->have_posts()) :
+                    while ($sidePosts->have_posts()) :
+                        
+                        $sidePosts->the_post();
+                        $post_categories = wp_get_post_categories(get_the_ID()); // array of categories for current post
+                        ?>
+
+                        <!-- html boxes -->
+                        <a href="<?php echo the_permalink() ?>">
+                            <div class="frontpage-minor-boxes">
+                                <!-- category boxes -->
+                                <div class="category-boxes"><?php custom_categories($post_categories); ?></div>
+                                <div class="box-image"><?php // display image if exists, or replace
+                                if (has_post_thumbnail()) {
+                                    the_post_thumbnail('medium');
+                                } else {
+                                    echo wp_get_attachment_image(162, 'medium');
+                                } ?></div>
+                                <h2><?php echo the_title(); ?></h2>
+                            </div>
+                        </a>
 
                 <?php endwhile; endif; ?>
-            </div>
-            <div class="frontpage-minor-thread">
-                <?php // the second loop
-
-                    if ($sidePosts->have_posts()) :
-                        while ($sidePosts->have_posts()) :
-                            
-                            $sidePosts->the_post();
-                            $post_categories = wp_get_post_categories(get_the_ID()); // array of categories for current post
-                            ?>
-
-                            <!-- html boxes -->
-                            <a href="<?php echo the_permalink() ?>">
-                                <div class="frontpage-minor-boxes">
-                                    <!-- category boxes -->
-                                    <div class="category-boxes"><?php custom_categories($post_categories); ?></div>
-                                    <div class="box-image"><?php // display image if exists, or replace
-                                    if (has_post_thumbnail()) {
-                                        the_post_thumbnail('medium');
-                                    } else {
-                                        echo wp_get_attachment_image(162, 'medium');
-                                    } ?></div>
-                                    <h2><?php echo the_title(); ?></h2>
-                                </div>
-                            </a>
-
-                    <?php endwhile; endif; ?>
-            </div>
         </div>
     </section>
 

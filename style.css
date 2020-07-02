@@ -375,6 +375,13 @@ header#site-header div.header-content a.header-tips-oss:hover {
 .section-middle {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 1000px;
   background-color: #f9f9f9;
   margin: 0 auto;
@@ -387,7 +394,16 @@ header#site-header div.header-content a.header-tips-oss:hover {
   }
 }
 
-.section-middle > .flex-row > div {
+@media (max-width: 600px) {
+  .section-middle {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.section-middle > div {
   margin: 1em;
 }
 
@@ -399,23 +415,11 @@ header#site-header div.header-content a.header-tips-oss:hover {
   text-decoration: none;
 }
 
-.flex-row {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
 #site-content {
   background: #e0e0e0;
 }
 
-.frontpage-main-boxes, .frontpage-minor-boxes {
+div.frontpage-main-boxes, div.frontpage-minor-boxes {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -424,23 +428,23 @@ header#site-header div.header-content a.header-tips-oss:hover {
   margin-bottom: 2em;
 }
 
-.frontpage-main-boxes h1, .frontpage-main-boxes h2, .frontpage-main-boxes h3, .frontpage-main-boxes h4, .frontpage-main-boxes h5, .frontpage-main-boxes h6, .frontpage-main-boxes p, .frontpage-minor-boxes h1, .frontpage-minor-boxes h2, .frontpage-minor-boxes h3, .frontpage-minor-boxes h4, .frontpage-minor-boxes h5, .frontpage-minor-boxes h6, .frontpage-minor-boxes p {
+div.frontpage-main-boxes h1, div.frontpage-main-boxes h2, div.frontpage-main-boxes h3, div.frontpage-main-boxes h4, div.frontpage-main-boxes h5, div.frontpage-main-boxes h6, div.frontpage-main-boxes p, div.frontpage-minor-boxes h1, div.frontpage-minor-boxes h2, div.frontpage-minor-boxes h3, div.frontpage-minor-boxes h4, div.frontpage-minor-boxes h5, div.frontpage-minor-boxes h6, div.frontpage-minor-boxes p {
   margin: 0;
   padding: 0;
 }
 
-.frontpage-main-boxes h1::first-letter, .frontpage-main-boxes h2::first-letter, .frontpage-main-boxes h3::first-letter, .frontpage-main-boxes h4::first-letter, .frontpage-main-boxes h5::first-letter, .frontpage-main-boxes h6::first-letter, .frontpage-main-boxes p::first-letter, .frontpage-minor-boxes h1::first-letter, .frontpage-minor-boxes h2::first-letter, .frontpage-minor-boxes h3::first-letter, .frontpage-minor-boxes h4::first-letter, .frontpage-minor-boxes h5::first-letter, .frontpage-minor-boxes h6::first-letter, .frontpage-minor-boxes p::first-letter {
+div.frontpage-main-boxes h1::first-letter, div.frontpage-main-boxes h2::first-letter, div.frontpage-main-boxes h3::first-letter, div.frontpage-main-boxes h4::first-letter, div.frontpage-main-boxes h5::first-letter, div.frontpage-main-boxes h6::first-letter, div.frontpage-main-boxes p::first-letter, div.frontpage-minor-boxes h1::first-letter, div.frontpage-minor-boxes h2::first-letter, div.frontpage-minor-boxes h3::first-letter, div.frontpage-minor-boxes h4::first-letter, div.frontpage-minor-boxes h5::first-letter, div.frontpage-minor-boxes h6::first-letter, div.frontpage-minor-boxes p::first-letter {
   text-transform: uppercase;
 }
 
-.frontpage-main-boxes img, .frontpage-minor-boxes img {
+div.frontpage-main-boxes img, div.frontpage-minor-boxes img {
   width: 100%;
   height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.frontpage-main-boxes .category-boxes, .frontpage-minor-boxes .category-boxes {
+div.frontpage-main-boxes div.category-boxes, div.frontpage-minor-boxes div.category-boxes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -454,7 +458,7 @@ header#site-header div.header-content a.header-tips-oss:hover {
   overflow: hidden;
 }
 
-.frontpage-main-boxes .category-boxes > div, .frontpage-minor-boxes .category-boxes > div {
+div.frontpage-main-boxes div.category-boxes > div, div.frontpage-minor-boxes div.category-boxes > div {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0 .5em;
@@ -465,35 +469,35 @@ header#site-header div.header-content a.header-tips-oss:hover {
   color: #f0f0f0;
 }
 
-.frontpage-main-boxes .category-boxes div.post-category-1, .frontpage-minor-boxes .category-boxes div.post-category-1 {
+div.frontpage-main-boxes div.category-boxes div.post-category-1, div.frontpage-minor-boxes div.category-boxes div.post-category-1 {
   background: #d1d1d1;
 }
 
-.frontpage-main-boxes .category-boxes div.post-category-41, .frontpage-minor-boxes .category-boxes div.post-category-41 {
+div.frontpage-main-boxes div.category-boxes div.post-category-41, div.frontpage-minor-boxes div.category-boxes div.post-category-41 {
   background: #2bb169;
 }
 
-.frontpage-main-boxes .category-boxes div.post-category-46, .frontpage-minor-boxes .category-boxes div.post-category-46 {
+div.frontpage-main-boxes div.category-boxes div.post-category-46, div.frontpage-minor-boxes div.category-boxes div.post-category-46 {
   background: #f08b08;
 }
 
-.frontpage-main-boxes .category-boxes div.post-category-44, .frontpage-minor-boxes .category-boxes div.post-category-44 {
+div.frontpage-main-boxes div.category-boxes div.post-category-44, div.frontpage-minor-boxes div.category-boxes div.post-category-44 {
   background: #18b1cf;
 }
 
-.frontpage-main-boxes .category-boxes div.post-category-42, .frontpage-minor-boxes .category-boxes div.post-category-42 {
+div.frontpage-main-boxes div.category-boxes div.post-category-42, div.frontpage-minor-boxes div.category-boxes div.post-category-42 {
   background: #8fb91a;
 }
 
-.frontpage-main-boxes .category-boxes div.post-category-45, .frontpage-minor-boxes .category-boxes div.post-category-45 {
+div.frontpage-main-boxes div.category-boxes div.post-category-45, div.frontpage-minor-boxes div.category-boxes div.post-category-45 {
   background: #ad3d14;
 }
 
-.frontpage-minor-boxes h1, .frontpage-minor-boxes h2, .frontpage-minor-boxes h3, .frontpage-minor-boxes h4, .frontpage-minor-boxes h5, .frontpage-minor-boxes h6 {
+div.frontpage-minor-boxes h1, div.frontpage-minor-boxes h2, div.frontpage-minor-boxes h3, div.frontpage-minor-boxes h4, div.frontpage-minor-boxes h5, div.frontpage-minor-boxes h6 {
   font-size: 3rem;
 }
 
-.frontpage-minor-boxes img {
+div.frontpage-minor-boxes img {
   width: 100%;
   height: 200px;
   -o-object-fit: cover;
@@ -509,12 +513,13 @@ header#site-header div.header-content a.header-tips-oss:hover {
 }
 
 footer#site-footer.header-footer-group {
+  overflow: hidden;
   background: #006387;
   position: relative;
   padding: 0;
 }
 
-footer#site-footer.header-footer-group .footer-content {
+footer#site-footer.header-footer-group div.footer-content {
   padding: 4em 8em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -522,7 +527,7 @@ footer#site-footer.header-footer-group .footer-content {
 }
 
 @media (max-width: 1200px) {
-  footer#site-footer.header-footer-group .footer-content {
+  footer#site-footer.header-footer-group div.footer-content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -530,14 +535,14 @@ footer#site-footer.header-footer-group .footer-content {
   }
 }
 
-footer#site-footer.header-footer-group .footer-content > * {
+footer#site-footer.header-footer-group div.footer-content > * {
   min-width: 300px;
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-footer#site-footer.header-footer-group .footer-content > * h1, footer#site-footer.header-footer-group .footer-content > * h2, footer#site-footer.header-footer-group .footer-content > * h3, footer#site-footer.header-footer-group .footer-content > * h4, footer#site-footer.header-footer-group .footer-content > * h5, footer#site-footer.header-footer-group .footer-content > * h6 {
+footer#site-footer.header-footer-group div.footer-content > * h1, footer#site-footer.header-footer-group div.footer-content > * h2, footer#site-footer.header-footer-group div.footer-content > * h3, footer#site-footer.header-footer-group div.footer-content > * h4, footer#site-footer.header-footer-group div.footer-content > * h5, footer#site-footer.header-footer-group div.footer-content > * h6 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -547,7 +552,7 @@ footer#site-footer.header-footer-group .footer-content > * h1, footer#site-foote
   margin: .5em 0;
 }
 
-footer#site-footer.header-footer-group .footer-content > * p {
+footer#site-footer.header-footer-group div.footer-content > * p {
   margin-right: 2em;
   opacity: .8;
 }

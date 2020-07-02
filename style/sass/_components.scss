@@ -270,7 +270,9 @@ header#site-header {
 // main content
 
 .section-middle {
-	box-sizing: border-box;
+    box-sizing: border-box;
+    display: flex;
+	flex-direction: row;
 	width: $content-size;
 	background-color: $background-white;
 	margin:0 auto;
@@ -279,45 +281,43 @@ header#site-header {
     @include for-screen-max($bp-tablet) {
         width: 100%;
     }
-
-    > .flex-row {
-        > div { // space between threads
-            margin: 1em;
-        }
+    @include for-screen-max($bp-phones) {
+        flex-direction: column;
     }
 
+    > div { margin: 1em; }
 	h1, h2, h3, h4, p, a { color: $broen-base-blue }
-	a {
-		text-decoration: none;
-	}
-}
-
-.flex-row {
-    box-sizing: border-box;
-    display: flex;
-	flex-direction: row;
+	a { text-decoration: none; }
 }
 
 
 #site-content { background: $background-grey; }
 
-.frontpage-main-boxes, .frontpage-minor-boxes {
+div.frontpage-main-boxes, div.frontpage-minor-boxes {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	overflow: hidden;
 	margin-bottom: 2em;
 
+    @include for-screen-max($bp-phone) {
+        width: 100%;
+    }
+
 	h1, h2, h3, h4, h5, h6, p {
         margin: 0; padding: 0;
         &::first-letter { text-transform: uppercase; }
 	}
-	img {
+    
+    img {
 		width: 100%;
 		height: 400px;
 		object-fit: cover;
-	}
-	.category-boxes {
+    }
+    
+    // category boxes
+    
+    div.category-boxes {
 		display: flex;
 		flex-direction: row;
 		width: 100%;
@@ -344,7 +344,7 @@ header#site-header {
 	}
 }
 
-.frontpage-minor-boxes {
+div.frontpage-minor-boxes {
 	h1, h2, h3, h4, h5, h6 {
 		font-size: 3rem;
 	}
@@ -363,11 +363,13 @@ header#site-header {
 // footer
 
 footer#site-footer.header-footer-group {
+    overflow: hidden;
     background: $broen-base-blue;
     position: relative;
     padding: 0;
 
-    .footer-content {
+    div.footer-content {
+        
         padding: 4em 8em;
         display: flex;
         @include for-screen-max($bp-laptop) {flex-direction: column;}
