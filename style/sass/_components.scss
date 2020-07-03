@@ -269,7 +269,7 @@ header#site-header {
 
 // main content
 
-.section-middle {
+section.section-middle {
     box-sizing: border-box;
     display: flex;
 	flex-direction: row;
@@ -285,7 +285,6 @@ header#site-header {
         flex-direction: column;
     }
 
-    > div { margin: 1em; }
 	h1, h2, h3, h4, p, a { color: $broen-base-blue }
 	a { text-decoration: none; }
 }
@@ -300,10 +299,6 @@ div.frontpage-main-boxes, div.frontpage-minor-boxes {
 	overflow: hidden;
 	margin-bottom: 2em;
 
-    @include for-screen-max($bp-phone) {
-        width: 100%;
-    }
-
 	h1, h2, h3, h4, h5, h6, p {
         margin: 0; padding: 0;
         &::first-letter { text-transform: uppercase; }
@@ -312,7 +307,9 @@ div.frontpage-main-boxes, div.frontpage-minor-boxes {
     img {
 		width: 100%;
 		height: 400px;
-		object-fit: cover;
+        object-fit: cover;
+        
+        @include for-screen-max($bp-phones) { height: 200px; }
     }
     
     // category boxes
@@ -356,9 +353,17 @@ div.frontpage-minor-boxes {
 	}
 }
 
-.frontpage-main-thread { width: calc(200% / 3); }
-.frontpage-minor-thread { width: calc(100% / 3); }
+div.frontpage-main-thread { width: calc(200% / 3); }
+div.frontpage-minor-thread { width: calc(100% / 3); }
 
+div.frontpage-main-thread, div.frontpage-minor-thread {
+    box-sizing: border-box;
+    padding: 1em;
+
+    @include for-screen-max($bp-phones) {
+        width: 100%;
+    }
+}
 
 // footer
 
@@ -369,11 +374,10 @@ footer#site-footer.header-footer-group {
     padding: 0;
 
     div.footer-content {
-        
         padding: 4em 8em;
         display: flex;
-        @include for-screen-max($bp-laptop) {flex-direction: column;}
-
+        @include for-screen-max($bp-laptop) { flex-direction: column; }
+        @include for-screen-max($bp-phones) { padding: 1em 2em; }
 
         > * {
             min-width: 300px;
@@ -405,6 +409,7 @@ footer#site-footer.header-footer-group {
             div.footer-credits { display: flex; justify-content: center;}
             * { text-align: center; }
         }
+        @include for-screen-max($bp-phones) { padding: 1em 2em; }
 
         p, a {
             @include text-emphasize;
