@@ -8,4 +8,10 @@
 @import 'mixins';
 @import 'base';
 @import 'components';
-@import 'layout';
+
+// layout files
+
+@import 'layout/layout';
+@import 'layout/header';
+@import 'layout/content';
+@import 'layout/footer';

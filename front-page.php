@@ -51,6 +51,10 @@ $sidePosts = new WP_Query(array(
 
     <section class="section-middle">
         <div class="frontpage-main-thread">
+            <div class="header-swift">
+                <h2>Hva er nytt?</h2>
+            </div>
+
             <?php // the first loop
 
                 if ($mainPosts->have_posts()) :
@@ -78,6 +82,10 @@ $sidePosts = new WP_Query(array(
             <?php endwhile; endif; ?>
         </div>
         <div class="frontpage-minor-thread">
+            <div class="header-swift">
+                <h2>Se også</h2>
+            </div>
+
             <?php // the second loop
 
                 if ($sidePosts->have_posts()) :

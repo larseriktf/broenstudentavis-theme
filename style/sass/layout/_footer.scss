@@ -1,0 +1,53 @@
+// File: _footer.scss
+
+// footer
+
+footer#site-footer.header-footer-group {
+    overflow: hidden;
+    background: $broen-base-blue;
+    position: relative;
+    padding: 0;
+
+    div.footer-content {
+        padding: 4em 8em;
+        display: flex;
+        @include for-screen-max($bp-laptop) { flex-direction: column; }
+        @include for-screen-max($bp-phones) { padding: 1em 2em; }
+
+        > * {
+            min-width: 300px;
+            width: 100%;
+            box-sizing: border-box;
+
+            h1, h2, h3, h4, h5, h6 {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                @include text-emphasize;
+                margin: .5em 0;
+            }
+            p {
+                margin-right: 2em;
+                opacity: .8;
+            }
+        }
+    }
+
+    div.footer-copyright {
+        padding: 2em 8em;
+        display: flex;
+        background: $broen-blue-dark;
+        justify-content: space-between;
+        
+        @include for-screen-max($bp-laptop) {
+            flex-direction: column;
+            div.footer-credits { display: flex; justify-content: center;}
+            * { text-align: center; }
+        }
+        @include for-screen-max($bp-phones) { padding: 1em 0; }
+
+        p, a {
+            @include text-emphasize;
+        }
+    }
+}

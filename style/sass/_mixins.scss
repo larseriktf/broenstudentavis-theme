@@ -48,6 +48,11 @@
     letter-spacing: 2px;
 }
 
+@mixin letters-spaced() {
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
 // breakpoints
 @mixin for-screen-max($size) {
     @media (max-width: $size) { @content; }

@@ -1,0 +1,125 @@
+// File: _content.scss
+
+// main content
+
+// @todo: find a home for this boy
+#site-content { background: $background-grey; }
+
+
+section.section-middle {
+    box-sizing: border-box;
+    display: flex;
+	flex-direction: row;
+	width: $content-size;
+	background-color: $background-white;
+    margin:0 auto;
+    padding: 0;
+
+    @include for-screen-max($bp-tablet) {
+        width: 100%;
+    }
+    @include for-screen-max($bp-phones) {
+        flex-direction: column;
+    }
+
+	h1, h2, h3, h4, p, a { color: $broen-base-blue }
+	a { text-decoration: none; }
+
+    div.frontpage-main-boxes, div.frontpage-minor-boxes {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+        margin-bottom: 2em;
+        border-radius: 0 0 $border-base $border-base;
+        display: flex;
+        flex-direction: column;
+
+        h1, h2, h3, h4, h5, h6, p {
+            margin: 0; padding: 0;
+            &::first-letter { text-transform: uppercase; }
+        }
+        
+        img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            
+            @include for-screen-max($bp-phones) { height: 225px; }
+        }
+        
+        // category boxes
+        
+        div.category-boxes {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: .5em;
+            border-radius: .25em .25em 0 0;
+            overflow: hidden;
+
+            > div {
+                box-sizing: border-box;
+                padding: 0 .5em;
+                width: 100%;
+                height: 100%;
+                font-size: 2rem;
+                background: $placeholder-color;
+                color: $broen-base-white;
+            }
+
+            div.post-category-1 { background: $broen-uncategorized; } // uncategorized
+            div.post-category-41 { background: $broen-leserinnlegg; } // leserinnlegg
+            div.post-category-46 { background: $broen-meninger; } // meninger
+            div.post-category-44 { background: $broen-nyheter; } // nyheter
+            div.post-category-42 { background: $broen-kultur; } // kultur
+            div.post-category-45 { background: $broen-spisekammeret; } // spisekammeret
+        }
+    }
+
+    div.frontpage-minor-boxes {
+
+        height: 2em;
+        overflow: hidden;
+
+        @include for-screen-max($bp-phones) {
+            flex-direction: row;
+        }
+        
+        div.category-boxes {
+            height: 100%;
+            width: 10px;
+            border-radius: 0;
+        }
+
+        div.box-image {
+            @include for-screen-max($bp-phones) { display: none; }
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-size: 3rem;
+        }
+
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    }
+
+    div.frontpage-main-thread {
+        width: calc(200% / 3);
+    }
+    div.frontpage-minor-thread {
+        width: calc(100% / 3);
+    }
+
+    div.frontpage-main-thread, div.frontpage-minor-thread {
+        box-sizing: border-box;
+        padding: 1em;
+
+        @include for-screen-max($bp-phones) {
+            width: 100%;
+        }
+    }
+}

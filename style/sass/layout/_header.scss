@@ -1,0 +1,179 @@
+// File: _header.scss
+
+// header
+
+$h_column_size: 75px;
+
+header#site-header {
+    background-color: transparent;
+    width: 100%; height: 250px;
+    display: flex;
+    flex-direction: column;
+
+    @include for-screen-max($bp-tablet) {
+        height: 200px;
+        margin-bottom: $h_column_size;
+    }
+
+    div.header-content {
+        width: $content-size; height: 100%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 250px 1fr 1fr 1fr;
+        grid-template-rows: $h_column_size $h_column_size;
+        grid-template-areas:
+            "header_logo                header_nav          header_nav      header_nav"
+            "header_logo                .                   .               header_tips_oss"
+        ;
+        grid-row-gap: 20px;
+
+        @include for-screen-max($bp-tablet) {
+            width: 100%;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas:
+                "header_logo        header_nav          header_nav          header_nav"
+                ".                  header_tips_oss     header_tips_oss     ."
+            ;
+            grid-row-gap: $h_column_size;
+            
+        }
+
+        div.site-logo {
+            position: absolute;
+            width: 250px; height: 250px;
+            display: grid;
+            place-items: center;
+            background-size: cover;
+            grid-area: header_logo;
+            transform: translateY(-60px);
+    
+            a.custom-logo-link {
+                display: block;     
+                position: relative;    
+                z-index: 1;     
+                padding: 4em;     
+                margin: -2em; 
+
+                img.custom-logo {
+                    position: relative;
+                }
+            }
+
+            @include for-screen-max($bp-tablet) {
+                transform: translateY(0px);
+                position: relative;
+                width: 100%; height: 100%;
+
+                a.custom-logo-link {
+                    padding: 0; margin: 0;
+                    $indent: 24px;
+                    width: $h_column_size - $indent;
+                    height: $h_column_size - $indent;
+
+                    img.custom-logo {
+                         height: 100%; width: 100%;
+                    }
+                }
+                #logo-graphic { display: none; }
+            }
+
+        }
+    
+        nav.primary-menu-wrapper {
+            width: 100%;
+            padding-top: 1.5em;;
+            text-align: right;
+            grid-area: header_nav;
+
+            &::before { // banner background
+                content: "";
+                position: absolute;
+                top: 0; left: 0;
+                height: $h_column_size;
+                width: 100%;
+                z-index: -100;
+                background-color: $broen-base-blue;
+            }
+            
+            ul#menu-primary {
+                margin: 0;
+            
+                li.menu-item {
+                    display: inline-block;
+                    height: 2em;
+            
+                    > a { // styling and underline animation
+                        color: $background-white;
+                        text-decoration: none;
+                        font-size: 1.8rem;
+                        background: linear-gradient(to bottom, white, white) no-repeat bottom;
+                        background-size: 0% 2px;
+                        height: 4em;
+                        transition: background .1s;
+                        @include text-emphasize();
+    
+                        &:hover {
+                            background-size: 100% 2px;
+                        }
+                    }
+                }
+            }
+        }
+
+        
+        // tips oss
+
+        a.header-tips-oss {
+            text-decoration: none;
+            border-radius: $border-base;
+            width: 100%; height: 100%;
+            grid-area: header_tips_oss;
+            display: flex;
+            overflow: hidden;
+
+            > div {
+                height: 100%;
+                display: grid;
+                place-items: center;
+            }
+
+            div.tips-oss-text {
+                width: 100%;
+                color: $background-white;
+                background-color: $broen-blue-dark;
+                
+                p {
+                    font-size: 2rem;
+                    margin: 0;
+                }
+            }
+            div.tips-oss-icon {
+                width: 150px;
+                background-color: $broen-base-blue;
+                overflow-x: hidden;
+                
+
+                img { width: 50%; }
+
+                @keyframes mailshift {
+                    // Taken from stack overflow -> Leo
+                    49% { // force it's `z-index = 0` to this point
+                        transform: translateX(100px);
+                        
+                        z-index: 0;
+                    }
+                    50% { // hide it while moving from right to left
+                        z-index: -1;
+                    }
+                    51% { // Show it again when it's already at left side
+                        transform: translateX(-100px);
+                        z-index: 0;
+                    }
+                }
+            }
+
+            &:hover { cursor: pointer; }            
+        }
+    }
+}

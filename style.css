@@ -148,6 +148,65 @@ body#site-body {
   background-color: #e0e0e0;
 }
 
+div.header-swift {
+  background: -webkit-gradient(linear, right top, left top, from(#006387), to(#006387)) no-repeat left;
+  background: linear-gradient(to left, #006387, #006387) no-repeat left;
+  background-size: 8px 100%;
+  margin-bottom: 2em;
+  padding: 0.25em 1em;
+}
+
+div.header-swift h2 {
+  color: #006387;
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: 0.5px;
+}
+
+body {
+  padding: 0;
+}
+
+/*Gjelder kun for mobile enheter (600 px og under)*/
+@media only screen and (max-width: 600px) {
+  .footer-top-visible .footer-nav-widgets-wrapper,
+  .footer-top-hidden #site-footer {
+    margin: 0;
+  }
+  .arrangementskort h2 {
+    /*Bestemmer bredde på kalender på mobile enheter*/
+    color: white;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 22px !important;
+  }
+  .arrangementskort p, .arrangementskort a {
+    /*endrer fontstørrelse på kalender på mobile enheter*/
+    font-size: 17px;
+  }
+  h1 {
+    /*endrer størrelse på overskrifter på mobile enheter*/
+    font-size: 35px !important;
+  }
+}
+
+/*Gjelder kun for enheter over 600 px*/
+@media only screen and (min-width: 601px) {
+  .footer-top-visible .footer-nav-widgets-wrapper,
+  .footer-top-hidden #site-footer {
+    margin: 0;
+  }
+  .arrangementskort h2 {
+    color: white;
+    max-width: 55%;
+    margin-top: 10px;
+  }
+  form, div #arrangementsinfo {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+
 header#site-header {
   background-color: transparent;
   width: 100%;
@@ -372,6 +431,10 @@ header#site-header div.header-content a.header-tips-oss:hover {
   cursor: pointer;
 }
 
+#site-content {
+  background: #e0e0e0;
+}
+
 section.section-middle {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -385,7 +448,7 @@ section.section-middle {
   width: 1000px;
   background-color: #f9f9f9;
   margin: 0 auto;
-  padding: 8em 0em;
+  padding: 0;
 }
 
 @media (max-width: 1000px) {
@@ -411,29 +474,33 @@ section.section-middle a {
   text-decoration: none;
 }
 
-#site-content {
-  background: #e0e0e0;
-}
-
-div.frontpage-main-boxes, div.frontpage-minor-boxes {
+section.section-middle div.frontpage-main-boxes, section.section-middle div.frontpage-minor-boxes {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
   margin-bottom: 2em;
+  border-radius: 0 0 0.25em 0.25em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-div.frontpage-main-boxes h1, div.frontpage-main-boxes h2, div.frontpage-main-boxes h3, div.frontpage-main-boxes h4, div.frontpage-main-boxes h5, div.frontpage-main-boxes h6, div.frontpage-main-boxes p, div.frontpage-minor-boxes h1, div.frontpage-minor-boxes h2, div.frontpage-minor-boxes h3, div.frontpage-minor-boxes h4, div.frontpage-minor-boxes h5, div.frontpage-minor-boxes h6, div.frontpage-minor-boxes p {
+section.section-middle div.frontpage-main-boxes h1, section.section-middle div.frontpage-main-boxes h2, section.section-middle div.frontpage-main-boxes h3, section.section-middle div.frontpage-main-boxes h4, section.section-middle div.frontpage-main-boxes h5, section.section-middle div.frontpage-main-boxes h6, section.section-middle div.frontpage-main-boxes p, section.section-middle div.frontpage-minor-boxes h1, section.section-middle div.frontpage-minor-boxes h2, section.section-middle div.frontpage-minor-boxes h3, section.section-middle div.frontpage-minor-boxes h4, section.section-middle div.frontpage-minor-boxes h5, section.section-middle div.frontpage-minor-boxes h6, section.section-middle div.frontpage-minor-boxes p {
   margin: 0;
   padding: 0;
 }
 
-div.frontpage-main-boxes h1::first-letter, div.frontpage-main-boxes h2::first-letter, div.frontpage-main-boxes h3::first-letter, div.frontpage-main-boxes h4::first-letter, div.frontpage-main-boxes h5::first-letter, div.frontpage-main-boxes h6::first-letter, div.frontpage-main-boxes p::first-letter, div.frontpage-minor-boxes h1::first-letter, div.frontpage-minor-boxes h2::first-letter, div.frontpage-minor-boxes h3::first-letter, div.frontpage-minor-boxes h4::first-letter, div.frontpage-minor-boxes h5::first-letter, div.frontpage-minor-boxes h6::first-letter, div.frontpage-minor-boxes p::first-letter {
+section.section-middle div.frontpage-main-boxes h1::first-letter, section.section-middle div.frontpage-main-boxes h2::first-letter, section.section-middle div.frontpage-main-boxes h3::first-letter, section.section-middle div.frontpage-main-boxes h4::first-letter, section.section-middle div.frontpage-main-boxes h5::first-letter, section.section-middle div.frontpage-main-boxes h6::first-letter, section.section-middle div.frontpage-main-boxes p::first-letter, section.section-middle div.frontpage-minor-boxes h1::first-letter, section.section-middle div.frontpage-minor-boxes h2::first-letter, section.section-middle div.frontpage-minor-boxes h3::first-letter, section.section-middle div.frontpage-minor-boxes h4::first-letter, section.section-middle div.frontpage-minor-boxes h5::first-letter, section.section-middle div.frontpage-minor-boxes h6::first-letter, section.section-middle div.frontpage-minor-boxes p::first-letter {
   text-transform: uppercase;
 }
 
-div.frontpage-main-boxes img, div.frontpage-minor-boxes img {
+section.section-middle div.frontpage-main-boxes img, section.section-middle div.frontpage-minor-boxes img {
   width: 100%;
   height: 400px;
   -o-object-fit: cover;
@@ -441,12 +508,12 @@ div.frontpage-main-boxes img, div.frontpage-minor-boxes img {
 }
 
 @media (max-width: 600px) {
-  div.frontpage-main-boxes img, div.frontpage-minor-boxes img {
-    height: 200px;
+  section.section-middle div.frontpage-main-boxes img, section.section-middle div.frontpage-minor-boxes img {
+    height: 225px;
   }
 }
 
-div.frontpage-main-boxes div.category-boxes, div.frontpage-minor-boxes div.category-boxes {
+section.section-middle div.frontpage-main-boxes div.category-boxes, section.section-middle div.frontpage-minor-boxes div.category-boxes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -460,7 +527,7 @@ div.frontpage-main-boxes div.category-boxes, div.frontpage-minor-boxes div.categ
   overflow: hidden;
 }
 
-div.frontpage-main-boxes div.category-boxes > div, div.frontpage-minor-boxes div.category-boxes > div {
+section.section-middle div.frontpage-main-boxes div.category-boxes > div, section.section-middle div.frontpage-minor-boxes div.category-boxes > div {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0 .5em;
@@ -471,57 +538,83 @@ div.frontpage-main-boxes div.category-boxes > div, div.frontpage-minor-boxes div
   color: #f0f0f0;
 }
 
-div.frontpage-main-boxes div.category-boxes div.post-category-1, div.frontpage-minor-boxes div.category-boxes div.post-category-1 {
+section.section-middle div.frontpage-main-boxes div.category-boxes div.post-category-1, section.section-middle div.frontpage-minor-boxes div.category-boxes div.post-category-1 {
   background: #d1d1d1;
 }
 
-div.frontpage-main-boxes div.category-boxes div.post-category-41, div.frontpage-minor-boxes div.category-boxes div.post-category-41 {
+section.section-middle div.frontpage-main-boxes div.category-boxes div.post-category-41, section.section-middle div.frontpage-minor-boxes div.category-boxes div.post-category-41 {
   background: #2bb169;
 }
 
-div.frontpage-main-boxes div.category-boxes div.post-category-46, div.frontpage-minor-boxes div.category-boxes div.post-category-46 {
+section.section-middle div.frontpage-main-boxes div.category-boxes div.post-category-46, section.section-middle div.frontpage-minor-boxes div.category-boxes div.post-category-46 {
   background: #f08b08;
 }
 
-div.frontpage-main-boxes div.category-boxes div.post-category-44, div.frontpage-minor-boxes div.category-boxes div.post-category-44 {
+section.section-middle div.frontpage-main-boxes div.category-boxes div.post-category-44, section.section-middle div.frontpage-minor-boxes div.category-boxes div.post-category-44 {
   background: #18b1cf;
 }
 
-div.frontpage-main-boxes div.category-boxes div.post-category-42, div.frontpage-minor-boxes div.category-boxes div.post-category-42 {
+section.section-middle div.frontpage-main-boxes div.category-boxes div.post-category-42, section.section-middle div.frontpage-minor-boxes div.category-boxes div.post-category-42 {
   background: #8fb91a;
 }
 
-div.frontpage-main-boxes div.category-boxes div.post-category-45, div.frontpage-minor-boxes div.category-boxes div.post-category-45 {
+section.section-middle div.frontpage-main-boxes div.category-boxes div.post-category-45, section.section-middle div.frontpage-minor-boxes div.category-boxes div.post-category-45 {
   background: #ad3d14;
 }
 
-div.frontpage-minor-boxes h1, div.frontpage-minor-boxes h2, div.frontpage-minor-boxes h3, div.frontpage-minor-boxes h4, div.frontpage-minor-boxes h5, div.frontpage-minor-boxes h6 {
+section.section-middle div.frontpage-minor-boxes {
+  height: 2em;
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  section.section-middle div.frontpage-minor-boxes {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+section.section-middle div.frontpage-minor-boxes div.category-boxes {
+  height: 100%;
+  width: 10px;
+  border-radius: 0;
+}
+
+@media (max-width: 600px) {
+  section.section-middle div.frontpage-minor-boxes div.box-image {
+    display: none;
+  }
+}
+
+section.section-middle div.frontpage-minor-boxes h1, section.section-middle div.frontpage-minor-boxes h2, section.section-middle div.frontpage-minor-boxes h3, section.section-middle div.frontpage-minor-boxes h4, section.section-middle div.frontpage-minor-boxes h5, section.section-middle div.frontpage-minor-boxes h6 {
   font-size: 3rem;
 }
 
-div.frontpage-minor-boxes img {
+section.section-middle div.frontpage-minor-boxes img {
   width: 100%;
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-div.frontpage-main-thread {
+section.section-middle div.frontpage-main-thread {
   width: calc(200% / 3);
 }
 
-div.frontpage-minor-thread {
+section.section-middle div.frontpage-minor-thread {
   width: calc(100% / 3);
 }
 
-div.frontpage-main-thread, div.frontpage-minor-thread {
+section.section-middle div.frontpage-main-thread, section.section-middle div.frontpage-minor-thread {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 1em;
 }
 
 @media (max-width: 600px) {
-  div.frontpage-main-thread, div.frontpage-minor-thread {
+  section.section-middle div.frontpage-main-thread, section.section-middle div.frontpage-minor-thread {
     width: 100%;
   }
 }
@@ -610,7 +703,7 @@ footer#site-footer.header-footer-group div.footer-copyright {
 
 @media (max-width: 600px) {
   footer#site-footer.header-footer-group div.footer-copyright {
-    padding: 1em 2em;
+    padding: 1em 0;
   }
 }
 
@@ -618,49 +711,5 @@ footer#site-footer.header-footer-group div.footer-copyright p, footer#site-foote
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 2px;
-}
-
-body {
-  padding: 0;
-}
-
-/*Gjelder kun for mobile enheter (600 px og under)*/
-@media only screen and (max-width: 600px) {
-  .footer-top-visible .footer-nav-widgets-wrapper,
-  .footer-top-hidden #site-footer {
-    margin: 0;
-  }
-  .arrangementskort h2 {
-    /*Bestemmer bredde på kalender på mobile enheter*/
-    color: white;
-    width: 100%;
-    margin-top: 10px;
-    font-size: 22px !important;
-  }
-  .arrangementskort p, .arrangementskort a {
-    /*endrer fontstørrelse på kalender på mobile enheter*/
-    font-size: 17px;
-  }
-  h1 {
-    /*endrer størrelse på overskrifter på mobile enheter*/
-    font-size: 35px !important;
-  }
-}
-
-/*Gjelder kun for enheter over 600 px*/
-@media only screen and (min-width: 601px) {
-  .footer-top-visible .footer-nav-widgets-wrapper,
-  .footer-top-hidden #site-footer {
-    margin: 0;
-  }
-  .arrangementskort h2 {
-    color: white;
-    max-width: 55%;
-    margin-top: 10px;
-  }
-  form, div #arrangementsinfo {
-    margin-left: 20%;
-    margin-right: 20%;
-  }
 }
 /*# sourceMappingURL=style.css.map */
