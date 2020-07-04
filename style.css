@@ -154,6 +154,14 @@ div.header-swift {
   background-size: 8px 100%;
   margin-bottom: 2em;
   padding: 0.25em 1em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 600px) {
+  div.header-swift {
+    background: #006387;
+  }
 }
 
 div.header-swift h2 {
@@ -161,6 +169,12 @@ div.header-swift h2 {
   margin: 0;
   font-size: 32px;
   letter-spacing: 0.5px;
+}
+
+@media (max-width: 600px) {
+  div.header-swift h2 {
+    color: #f9f9f9;
+  }
 }
 
 body {
@@ -466,10 +480,6 @@ section.section-middle {
   }
 }
 
-section.section-middle h1, section.section-middle h2, section.section-middle h3, section.section-middle h4, section.section-middle p, section.section-middle a {
-  color: #006387;
-}
-
 section.section-middle a {
   text-decoration: none;
 }
@@ -482,16 +492,10 @@ section.section-middle div.frontpage-main-boxes, section.section-middle div.fron
   overflow: hidden;
   margin-bottom: 2em;
   border-radius: 0 0 0.25em 0.25em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 section.section-middle div.frontpage-main-boxes h1, section.section-middle div.frontpage-main-boxes h2, section.section-middle div.frontpage-main-boxes h3, section.section-middle div.frontpage-main-boxes h4, section.section-middle div.frontpage-main-boxes h5, section.section-middle div.frontpage-main-boxes h6, section.section-middle div.frontpage-main-boxes p, section.section-middle div.frontpage-minor-boxes h1, section.section-middle div.frontpage-minor-boxes h2, section.section-middle div.frontpage-minor-boxes h3, section.section-middle div.frontpage-minor-boxes h4, section.section-middle div.frontpage-minor-boxes h5, section.section-middle div.frontpage-minor-boxes h6, section.section-middle div.frontpage-minor-boxes p {
+  color: #006387;
   margin: 0;
   padding: 0;
 }
@@ -563,23 +567,23 @@ section.section-middle div.frontpage-main-boxes div.category-boxes div.post-cate
 }
 
 section.section-middle div.frontpage-minor-boxes {
-  height: 2em;
   overflow: hidden;
 }
 
 @media (max-width: 600px) {
   section.section-middle div.frontpage-minor-boxes {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    height: 2em;
+    border-radius: 0;
   }
 }
 
-section.section-middle div.frontpage-minor-boxes div.category-boxes {
-  height: 100%;
-  width: 10px;
-  border-radius: 0;
+@media (max-width: 600px) {
+  section.section-middle div.frontpage-minor-boxes div.category-boxes {
+    height: 100%;
+    width: 10px;
+    border-radius: 0;
+    float: left;
+  }
 }
 
 @media (max-width: 600px) {
