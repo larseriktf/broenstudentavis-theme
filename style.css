@@ -318,7 +318,7 @@ header#site-header div.header-content div.site-logo a.custom-logo-link img.custo
   }
 }
 
-header#site-header div.header-content nav.primary-menu-wrapper {
+header#site-header div.header-content nav.menu-wrapper {
   width: 100%;
   padding-top: 1.5em;
   text-align: right;
@@ -328,27 +328,27 @@ header#site-header div.header-content nav.primary-menu-wrapper {
   grid-area: header_nav;
 }
 
-header#site-header div.header-content nav.primary-menu-wrapper::before {
+header#site-header div.header-content nav.menu-wrapper::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
+  left: -700px;
   height: 75px;
-  width: 100%;
+  width: 100vw;
   z-index: -100;
   background-color: #006387;
 }
 
-header#site-header div.header-content nav.primary-menu-wrapper ul#menu-primary {
+header#site-header div.header-content nav.menu-wrapper ul#menu-primary {
   margin: 0;
 }
 
-header#site-header div.header-content nav.primary-menu-wrapper ul#menu-primary li.menu-item {
+header#site-header div.header-content nav.menu-wrapper ul#menu-primary li.menu-item {
   display: inline-block;
   height: 2em;
 }
 
-header#site-header div.header-content nav.primary-menu-wrapper ul#menu-primary li.menu-item > a {
+header#site-header div.header-content nav.menu-wrapper ul#menu-primary li.menu-item > a {
   color: #f9f9f9;
   text-decoration: none;
   font-size: 1.8rem;
@@ -363,7 +363,7 @@ header#site-header div.header-content nav.primary-menu-wrapper ul#menu-primary l
   letter-spacing: 2px;
 }
 
-header#site-header div.header-content nav.primary-menu-wrapper ul#menu-primary li.menu-item > a:hover {
+header#site-header div.header-content nav.menu-wrapper ul#menu-primary li.menu-item > a:hover {
   background-size: 100% 2px;
 }
 

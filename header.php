@@ -39,13 +39,13 @@
                     </div>
 
 
-                <nav class="primary-menu-wrapper" aria-label="<?php esc_attr_e( 'Horizontal', 'twentytwenty' ); ?>" role="navigation">
+                <nav class="menu-wrapper" aria-label="<?php esc_attr_e( 'Horizontal', 'twentytwenty' ); ?>" role="navigation">
                     <?php
                         wp_nav_menu(array(
                             'container' => ''
                         )); 
                     ?>
-                </nav><!-- .primary-menu-wrapper -->
+                </nav><!-- .menu-wrapper -->
 
                 <a class="header-tips-oss">
                     <div class="tips-oss-text">

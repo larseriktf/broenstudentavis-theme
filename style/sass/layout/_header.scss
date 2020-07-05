@@ -80,7 +80,7 @@ header#site-header {
 
         }
     
-        nav.primary-menu-wrapper {
+        nav.menu-wrapper {
             width: 100%;
             padding-top: 1.5em;;
             text-align: right;
@@ -89,9 +89,9 @@ header#site-header {
             &::before { // banner background
                 content: "";
                 position: absolute;
-                top: 0; left: 0;
+                top: 0; left: -700px;
                 height: $h_column_size;
-                width: 100%;
+                width: 100vw;
                 z-index: -100;
                 background-color: $broen-base-blue;
             }
