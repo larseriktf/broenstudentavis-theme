@@ -318,7 +318,10 @@ header#site-header div.header-content div.site-logo a.custom-logo-link img.custo
   }
 }
 
-header#site-header div.header-content nav.menu-wrapper {
+header#site-header div.header-content .menu-wrapper {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  word-break: break-word;
   width: 100%;
   padding-top: 1.5em;
   text-align: right;
@@ -328,27 +331,28 @@ header#site-header div.header-content nav.menu-wrapper {
   grid-area: header_nav;
 }
 
-header#site-header div.header-content nav.menu-wrapper::before {
+header#site-header div.header-content .menu-wrapper::before {
+  display: block;
   content: "";
   position: absolute;
   top: 0;
-  left: -700px;
+  left: 0;
   height: 75px;
-  width: 100vw;
+  width: 100%;
   z-index: -100;
   background-color: #006387;
 }
 
-header#site-header div.header-content nav.menu-wrapper ul#menu-primary {
+header#site-header div.header-content .menu-wrapper ul#menu-primary {
   margin: 0;
 }
 
-header#site-header div.header-content nav.menu-wrapper ul#menu-primary li.menu-item {
+header#site-header div.header-content .menu-wrapper ul#menu-primary li.menu-item {
   display: inline-block;
   height: 2em;
 }
 
-header#site-header div.header-content nav.menu-wrapper ul#menu-primary li.menu-item > a {
+header#site-header div.header-content .menu-wrapper ul#menu-primary li.menu-item > a {
   color: #f9f9f9;
   text-decoration: none;
   font-size: 1.8rem;
@@ -363,7 +367,7 @@ header#site-header div.header-content nav.menu-wrapper ul#menu-primary li.menu-i
   letter-spacing: 2px;
 }
 
-header#site-header div.header-content nav.menu-wrapper ul#menu-primary li.menu-item > a:hover {
+header#site-header div.header-content .menu-wrapper ul#menu-primary li.menu-item > a:hover {
   background-size: 100% 2px;
 }
 

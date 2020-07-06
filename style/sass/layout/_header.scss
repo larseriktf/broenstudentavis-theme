@@ -80,18 +80,22 @@ header#site-header {
 
         }
     
-        nav.menu-wrapper {
+        .menu-wrapper {
+            box-sizing: inherit;
+            word-break: break-word;
             width: 100%;
             padding-top: 1.5em;;
             text-align: right;
             grid-area: header_nav;
 
             &::before { // banner background
+                display: block;
+
                 content: "";
                 position: absolute;
-                top: 0; left: -700px;
+                top: 0; left: 0;
                 height: $h_column_size;
-                width: 100vw;
+                width: 100%;
                 z-index: -100;
                 background-color: $broen-base-blue;
             }
