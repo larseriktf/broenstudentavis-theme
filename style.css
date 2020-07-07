@@ -267,6 +267,17 @@ header#site-header div.header-content {
   }
 }
 
+header#site-header div.header-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 75px;
+  width: 100%;
+  z-index: -100;
+  background-color: #006387;
+}
+
 header#site-header div.header-content div.site-logo {
   position: absolute;
   width: 250px;
@@ -318,10 +329,17 @@ header#site-header div.header-content div.site-logo a.custom-logo-link img.custo
   }
 }
 
-header#site-header div.header-content .menu-wrapper {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-  word-break: break-word;
+header#site-header div.header-content nav.header-nav-desktop > ul, header#site-header div.header-content nav.header-nav-tablet > ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+header#site-header div.header-content nav.header-nav-desktop > ul li.menu-item > a, header#site-header div.header-content nav.header-nav-tablet > ul li.menu-item > a {
+  color: #f9f9f9;
+  text-decoration: none;
+}
+
+header#site-header div.header-content nav.header-nav-desktop {
   width: 100%;
   padding-top: 1.5em;
   text-align: right;
@@ -331,30 +349,18 @@ header#site-header div.header-content .menu-wrapper {
   grid-area: header_nav;
 }
 
-header#site-header div.header-content .menu-wrapper::before {
-  display: block;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 75px;
-  width: 100%;
-  z-index: -100;
-  background-color: #006387;
+@media (max-width: 1000px) {
+  header#site-header div.header-content nav.header-nav-desktop {
+    display: none;
+  }
 }
 
-header#site-header div.header-content .menu-wrapper ul#menu-primary {
-  margin: 0;
-}
-
-header#site-header div.header-content .menu-wrapper ul#menu-primary li.menu-item {
+header#site-header div.header-content nav.header-nav-desktop li.menu-item {
   display: inline-block;
   height: 2em;
 }
 
-header#site-header div.header-content .menu-wrapper ul#menu-primary li.menu-item > a {
-  color: #f9f9f9;
-  text-decoration: none;
+header#site-header div.header-content nav.header-nav-desktop li.menu-item > a {
   font-size: 1.8rem;
   background: -webkit-gradient(linear, left top, left bottom, from(white), to(white)) no-repeat bottom;
   background: linear-gradient(to bottom, white, white) no-repeat bottom;
@@ -367,8 +373,33 @@ header#site-header div.header-content .menu-wrapper ul#menu-primary li.menu-item
   letter-spacing: 2px;
 }
 
-header#site-header div.header-content .menu-wrapper ul#menu-primary li.menu-item > a:hover {
+header#site-header div.header-content nav.header-nav-desktop li.menu-item > a:hover {
   background-size: 100% 2px;
+}
+
+header#site-header div.header-content nav.header-nav-tablet {
+  position: absolute;
+  background-color: #006387;
+  right: 0;
+  top: 75px;
+  padding: 1em;
+}
+
+@media (min-width: 1001px) {
+  header#site-header div.header-content nav.header-nav-tablet {
+    display: none;
+  }
+}
+
+header#site-header div.header-content nav.header-nav-tablet li.menu-item {
+  margin: 0;
+}
+
+header#site-header div.header-content nav.header-nav-tablet li.menu-item > a {
+  font-size: 1.8rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 header#site-header div.header-content a.header-tips-oss {

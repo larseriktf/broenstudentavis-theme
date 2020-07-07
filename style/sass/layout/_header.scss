@@ -39,6 +39,16 @@ header#site-header {
             
         }
 
+        &::before { // banner background
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            height: $h_column_size;
+            width: 100%;
+            z-index: -100;
+            background-color: $broen-base-blue;
+        }
+
         div.site-logo {
             position: absolute;
             width: 250px; height: 250px;
@@ -80,47 +90,59 @@ header#site-header {
 
         }
     
-        .menu-wrapper {
-            box-sizing: inherit;
-            word-break: break-word;
+        nav.header-nav-desktop, nav.header-nav-tablet {
+            > ul {
+                list-style-type: none;
+                margin: 0;
+            
+                li.menu-item > a {
+                    color: $background-white;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        nav.header-nav-desktop {
             width: 100%;
             padding-top: 1.5em;;
             text-align: right;
             grid-area: header_nav;
 
-            &::before { // banner background
-                display: block;
+            @include for-screen-max($bp-tablet) { display: none; }
 
-                content: "";
-                position: absolute;
-                top: 0; left: 0;
-                height: $h_column_size;
-                width: 100%;
-                z-index: -100;
-                background-color: $broen-base-blue;
-            }
-            
-            ul#menu-primary {
-                margin: 0;
-            
-                li.menu-item {
-                    display: inline-block;
-                    height: 2em;
-            
-                    > a { // styling and underline animation
-                        color: $background-white;
-                        text-decoration: none;
-                        font-size: 1.8rem;
-                        background: linear-gradient(to bottom, white, white) no-repeat bottom;
-                        background-size: 0% 2px;
-                        height: 4em;
-                        transition: background .1s;
-                        @include text-emphasize();
-    
-                        &:hover {
-                            background-size: 100% 2px;
-                        }
+            li.menu-item {
+                display: inline-block;
+                height: 2em;
+        
+                > a { // styling and underline animation
+                    font-size: 1.8rem;
+                    background: linear-gradient(to bottom, white, white) no-repeat bottom;
+                    background-size: 0% 2px;
+                    height: 4em;
+                    transition: background .1s;
+                    @include text-emphasize();
+
+                    &:hover {
+                        background-size: 100% 2px;
                     }
+                }
+            }
+        }
+
+        nav.header-nav-tablet {
+            position: absolute;
+            background-color: $broen-base-blue;
+            right: 0; top: $h_column_size;
+            padding: 1em;
+
+            @include for-screen-min($bp-tablet) { display: none; }
+
+            li.menu-item {
+                margin: 0;
+
+                > a {
+                    font-size: 1.8rem;
+                    @include text-emphasize();
                 }
             }
         }

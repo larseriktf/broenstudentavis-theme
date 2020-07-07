@@ -39,13 +39,21 @@
                     </div>
 
 
-                <nav class="menu-wrapper" aria-label="<?php esc_attr_e( 'Horizontal', 'twentytwenty' ); ?>" role="navigation">
+                <nav class="header-nav-desktop" aria-label="<?php esc_attr_e( 'Horizontal', 'twentytwenty' ); ?>" role="navigation">
                     <?php
                         wp_nav_menu(array(
                             'container' => ''
                         )); 
                     ?>
-                </nav><!-- .menu-wrapper -->
+                </nav><!-- header-nav-desktop -->
+
+                <nav class="header-nav-tablet" aria-label="Mobile" role="navigation">
+                    <?php
+                        wp_nav_menu(array(
+                            'container' => ''
+                        )); 
+                    ?>
+				</nav><!-- header-nav-tablet -->
 
                 <a class="header-tips-oss">
                     <div class="tips-oss-text">

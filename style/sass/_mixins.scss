@@ -36,6 +36,19 @@
 	@return $stroke;
 }*/
 
+// replace part of string
+// str-replace( [original string], [part to replace], [string to insert] )
+@function str-replace($string, $search, $replace: '') { // @todo: decide if this is actually nescessary
+    $index: str-index($string, $search);
+  
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+  
+    @return $string;
+}
+
+
 // adds stroke on the outside of text
 @mixin text-stroke($size: 2, $color: #fff, $correction: 0) {
 	text-shadow: text-stroke($size, $color, $correction);
@@ -58,6 +71,6 @@
     @media (max-width: $size) { @content; }
 }
 
-@mixin for-screen-min($size) {
-    @media (min-width: $size) { @content; }
+@mixin for-screen-min($size) { // @todo: make the actual size = size - 1
+    @media (min-width: $size + 1) { @content; }
 }
