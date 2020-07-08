@@ -19,5 +19,7 @@ function my_theme_enqueue_scripts() {
     wp_enqueue_script( 'logo-animation', get_stylesheet_directory_uri() . '/js/logo-animation.js', null, false, true );
     // mail-animation
     wp_enqueue_script( 'mail-animation', get_stylesheet_directory_uri() . '/js/mail-animation.js', null, false, true );
+    // menu-nav-button
+    wp_enqueue_script( 'menu-nav-button', get_stylesheet_directory_uri() . '/js/menu-nav-button.js', null, false, true );
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_scripts' );

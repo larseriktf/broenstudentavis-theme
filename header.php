@@ -50,7 +50,7 @@
 
                 <!-- nav-tablet-button -->
 
-                <button class="nav-toggle-waffle nav-unclicked" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
+                <button id="nav-toggle-waffle" aria-expanded="false">
                     
 				</button>
 
