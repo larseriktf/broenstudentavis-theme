@@ -224,7 +224,7 @@ body {
 header#site-header {
   background-color: transparent;
   width: 100%;
-  height: 250px;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -232,13 +232,7 @@ header#site-header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-@media (max-width: 1000px) {
-  header#site-header {
-    height: 200px;
-    margin-bottom: 75px;
-  }
+  margin-bottom: 75px;
 }
 
 header#site-header div.header-content {
@@ -251,18 +245,18 @@ header#site-header div.header-content {
       grid-template-columns: 250px 1fr 1fr 1fr;
   -ms-grid-rows: 75px 75px;
       grid-template-rows: 75px 75px;
-      grid-template-areas: "header_logo                header_nav          header_nav      header_nav" "header_logo                .                   .               header_tips_oss";
+      grid-template-areas: "h_logo         h_nav       h_nav       h_nav" "h_logo         .           .           h_tips_oss";
   grid-row-gap: 20px;
 }
 
 @media (max-width: 1000px) {
   header#site-header div.header-content {
     width: 100%;
-    -ms-grid-columns: 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: "header_logo        header_nav          header_nav          header_nav" ".                  header_tips_oss     header_tips_oss     .";
+    -ms-grid-columns: 75px 1fr 1fr 75px;
+        grid-template-columns: 75px 1fr 1fr 75px;
+    -ms-grid-rows: 75px auto 75px;
+        grid-template-rows: 75px auto 75px;
+        grid-template-areas: "h_logo         .               .               h_nav" "h_nav_tab      h_nav_tab       h_nav_tab       h_nav_tab" ".              h_tips_oss      h_tips_oss      .";
     grid-row-gap: 75px;
   }
 }
@@ -289,7 +283,7 @@ header#site-header div.header-content div.site-logo {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
-  grid-area: header_logo;
+  grid-area: h_logo;
   -webkit-transform: translateY(-60px);
           transform: translateY(-60px);
 }
@@ -346,7 +340,7 @@ header#site-header div.header-content nav.header-nav-desktop {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   -ms-grid-column-span: 3;
-  grid-area: header_nav;
+  grid-area: h_nav;
 }
 
 @media (max-width: 1000px) {
@@ -378,11 +372,13 @@ header#site-header div.header-content nav.header-nav-desktop li.menu-item > a:ho
 }
 
 header#site-header div.header-content nav.header-nav-tablet {
-  position: absolute;
-  background-color: #006387;
-  right: 0;
+  grid-area: h_nav_tab;
+  background-color: #00425a;
   top: 75px;
   padding: 1em;
+  width: 100%;
+  overflow: hidden;
+  display: none;
 }
 
 @media (min-width: 1001px) {
@@ -393,6 +389,10 @@ header#site-header div.header-content nav.header-nav-tablet {
 
 header#site-header div.header-content nav.header-nav-tablet li.menu-item {
   margin: 0;
+  padding: .5em 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#006387), to(#006387)) no-repeat bottom;
+  background: linear-gradient(to bottom, #006387, #006387) no-repeat bottom;
+  background-size: 100% 1px;
 }
 
 header#site-header div.header-content nav.header-nav-tablet li.menu-item > a {
@@ -402,6 +402,28 @@ header#site-header div.header-content nav.header-nav-tablet li.menu-item > a {
   letter-spacing: 2px;
 }
 
+header#site-header div.header-content button.nav-toggle-waffle {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: h_nav;
+  width: 100%;
+  height: 100%;
+  background-size: 51px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: 1001px) {
+  header#site-header div.header-content button.nav-toggle-waffle {
+    display: none;
+  }
+}
+
+header#site-header div.header-content button.nav-toggle-waffle.nav-unclicked {
+  background-image: url("images/icons/icons_menu_unclicked.svg");
+}
+
 header#site-header div.header-content a.header-tips-oss {
   text-decoration: none;
   border-radius: 0.25em;
@@ -409,7 +431,7 @@ header#site-header div.header-content a.header-tips-oss {
   height: 100%;
   -ms-grid-row: 2;
   -ms-grid-column: 4;
-  grid-area: header_tips_oss;
+  grid-area: h_tips_oss;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

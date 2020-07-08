@@ -3,17 +3,14 @@
 // header
 
 $h_column_size: 75px;
+$indent: 24px; // used for both site logo and nav button
 
 header#site-header {
     background-color: transparent;
-    width: 100%; height: 250px;
+    width: 100%; height: auto;
     display: flex;
     flex-direction: column;
-
-    @include for-screen-max($bp-tablet) {
-        height: 200px;
-        margin-bottom: $h_column_size;
-    }
+    margin-bottom: $h_column_size;
 
     div.header-content {
         width: $content-size; height: 100%;
@@ -22,18 +19,19 @@ header#site-header {
         grid-template-columns: 250px 1fr 1fr 1fr;
         grid-template-rows: $h_column_size $h_column_size;
         grid-template-areas:
-            "header_logo                header_nav          header_nav      header_nav"
-            "header_logo                .                   .               header_tips_oss"
+            "h_logo         h_nav       h_nav       h_nav"
+            "h_logo         .           .           h_tips_oss"
         ;
         grid-row-gap: 20px;
 
         @include for-screen-max($bp-tablet) {
             width: 100%;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
+            grid-template-columns: $h_column_size 1fr 1fr $h_column_size;
+            grid-template-rows: $h_column_size auto $h_column_size;
             grid-template-areas:
-                "header_logo        header_nav          header_nav          header_nav"
-                ".                  header_tips_oss     header_tips_oss     ."
+                "h_logo         .               .               h_nav"
+                "h_nav_tab      h_nav_tab       h_nav_tab       h_nav_tab"
+                ".              h_tips_oss      h_tips_oss      ."
             ;
             grid-row-gap: $h_column_size;
             
@@ -55,7 +53,7 @@ header#site-header {
             display: grid;
             place-items: center;
             background-size: cover;
-            grid-area: header_logo;
+            grid-area: h_logo;
             transform: translateY(-60px);
     
             a.custom-logo-link {
@@ -77,7 +75,6 @@ header#site-header {
 
                 a.custom-logo-link {
                     padding: 0; margin: 0;
-                    $indent: 24px;
                     width: $h_column_size - $indent;
                     height: $h_column_size - $indent;
 
@@ -102,11 +99,13 @@ header#site-header {
             }
         }
 
+        // nav for desktop
+
         nav.header-nav-desktop {
             width: 100%;
             padding-top: 1.5em;;
             text-align: right;
-            grid-area: header_nav;
+            grid-area: h_nav;
 
             @include for-screen-max($bp-tablet) { display: none; }
 
@@ -129,21 +128,47 @@ header#site-header {
             }
         }
 
+        // nav for tablet and phones
+
         nav.header-nav-tablet {
-            position: absolute;
-            background-color: $broen-base-blue;
-            right: 0; top: $h_column_size;
+            grid-area: h_nav_tab;
+            background-color: $broen-blue-dark;
+            top: $h_column_size;
             padding: 1em;
+            width: 100%;
+            overflow: hidden;
+            display: none;
 
             @include for-screen-min($bp-tablet) { display: none; }
 
             li.menu-item {
                 margin: 0;
+                padding: .5em 0;
+                background: linear-gradient(to bottom, $broen-base-blue, $broen-base-blue) no-repeat bottom;
+                background-size: 100% 1px;
 
                 > a {
                     font-size: 1.8rem;
                     @include text-emphasize();
                 }
+            }
+        }
+
+        // waffle menu button
+
+        button.nav-toggle-waffle {
+            grid-area: h_nav;
+            width: 100%;
+            height: 100%;
+            
+            background-size: $h_column_size - $indent;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            @include for-screen-min($bp-tablet) { display: none; }
+
+            &.nav-unclicked {
+                background-image: url("images/icons/icons_menu_unclicked.svg");
             }
         }
 
@@ -154,7 +179,7 @@ header#site-header {
             text-decoration: none;
             border-radius: $border-base;
             width: 100%; height: 100%;
-            grid-area: header_tips_oss;
+            grid-area: h_tips_oss;
             display: flex;
             overflow: hidden;
 
