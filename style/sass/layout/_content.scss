@@ -5,6 +5,8 @@
 // @todo: find a home for this boy
 #site-content { background: $background-grey; }
 
+// remove hover effects
+.noHover{ pointer-events: none; }
 
 section.section-middle {
     box-sizing: border-box;

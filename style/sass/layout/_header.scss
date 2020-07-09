@@ -16,7 +16,7 @@ header#site-header {
         width: $content-size; height: 100%;
         margin: auto;
         display: grid;
-        grid-template-columns: 250px 1fr 1fr 1fr;
+        grid-template-columns: 250px 1fr 1fr 250px;
         grid-template-rows: $h_column_size $h_column_size;
         grid-template-areas:
             "h_logo         h_nav       h_nav       h_nav"
@@ -26,15 +26,13 @@ header#site-header {
 
         @include for-screen-max($bp-tablet) {
             width: 100%;
-            grid-template-columns: $h_column_size 1fr 1fr $h_column_size;
-            grid-template-rows: $h_column_size auto $h_column_size;
+            grid-template-columns: $h_column_size 250px 1fr $h_column_size;
+            grid-template-rows: $h_column_size auto;
             grid-template-areas:
-                "h_logo         .               .               h_nav"
+                "h_logo         h_tips_oss      .               h_nav"
                 "h_nav_tab      h_nav_tab       h_nav_tab       h_nav_tab"
-                ".              h_tips_oss      h_tips_oss      ."
             ;
-            grid-row-gap: $h_column_size;
-            
+            grid-gap: 0;
         }
 
         &::before { // banner background
@@ -160,7 +158,8 @@ header#site-header {
             grid-area: h_nav;
             width: 100%;
             height: 100%;
-            
+            transition: none;
+
             background-image: url("images/icons/icons_menu_unclicked.svg");
             background-size: $h_column_size - $indent;
             background-repeat: no-repeat;
@@ -168,9 +167,13 @@ header#site-header {
 
             @include for-screen-min($bp-tablet) { display: none; }
 
-            &.nav-clicked {
-                background-image: url("images/icons/icons_menu_clicked.svg");
+            &.nav-clicked { background-image: url("images/icons/icons_menu_clicked.svg"); }
+
+            &:hover, &:active, &:visited, &:focus {
+                border: none;
+                text-decoration: none;
             }
+           
         }
 
         
@@ -183,6 +186,10 @@ header#site-header {
             grid-area: h_tips_oss;
             display: flex;
             overflow: hidden;
+
+            @include for-screen-max($bp-tablet) {
+                border-radius: 0;
+            }
 
             > div {
                 height: 100%;
@@ -205,6 +212,7 @@ header#site-header {
                 background-color: $broen-base-blue;
                 overflow-x: hidden;
                 
+                @include for-screen-max($bp-tablet) { display: none; }
 
                 img { width: 50%; }
 

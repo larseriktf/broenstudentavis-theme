@@ -241,8 +241,8 @@ header#site-header div.header-content {
   margin: auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 250px 1fr 1fr 1fr;
-      grid-template-columns: 250px 1fr 1fr 1fr;
+  -ms-grid-columns: 250px 1fr 1fr 250px;
+      grid-template-columns: 250px 1fr 1fr 250px;
   -ms-grid-rows: 75px 75px;
       grid-template-rows: 75px 75px;
       grid-template-areas: "h_logo         h_nav       h_nav       h_nav" "h_logo         .           .           h_tips_oss";
@@ -252,12 +252,12 @@ header#site-header div.header-content {
 @media (max-width: 1000px) {
   header#site-header div.header-content {
     width: 100%;
-    -ms-grid-columns: 75px 1fr 1fr 75px;
-        grid-template-columns: 75px 1fr 1fr 75px;
-    -ms-grid-rows: 75px auto 75px;
-        grid-template-rows: 75px auto 75px;
-        grid-template-areas: "h_logo         .               .               h_nav" "h_nav_tab      h_nav_tab       h_nav_tab       h_nav_tab" ".              h_tips_oss      h_tips_oss      .";
-    grid-row-gap: 75px;
+    -ms-grid-columns: 75px 250px 1fr 75px;
+        grid-template-columns: 75px 250px 1fr 75px;
+    -ms-grid-rows: 75px auto;
+        grid-template-rows: 75px auto;
+        grid-template-areas: "h_logo         h_tips_oss      .               h_nav" "h_nav_tab      h_nav_tab       h_nav_tab       h_nav_tab";
+    grid-gap: 0;
   }
 }
 
@@ -409,6 +409,8 @@ header#site-header div.header-content button#nav-toggle-waffle {
   grid-area: h_nav;
   width: 100%;
   height: 100%;
+  -webkit-transition: none;
+  transition: none;
   background-image: url("images/icons/icons_menu_unclicked.svg");
   background-size: 51px;
   background-repeat: no-repeat;
@@ -425,6 +427,11 @@ header#site-header div.header-content button#nav-toggle-waffle.nav-clicked {
   background-image: url("images/icons/icons_menu_clicked.svg");
 }
 
+header#site-header div.header-content button#nav-toggle-waffle:hover, header#site-header div.header-content button#nav-toggle-waffle:active, header#site-header div.header-content button#nav-toggle-waffle:visited, header#site-header div.header-content button#nav-toggle-waffle:focus {
+  border: none;
+  text-decoration: none;
+}
+
 header#site-header div.header-content a.header-tips-oss {
   text-decoration: none;
   border-radius: 0.25em;
@@ -437,6 +444,12 @@ header#site-header div.header-content a.header-tips-oss {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
+}
+
+@media (max-width: 1000px) {
+  header#site-header div.header-content a.header-tips-oss {
+    border-radius: 0;
+  }
 }
 
 header#site-header div.header-content a.header-tips-oss > div {
@@ -461,6 +474,12 @@ header#site-header div.header-content a.header-tips-oss div.tips-oss-icon {
   width: 150px;
   background-color: #006387;
   overflow-x: hidden;
+}
+
+@media (max-width: 1000px) {
+  header#site-header div.header-content a.header-tips-oss div.tips-oss-icon {
+    display: none;
+  }
 }
 
 header#site-header div.header-content a.header-tips-oss div.tips-oss-icon img {
@@ -505,6 +524,10 @@ header#site-header div.header-content a.header-tips-oss:hover {
 
 #site-content {
   background: #e0e0e0;
+}
+
+.noHover {
+  pointer-events: none;
 }
 
 section.section-middle {

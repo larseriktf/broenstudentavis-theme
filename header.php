@@ -50,11 +50,11 @@
 
                 <!-- nav-tablet-button -->
 
-                <button id="nav-toggle-waffle" aria-expanded="false">
+                <button id="nav-toggle-waffle"  aria-expanded="false">
                     
 				</button>
 
-                <nav class="header-nav-tablet" aria-label="Mobile" role="navigation">
+                <nav id="header-nav-tablet" class="header-nav-tablet" aria-label="Mobile" role="navigation">
                     <?php
                         wp_nav_menu(array(
                             'container' => '',
