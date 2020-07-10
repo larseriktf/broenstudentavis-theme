@@ -72,8 +72,6 @@ $sidePosts = new WP_Query(array(
                                 <div class="box-image"><?php // display image if exists, or replace
                                 if (has_post_thumbnail()) {
                                     the_post_thumbnail('medium_large');
-                                } else {
-                                    echo wp_get_attachment_image(162, 'medium_large');
                                 } ?></div>
                                 <h2><?php echo the_title(); ?></h2>
                             </div>
@@ -103,8 +101,6 @@ $sidePosts = new WP_Query(array(
                                 <div class="box-image"><?php // display image if exists, or replace
                                 if (has_post_thumbnail()) {
                                     the_post_thumbnail('medium');
-                                } else {
-                                    echo wp_get_attachment_image(162, 'medium');
                                 } ?></div>
                                 <h2><?php echo the_title(); ?></h2>
                             </div>

@@ -2,7 +2,7 @@
 
 // header
 
-$h_column_size: 75px;
+$std-medium: 75px;
 $indent: 24px; // used for both site logo and nav button
 
 header#site-header {
@@ -10,14 +10,14 @@ header#site-header {
     width: 100%; height: auto;
     display: flex;
     flex-direction: column;
-    margin-bottom: $h_column_size;
+    margin-bottom: $std-medium;
 
     div.header-content {
         width: $content-size; height: 100%;
         margin: auto;
         display: grid;
-        grid-template-columns: 250px 1fr 1fr 250px;
-        grid-template-rows: $h_column_size $h_column_size;
+        grid-template-columns: 1fr 1fr 1fr 250px;
+        grid-template-rows: $std-medium $std-medium;
         grid-template-areas:
             "h_logo         h_nav       h_nav       h_nav"
             "h_logo         .           .           h_tips_oss"
@@ -26,8 +26,8 @@ header#site-header {
 
         @include for-screen-max($bp-tablet) {
             width: 100%;
-            grid-template-columns: $h_column_size 250px 1fr $h_column_size;
-            grid-template-rows: $h_column_size auto;
+            grid-template-columns: $std-medium 150px 1fr $std-medium;
+            grid-template-rows: $std-medium auto;
             grid-template-areas:
                 "h_logo         h_tips_oss      .               h_nav"
                 "h_nav_tab      h_nav_tab       h_nav_tab       h_nav_tab"
@@ -39,7 +39,7 @@ header#site-header {
             content: "";
             position: absolute;
             top: 0; left: 0;
-            height: $h_column_size;
+            height: $std-medium;
             width: 100%;
             z-index: -100;
             background-color: $broen-base-blue;
@@ -73,8 +73,8 @@ header#site-header {
 
                 a.custom-logo-link {
                     padding: 0; margin: 0;
-                    width: $h_column_size - $indent;
-                    height: $h_column_size - $indent;
+                    width: $std-medium - $indent;
+                    height: $std-medium - $indent;
 
                     img.custom-logo {
                          height: 100%; width: 100%;
@@ -131,7 +131,7 @@ header#site-header {
         nav.header-nav-tablet {
             grid-area: h_nav_tab;
             background-color: $broen-blue-dark;
-            top: $h_column_size;
+            top: $std-medium;
             padding: 1em;
             width: 100%;
             overflow: hidden;
@@ -161,7 +161,7 @@ header#site-header {
             transition: none;
 
             background-image: url("images/icons/icons_menu_unclicked.svg");
-            background-size: $h_column_size - $indent;
+            background-size: $std-medium - $indent;
             background-repeat: no-repeat;
             background-position: center;
 
