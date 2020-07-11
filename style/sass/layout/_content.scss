@@ -8,7 +8,7 @@
 // remove hover effects
 .noHover{ pointer-events: none; }
 
-section.section-middle {
+section.section-frontpage {
     box-sizing: border-box;
     display: flex;
 	flex-direction: row;
@@ -26,112 +26,22 @@ section.section-middle {
     }
 	a { text-decoration: none; }
 
-    div.frontpage-main-boxes, div.frontpage-minor-boxes {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        margin-bottom: 2em;
-        border-radius: 0 0 $border-base $border-base;
+    
+}
 
-        h2 {
-            color: $broen-base-blue;
-            margin: 0; padding: 0;
-        }
-        
-        img {
-            width: 100%;
-            
-        }
+section.section-page {
+    box-sizing: border-box;
+	width: $content-size;
+	background-color: $background-white;
+    margin:0 auto;
+    padding: 0;
+    margin-bottom: $std-medium;
 
-        div.box-image {
-            background-image: url("images/graphics/placeholder.png");
-            background-size: cover;
-            background-position: center;
-            overflow: hidden;
-
-            min-height: 256px;
-            max-height: 512px;
-
-            @include for-screen-max($bp-tablet) {
-                min-height: 192px;
-                max-height: 384px;
-            }
-
-
-            
-        }
-        
-        // category boxes
-        
-        div.category-boxes {
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            height: .5em;
-            border-radius: .25em .25em 0 0;
-            overflow: hidden;
-
-            > div {
-                box-sizing: border-box;
-                padding: 0 .5em;
-                width: 100%;
-                height: 100%;
-                font-size: 2rem;
-                background: $placeholder-color;
-                color: $broen-base-white;
-            }
-
-            div.post-category-1 { background: $broen-uncategorized; } // uncategorized
-            div.post-category-41 { background: $broen-leserinnlegg; } // leserinnlegg
-            div.post-category-46 { background: $broen-meninger; } // meninger
-            div.post-category-44 { background: $broen-nyheter; } // nyheter
-            div.post-category-42 { background: $broen-kultur; } // kultur
-            div.post-category-45 { background: $broen-spisekammeret; } // spisekammeret
-        }
+    @include for-screen-max($bp-tablet) {
+        width: 100%;
     }
-
-    // minor box
-
-    div.frontpage-minor-boxes {
-        overflow: hidden;
-
-        @include for-screen-max($bp-phones) {
-            height: 2em;
-            border-radius: 0;
-        }
-        
-        div.category-boxes {
-            @include for-screen-max($bp-phones) {
-                height: 100%;
-                width: 10px;
-                border-radius: 0;
-                float: left;
-            }
-        }
-        
-
-        div.box-image {
-            @include for-screen-max($bp-phones) { display: none; }
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-size: 3rem;
-        }
+    @include for-screen-max($bp-phones) {
+        flex-direction: column;
     }
-
-    div.frontpage-main-thread {
-        width: calc(200% / 3);
-    }
-    div.frontpage-minor-thread {
-        width: calc(100% / 3);
-    }
-
-    div.frontpage-main-thread, div.frontpage-minor-thread {
-        box-sizing: border-box;
-        padding: 1em;
-
-        @include for-screen-max($bp-phones) {
-            width: 100%;
-        }
-    }
+	a { text-decoration: none; }
 }

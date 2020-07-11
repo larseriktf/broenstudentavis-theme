@@ -1,0 +1,36 @@
+// File: _page-feed.scss
+
+// page feed
+
+div.page-main-thread {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include for-screen-max($bp-phones) {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    > a {
+        flex: 1 0 40%;
+
+        div.page-main-boxes {
+            margin: 1em 1em 2em 1em;
+            padding: 0;
+            box-sizing: border-box;
+    
+            overflow: hidden;
+            h2 {
+                color: $broen-base-blue;
+                margin: 0; padding: 0;
+            }
+            
+            img {
+                width: 100%;
+                
+            }
+        }
+    }
+}

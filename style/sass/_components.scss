@@ -116,3 +116,40 @@ div.header-swift {
         }
     }
 }
+
+div.header-category {
+    padding: 2em 1em;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+
+    @include for-screen-max($bp-phones) {
+        background: $broen-base-blue;
+    }
+
+    h2 {
+        color: $broen-base-blue;
+        margin: 0;
+        font-size: 32px;
+        letter-spacing: 0.5px;
+        display: flex;
+        
+        @include for-screen-max($bp-phones) {
+            color: $background-white;
+        }
+
+        > div {
+            padding: 0 .25em;
+            border-radius: $border-base;
+            color: white;
+        }
+    }
+}
+
+// categories
+
+div.post-category-1 { background: $broen-uncategorized; } // uncategorized
+div.post-category-41 { background: $broen-leserinnlegg; } // leserinnlegg
+div.post-category-46 { background: $broen-meninger; } // meninger
+div.post-category-44 { background: $broen-nyheter; } // nyheter
+div.post-category-42 { background: $broen-kultur; } // kultur
+div.post-category-45 { background: $broen-spisekammeret; } // spisekammeret

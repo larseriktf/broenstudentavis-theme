@@ -49,7 +49,7 @@ $sidePosts = new WP_Query(array(
 
 <main id="site-content" role="main">
 
-    <section class="section-middle">
+    <section class="section-frontpage">
         <div class="frontpage-main-thread">
             <div class="header-swift">
                 <h2>Hva er nytt?</h2>
@@ -69,10 +69,10 @@ $sidePosts = new WP_Query(array(
                             <div class="frontpage-main-boxes">
                                 <!-- category boxes -->
                                 <div class="category-boxes"><?php custom_categories($post_categories); ?></div>
-                                <div class="box-image"><?php // display image if exists, or replace
+                                <?php // display image if exists, or replace
                                 if (has_post_thumbnail()) {
                                     the_post_thumbnail('medium_large');
-                                } ?></div>
+                                } ?>
                                 <h2><?php echo the_title(); ?></h2>
                             </div>
                         </a>
@@ -98,10 +98,10 @@ $sidePosts = new WP_Query(array(
                             <div class="frontpage-minor-boxes">
                                 <!-- category boxes -->
                                 <div class="category-boxes"><?php custom_categories($post_categories); ?></div>
-                                <div class="box-image"><?php // display image if exists, or replace
+                                <?php // display image if exists, or replace
                                 if (has_post_thumbnail()) {
                                     the_post_thumbnail('medium');
-                                } ?></div>
+                                } ?>
                                 <h2><?php echo the_title(); ?></h2>
                             </div>
                         </a>
