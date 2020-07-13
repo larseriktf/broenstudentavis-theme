@@ -20,13 +20,13 @@ get_header();
 // huh.. no functions?
 
 global $post;
-$cat_id_obj = get_category_by_slug( $post->post_name );
-$cat_id = $cat_id_obj->term_id;
+$cat_slug_id = get_category_by_slug( $post->post_name )->term_id;
+
 
 // query
 $mainPosts = new WP_Query(array(
     'posts_per_page' => -1,
-    'cat' => '41, 44',
+    'cat' => $cat_slug_id,
     'post_type' => 'post',
     'orderby' => 'date',
     'order' => 'DESC',
@@ -39,7 +39,7 @@ $mainPosts = new WP_Query(array(
 
     <section class="section-page">
         <div class="header-category">
-            <h2>Kategori - <div class="post-category-<?php echo $cat_id ?>"><?php echo $post->post_name ?></div></h2>
+            <h2>Kategori - <div class="post-category-<?php echo $cat_slug_id ?>"><?php echo $post->post_name ?></div></h2>
         </div>
         <div class="page-main-thread">
             <?php // the loop
@@ -55,6 +55,8 @@ $mainPosts = new WP_Query(array(
                                 <?php // display image if exists, or replace
                                 if (has_post_thumbnail()) {
                                     the_post_thumbnail('medium_large');
+                                } else {
+                                    echo wp_get_attachment_image(900, 'medium_large');
                                 } ?>
                                 <h2><?php echo the_title(); ?></h2>
                             </div>

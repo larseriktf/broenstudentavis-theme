@@ -147,9 +147,19 @@ div.header-category {
 
 // categories
 
-div.post-category-1 { background: $broen-uncategorized; } // uncategorized
-div.post-category-41 { background: $broen-leserinnlegg; } // leserinnlegg
-div.post-category-46 { background: $broen-meninger; } // meninger
-div.post-category-44 { background: $broen-nyheter; } // nyheter
-div.post-category-42 { background: $broen-kultur; } // kultur
-div.post-category-45 { background: $broen-spisekammeret; } // spisekammeret
+// gamle
+div.post-category-1 { background: $category-grey; } // uncategorized
+div.post-category-41 { background: $category-grey; } // leserinnlegg
+div.post-category-46 { background: $category-grey; } // meninger
+div.post-category-44 { background: $category-grey; } // nyheter
+div.post-category-42 { background: $category-grey; } // kultur
+div.post-category-45 { background: $category-grey; } // spisekammeret
+
+// nye
+div.post-category-61 { background: $category-blue; }
+div.post-category-66 { background: $category-orange; }
+div.post-category-10 { background: $category-green; }
+div.post-category-18 { background: $category-yellow; }
+div.post-category-9 { background: $category-brown; }
+div.post-category-18 { background: $category-grey; }
+div.post-category-27 { background: $category-lightgreen; }

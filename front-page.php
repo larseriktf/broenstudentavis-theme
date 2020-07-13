@@ -26,10 +26,21 @@ function custom_categories($categories) {
     <?php endforeach;
 }
 
+// variables
+$cat_artikkel = get_category_by_slug( 'artikkel' )->term_id;
+$cat_debatt = get_category_by_slug( 'debatt' )->term_id;
+$cat_leserinnlegg = get_category_by_slug( 'leserinnlegg' )->term_id;
+$cat_spiskammeret = get_category_by_slug( 'spisekammeret' )->term_id;
+$cat_uncategorized = get_category_by_slug( 'uncategorized' )->term_id;
+$cat_utdanningskvalitet = get_category_by_slug( 'utdanningskvalitet' )->term_id;
+
 // query
 $mainPosts = new WP_Query(array(
     'posts_per_page' => -1,
-    'cat' => '41, 44', // leserinnlegg, nyheter
+    'cat' =>    $cat_artikkel .','.
+                $cat_leserinnlegg .','.
+                $cat_debatt .','.
+                $cat_utdanningskvalitet,
     'post_type' => 'post',
     'orderby' => 'date',
     'order' => 'DESC',
@@ -38,7 +49,8 @@ $mainPosts = new WP_Query(array(
 
 $sidePosts = new WP_Query(array(
     'posts_per_page' => -1,
-    'cat' => '1, 45, 42, 46', // uncategorized, spisekammeret, kultur, meninger
+    'cat' =>    $cat_spiskammeret .','.
+                $cat_uncategorized,
     'post_type' => 'post',
     'orderby' => 'date',
     'order' => 'DESC',
@@ -52,7 +64,7 @@ $sidePosts = new WP_Query(array(
     <section class="section-frontpage">
         <div class="frontpage-main-thread">
             <div class="header-swift">
-                <h2>Hva er nytt?</h2>
+                <h2>Hva er nytt? <?php echo $cat_kultur ?></h2>
             </div>
 
             <?php // the first loop
@@ -72,6 +84,8 @@ $sidePosts = new WP_Query(array(
                                 <?php // display image if exists, or replace
                                 if (has_post_thumbnail()) {
                                     the_post_thumbnail('medium_large');
+                                } else {
+                                    echo wp_get_attachment_image(900, 'medium_large');
                                 } ?>
                                 <h2><?php echo the_title(); ?></h2>
                             </div>
@@ -101,6 +115,8 @@ $sidePosts = new WP_Query(array(
                                 <?php // display image if exists, or replace
                                 if (has_post_thumbnail()) {
                                     the_post_thumbnail('medium');
+                                } else {
+                                    echo wp_get_attachment_image(900, 'medium_large');
                                 } ?>
                                 <h2><?php echo the_title(); ?></h2>
                             </div>
