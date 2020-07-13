@@ -16,51 +16,19 @@
 
 get_header();
 
-// functions etc.
-
-function custom_categories($categories) {
-    foreach ($categories AS $cat_id) :
-        $cat = get_category( $cat_id );?>
-
-        <div class="<?php echo 'post-category-' . $cat_id; ?>"></div>
-    <?php endforeach;
-}
-
-// query
-$mainPosts = new WP_Query(array(
-    'posts_per_page' => -1,
-    'cat' => '41, 44', // leserinnlegg, nyheter
-    'post_type' => 'post',
-    'orderby' => 'date',
-    'order' => 'DESC',
-    'paged' => $paged
-));
-
-$sidePosts = new WP_Query(array(
-    'posts_per_page' => -1,
-    'cat' => '1, 45, 42, 46', // uncategorized, spisekammeret, kultur, meninger
-    'post_type' => 'post',
-    'orderby' => 'date',
-    'order' => 'DESC',
-    'paged' => $paged
-));
-
 ?>
 
 <main id="site-content" role="main">
 
     <section class="section-frontpage">
         <?php
-
-            if ( have_posts() ) {
-
-                while ( have_posts() ) {
+            if (have_posts()) {
+                while (have_posts()) {
                     the_post();
 
                     get_template_part( 'template-parts/content', get_post_type() );
                 }
             }
-
         ?>
     </section>
 

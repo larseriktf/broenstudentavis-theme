@@ -1,0 +1,23 @@
+// File: _post-content.scss
+
+// post content
+
+header.entry-header {
+
+    
+
+    div.entry-categories {
+        display: none;
+    }
+
+    ul.post-meta {
+        li.post-author { display: none; }
+    }
+}
+
+div.entry-content {
+
+    > p, h1, h2, h3, h4, h5, h6 {
+        // @todo - selector not specific enough, fix
+    }
+}
