@@ -2,22 +2,34 @@
 
 // post content
 
-header.entry-header {
-
+header.entry-header.header-footer-group {
+    background-color: transparent;
     
-
-    div.entry-categories {
-        display: none;
-    }
-
-    ul.post-meta {
-        li.post-author { display: none; }
+    div.entry-header-inner {
+        h1, h2, h3, h4, h5, h6, p {
+            color: $broen-base-blue;
+        }
+        
+        div.entry-categories { display: none; }
+    
+        ul.post-meta {
+            span, span.meta-text > a { color: $broen-base-blue; }
+            li.post-author { display: none; }
+        }
     }
 }
 
 div.entry-content {
 
-    > p, h1, h2, h3, h4, h5, h6 {
-        // @todo - selector not specific enough, fix
+    > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) { // all content
+        max-width: 90rem;
+        width: calc(100% - 4rem);
+    }
+}
+
+
+nav.pagination-single {
+    a, span {
+        color: $broen-base-blue;
     }
 }

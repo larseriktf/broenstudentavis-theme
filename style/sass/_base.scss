@@ -1,6 +1,7 @@
 // File: _base.scss
 
 // Containing resets, variables, mixins etc.
+// @todo - fix variable names
 
 $broen-base-blue:               #006387; // previusly #487c81 and #36a7f7
 $broen-blue-dark:               #00425a;
@@ -13,6 +14,7 @@ $box-grey:						#d1d1d1;
 $box-gray:						#d1d1d1;
 $text-color-black:              #252626;
 $placeholder-color:				#a8329e;
+$broen-theme-grey:              #545454;
 
 // situational
 $category-grey:                 $box-grey;

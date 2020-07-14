@@ -7,6 +7,7 @@ div.page-main-thread {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    
 
     @include for-screen-max($bp-phones) {
         flex-direction: column;
@@ -14,6 +15,21 @@ div.page-main-thread {
     }
 
     > a {
+        /* @todo - make unique first item later
+        &:first-child { // unique first item
+            flex-basis: 100%;
+            background-color: $broen-theme-grey;
+            div.page-main-boxes {
+                display: flex;
+                
+                > img {width: 50%;}
+
+                h1, h2, h3, h4, h5, h6, p {
+                    color: $background-white;
+                }
+            }
+        }*/
+
         flex: 1 0 40%;
 
         div.page-main-boxes {
