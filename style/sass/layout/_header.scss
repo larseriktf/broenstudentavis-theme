@@ -52,17 +52,18 @@ header#site-header {
             place-items: center;
             background-size: cover;
             grid-area: h_logo;
-            transform: translateY(-60px);
+            transform: translateY(-50px);
     
             a.custom-logo-link {
-                display: block;     
-                position: relative;    
-                z-index: 1;     
-                padding: 4em;     
-                margin: -2em; 
+                display: block;
+                position: relative;
+                z-index: 1;
+                padding: 2em;
 
                 img.custom-logo {
                     position: relative;
+                    width: 100%; width: auto;
+                    max-height: none;
                 }
             }
 

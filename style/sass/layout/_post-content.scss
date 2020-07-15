@@ -25,6 +25,12 @@ div.entry-content {
         max-width: 90rem;
         width: calc(100% - 4rem);
     }
+
+    a { color: $broen-base-blue; }
+
+    > figure.wp-block-image {
+        max-width: 35em;
+    }
 }
 
 
@@ -33,3 +39,14 @@ nav.pagination-single {
         color: $broen-base-blue;
     }
 }
+
+figure.featured-media {
+
+    div.featured-media-inner {
+        background-color: blue;
+        max-width: 40em;
+        left: 0;
+    }
+}
+
+figure.featured-media:before { display: none !important; } // @todo - remove !important
