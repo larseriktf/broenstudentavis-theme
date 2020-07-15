@@ -62,14 +62,22 @@
                     ?>
 				</nav><!-- header-nav-tablet -->
 
-                <a class="header-tips-oss">
+                
+                <!-- tips oss -->
+
+                <?php // bruk dette til å bestemme email for knapp
+                    // @todo - display email i knappen
+                    $receiving_email = "Kasper.lislevand@gmail.com";
+                ?>
+
+                <a href="mailto:<?php echo $receiving_email; ?>?subject=Tips%20til%20artikkel" class="header-tips-oss">
                     <div class="tips-oss-text">
                         <p>Tips Oss!</p>
                     </div>
                     <div class="tips-oss-icon">
                         <img id="tips-oss-img" src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/icons_mail.svg" alt="mail icon" />
                     </div>
-                    </a>
+                </a>
             </div> 
         </header><!-- #site-header -->
 
