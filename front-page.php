@@ -85,7 +85,7 @@ $sidePosts = new WP_Query(array(
                                 if (has_post_thumbnail()) {
                                     the_post_thumbnail('medium_large');
                                 } else {
-                                    echo wp_get_attachment_image(900, 'medium_large');
+                                    echo wp_get_attachment_image(918, 'medium_large');
                                 } ?>
                                 <h2><?php echo the_title(); ?></h2>
                             </div>
@@ -116,7 +116,7 @@ $sidePosts = new WP_Query(array(
                                 if (has_post_thumbnail()) {
                                     the_post_thumbnail('medium');
                                 } else {
-                                    echo wp_get_attachment_image(900, 'medium_large');
+                                    echo wp_get_attachment_image(918, 'medium_large');
                                 } ?>
                                 <h2><?php echo the_title(); ?></h2>
                             </div>
