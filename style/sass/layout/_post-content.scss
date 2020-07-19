@@ -2,6 +2,10 @@
 
 // post content
 
+section.section-post > article {
+    width: 100%;
+}
+
 header.entry-header.header-footer-group {
     background-color: transparent;
     
@@ -20,6 +24,8 @@ header.entry-header.header-footer-group {
 }
 
 div.entry-content {
+
+    font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 
     > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) { // all content
         max-width: 90rem;
@@ -43,7 +49,6 @@ nav.pagination-single {
 figure.featured-media {
 
     div.featured-media-inner {
-        background-color: blue;
         max-width: 40em;
         left: 0;
     }

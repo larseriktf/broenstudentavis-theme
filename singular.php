@@ -20,7 +20,7 @@ get_header();
 
 <main id="site-content" role="main">
 
-    <section class="section-frontpage">
+    <section class="section-post">
         <?php
             if (have_posts()) {
                 while (have_posts()) {

@@ -25,12 +25,29 @@ section.section-frontpage {
         flex-direction: column;
     }
 	a { text-decoration: none; }
-
-    
 }
 
 section.section-page {
     box-sizing: border-box;
+	width: $content-size;
+	background-color: $background-white;
+    margin:0 auto;
+    padding: 0;
+    margin-bottom: $std-medium;
+
+    @include for-screen-max($bp-tablet) {
+        width: 100%;
+    }
+    @include for-screen-max($bp-phones) {
+        flex-direction: column;
+    }
+	a { text-decoration: none; }
+}
+
+section.section-post {
+    box-sizing: border-box;
+    display: flex;
+	flex-direction: row;
 	width: $content-size;
 	background-color: $background-white;
     margin:0 auto;
