@@ -959,6 +959,7 @@ div.page-main-thread > a div.page-main-boxes h2 {
 
 div.page-main-thread > a div.page-main-boxes img {
   width: 100%;
+  border: 1px solid #e0e0e0;
 }
 
 section.section-post > article {
@@ -985,7 +986,7 @@ header.entry-header.header-footer-group div.entry-header-inner ul.post-meta li.p
   display: none;
 }
 
-div.entry-content {
+div.entry-content p {
   font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 }
 
