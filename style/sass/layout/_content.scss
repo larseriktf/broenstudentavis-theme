@@ -47,7 +47,7 @@ section.section-page {
 section.section-post {
     box-sizing: border-box;
     display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	width: $content-size;
 	background-color: $background-white;
     margin:0 auto;

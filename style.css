@@ -260,6 +260,39 @@ div.post-category-27 {
   background: #8fb91a;
 }
 
+.style-info-box {
+  background: #545454;
+  width: 100%;
+  padding: 75px;
+}
+
+.style-info-box > * {
+  color: #f9f9f9;
+}
+
+.style-info-box > h2 {
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.style-info-box > h1:first-child, .style-info-box h2:first-child, .style-info-box h3:first-child, .style-info-box h4:first-child, .style-info-box h5:first-child, .style-info-box h6:first-child, .style-info-box p:first-child, .style-info-box a:first-child {
+  margin-top: 0;
+}
+
+.style-info-box > h1:last-child, .style-info-box h2:last-child, .style-info-box h3:last-child, .style-info-box h4:last-child, .style-info-box h5:last-child, .style-info-box h6:last-child, .style-info-box p:last-child, .style-info-box a:last-child {
+  margin-bottom: 0;
+}
+
+.icons-exclamation-mark {
+  background-image: url("images/icons/icons_exclamation_mark.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 75px;
+  height: 75px;
+}
+
 body {
   padding: 0;
 }
@@ -780,10 +813,10 @@ section.section-post {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 1000px;
   background-color: #f9f9f9;
   margin: 0 auto;

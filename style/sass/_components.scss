@@ -159,3 +159,26 @@ div.post-category-18 { background: $category-yellow; }
 div.post-category-9 { background: $category-brown; }
 div.post-category-18 { background: $category-grey; }
 div.post-category-27 { background: $category-lightgreen; }
+
+
+// box styles
+.style-info-box {
+    background: $broen-theme-grey;
+    width:100%;
+    padding: $std-medium;
+
+    > * { color: $background-white; }
+    > h2 { @include text-emphasize(); }
+    
+    @include remove-outer-text-margin();
+}
+
+// icons
+.icons-exclamation-mark {
+    background-image: url("images/icons/icons_exclamation_mark.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: $std-medium;
+    height: $std-medium;
+}
