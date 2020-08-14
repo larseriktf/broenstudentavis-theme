@@ -178,6 +178,9 @@ div.style-info-box {
     background-color: $broen-theme-grey;
     width:100%;
     padding: $std-medium;
+    @include for-screen-max($bp-phones) {
+        padding: $std-small;
+    }
 
     > * { color: $background-white; }
     p > a {

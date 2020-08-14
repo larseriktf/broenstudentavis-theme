@@ -277,6 +277,12 @@ div.style-info-box {
   padding: 75px;
 }
 
+@media (max-width: 600px) {
+  div.style-info-box {
+    padding: 25px;
+  }
+}
+
 div.style-info-box > * {
   color: #f9f9f9;
 }
