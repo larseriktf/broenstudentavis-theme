@@ -23,12 +23,15 @@ get_header();
 <main id="site-content" role="main">
     <section class="section-post">
         <div class="rekrutt-blokk style-info-box">
-            <div class="icons-exclamation-mark"></div>
-            <h2>Vi trenger flere ansatte!</h2>
+            <h2>Søker ansatte</h2>
             <p>
-                test contenttest contenttest contenttest contenttest contenttest contenttest contenttest contenttest contenttest contenttest contenttest content
+                Er du en student ved Høgskolen i Østfold som ønsker å delta i noe større?
+                Vi søker deg som engasjerer seg for journalistikk, ledelse, grafisk design eller IT.
             </p>
-            <p>Høres dette interessant ut for deg? Klikk her: <a>Link til påmelding</a></p>
+            <p>Høres dette interessant ut? Ta kontakt og fortell oss hva du kan!</p>
+            <a href="mailto:Broen@broenstudentavis.no?subject=Søknad%20til%20stilling" class="button-border-white element-centered">TA KONTAKT: broen@broenstudentavis.no</a>
+            <p>Eller send oss en melding via <a href="https://www.facebook.com/Broen-Studentavis-110608023806866">Facebook siden</a> vår.</p>
+            
         </div>
 
         <?php

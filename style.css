@@ -50,20 +50,11 @@ body {
   display: none;
 }
 
-.abs-centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
 .mail-animation {
   -webkit-animation: mailshift .5s ease-in-out forwards;
           animation: mailshift .5s ease-in-out forwards;
 }
 
-/*knapper*/
 button:not(.toggle),
 .button,
 .faux-button,
@@ -98,6 +89,25 @@ input[type="submit"]:hover,
   background: #0088ba;
   text-decoration: none;
   border-radius: 2em;
+}
+
+.button-border-white {
+  display: inline-block;
+  border: 0.2em solid #f9f9f9;
+  border-radius: 0.25em;
+  color: #f9f9f9;
+  padding: 1em;
+  width: auto;
+  text-align: center;
+  -webkit-transition: .2s;
+  transition: .2s;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+
+.button-border-white:hover {
+  background-color: #f9f9f9;
+  color: #545454;
 }
 
 main#main {
@@ -260,37 +270,66 @@ div.post-category-27 {
   background: #8fb91a;
 }
 
-.style-info-box {
-  background: #545454;
+div.style-info-box {
+  position: relative;
+  background-color: #545454;
   width: 100%;
   padding: 75px;
 }
 
-.style-info-box > * {
+div.style-info-box > * {
   color: #f9f9f9;
 }
 
-.style-info-box > h2 {
+div.style-info-box p > a {
+  color: #47ceff;
+  text-decoration: underline;
+}
+
+div.style-info-box > h1, div.style-info-box h2, div.style-info-box h3, div.style-info-box h4, div.style-info-box h5, div.style-info-box h6 {
   font-weight: normal;
-  text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-.style-info-box > h1:first-child, .style-info-box h2:first-child, .style-info-box h3:first-child, .style-info-box h4:first-child, .style-info-box h5:first-child, .style-info-box h6:first-child, .style-info-box p:first-child, .style-info-box a:first-child {
+div.style-info-box h1, div.style-info-box h2, div.style-info-box h3, div.style-info-box h4, div.style-info-box h5, div.style-info-box h6, div.style-info-box p, div.style-info-box a {
+  position: relative;
+}
+
+div.style-info-box > h1:first-child, div.style-info-box h2:first-child, div.style-info-box h3:first-child, div.style-info-box h4:first-child, div.style-info-box h5:first-child, div.style-info-box h6:first-child, div.style-info-box p:first-child, div.style-info-box a:first-child {
   margin-top: 0;
 }
 
-.style-info-box > h1:last-child, .style-info-box h2:last-child, .style-info-box h3:last-child, .style-info-box h4:last-child, .style-info-box h5:last-child, .style-info-box h6:last-child, .style-info-box p:last-child, .style-info-box a:last-child {
+div.style-info-box > h1:last-child, div.style-info-box h2:last-child, div.style-info-box h3:last-child, div.style-info-box h4:last-child, div.style-info-box h5:last-child, div.style-info-box h6:last-child, div.style-info-box p:last-child, div.style-info-box a:last-child {
   margin-bottom: 0;
 }
 
-.icons-exclamation-mark {
+div.style-info-box::before {
+  content: '';
   background-image: url("images/icons/icons_exclamation_mark.svg");
-  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
-  width: 75px;
-  height: 75px;
+  background-size: contain;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 75%;
+  opacity: 0.1;
+}
+
+.abs-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.element-centered {
+  margin: auto;
+}
+
+.text-centered {
+  text-align: center;
 }
 
 body {

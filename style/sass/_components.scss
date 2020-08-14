@@ -6,17 +6,10 @@
 
 #site-title { display: none; }
 
-.abs-centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 // for tips-oss animasjonen
 .mail-animation { animation: mailshift .5s ease-in-out forwards; }
 
-/*knapper*/
+// buttons
 button:not(.toggle),
 .button,
 .faux-button,
@@ -40,6 +33,24 @@ input[type="submit"],
 	}
 }
 
+.button-border-white {
+    display: inline-block;
+    border: 0.2em solid $background-white;
+    border-radius: $border-base;
+    color: $background-white;
+    padding: 1em;
+    width: auto;
+    text-align: center;
+    transition: .2s;
+    @include letters-spaced();
+
+    &:hover {
+        background-color: $background-white;
+        color: $broen-theme-grey;
+    }
+}
+
+// noe annet
 main#main {
 	font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 	text-align: center;
@@ -162,23 +173,32 @@ div.post-category-27 { background: $category-lightgreen; }
 
 
 // box styles
-.style-info-box {
-    background: $broen-theme-grey;
+div.style-info-box {
+    position: relative;
+    background-color: $broen-theme-grey;
     width:100%;
     padding: $std-medium;
 
     > * { color: $background-white; }
-    > h2 { @include text-emphasize(); }
+    p > a {
+        color: $broen-blue-light;
+        text-decoration: underline;
+    }
+    > h1, h2, h3, h4, h5, h6 { @include letters-spaced(); }
+    h1, h2, h3, h4, h5, h6, p, a { position: relative; }
     
     @include remove-outer-text-margin();
-}
 
-// icons
-.icons-exclamation-mark {
-    background-image: url("images/icons/icons_exclamation_mark.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: $std-medium;
-    height: $std-medium;
+    &::before { // the exclamation mark
+        content: '';
+        background-image: url("images/icons/icons_exclamation_mark.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 75%;
+        opacity: 0.1;
+    }
 }

@@ -1,0 +1,14 @@
+// File: _attributes.scss
+
+// Attributes for html elements
+
+.abs-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.element-centered { margin: auto; }
+
+.text-centered { text-align: center; }
