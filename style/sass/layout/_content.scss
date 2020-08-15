@@ -3,7 +3,7 @@
 // main content
 
 // @todo: find a home for this boy
-#site-content { background: $background-grey; }
+#site-content { background: $grey-light; }
 
 // remove hover effects
 .noHover{ pointer-events: none; }
@@ -13,7 +13,7 @@ section.section-frontpage {
     display: flex;
 	flex-direction: row;
 	width: $content-size;
-	background-color: $background-white;
+	background-color: $white;
     margin:0 auto;
     padding: 0;
     margin-bottom: $std-medium;
@@ -30,7 +30,7 @@ section.section-frontpage {
 section.section-page {
     box-sizing: border-box;
 	width: $content-size;
-	background-color: $background-white;
+	background-color: $white;
     margin:0 auto;
     padding: 0;
     margin-bottom: $std-medium;
@@ -49,7 +49,7 @@ section.section-post {
     display: flex;
 	flex-direction: column;
 	width: $content-size;
-	background-color: $background-white;
+	background-color: $white;
     margin:0 auto;
     padding: 0;
     margin-bottom: $std-medium;

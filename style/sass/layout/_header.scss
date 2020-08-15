@@ -42,7 +42,7 @@ header#site-header {
             height: $std-medium;
             width: 100%;
             z-index: -100;
-            background-color: $broen-base-blue;
+            background-color: $blue-base;
         }
 
         div.site-logo {
@@ -92,7 +92,7 @@ header#site-header {
                 margin: 0;
             
                 li.menu-item > a {
-                    color: $background-white;
+                    color: $white;
                     text-decoration: none;
                 }
             }
@@ -131,7 +131,7 @@ header#site-header {
 
         nav.header-nav-tablet {
             grid-area: h_nav_tab;
-            background-color: $broen-blue-dark;
+            background-color: $blue-dark;
             top: $std-medium;
             padding: 1em;
             width: 100%;
@@ -143,7 +143,7 @@ header#site-header {
             li.menu-item {
                 margin: 0;
                 padding: .5em 0;
-                background: linear-gradient(to bottom, $broen-base-blue, $broen-base-blue) no-repeat bottom;
+                background: linear-gradient(to bottom, $blue-base, $blue-base) no-repeat bottom;
                 background-size: 100% 1px;
 
                 > a {
@@ -200,8 +200,8 @@ header#site-header {
 
             div.tips-oss-text {
                 width: 100%;
-                color: $background-white;
-                background-color: $broen-blue-dark;
+                color: $white;
+                background-color: $blue-dark;
                 
                 p {
                     font-size: 2rem;
@@ -210,7 +210,7 @@ header#site-header {
             }
             div.tips-oss-icon {
                 width: 150px;
-                background-color: $broen-base-blue;
+                background-color: $blue-base;
                 overflow-x: hidden;
                 
                 @include for-screen-max($bp-tablet) { display: none; }

@@ -107,7 +107,7 @@ input[type="submit"]:hover,
 
 .button-border-white:hover {
   background-color: #f9f9f9;
-  color: #545454;
+  color: #252626;
 }
 
 main#main {
@@ -272,7 +272,7 @@ div.post-category-27 {
 
 div.style-info-box {
   position: relative;
-  background-color: #545454;
+  background-color: #252626;
   width: 100%;
   padding: 75px;
 }
@@ -687,16 +687,35 @@ header#site-header div.header-content a.header-tips-oss:hover {
 
 footer#site-footer.header-footer-group {
   overflow: hidden;
-  background: #006387;
+  background: #00425a;
   position: relative;
   padding: 0;
 }
 
 footer#site-footer.header-footer-group div.footer-content {
-  padding: 4em 8em;
+  padding: 75px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  /*
+        > * {
+            min-width: 300px;
+            width: 100%;
+            box-sizing: border-box;
+
+            h1, h2, h3, h4, h5, h6 {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                @include text-emphasize;
+                margin: .5em 0;
+            }
+            p {
+                margin-right: 2em;
+                opacity: .8;
+            }
+        }
+        */
 }
 
 @media (max-width: 1200px) {
@@ -705,43 +724,55 @@ footer#site-footer.header-footer-group div.footer-content {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 0 25px;
   }
 }
 
-@media (max-width: 600px) {
-  footer#site-footer.header-footer-group div.footer-content {
-    padding: 1em 2em;
-  }
-}
-
-footer#site-footer.header-footer-group div.footer-content > * {
-  min-width: 300px;
+footer#site-footer.header-footer-group div.footer-content .footer-column {
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  padding: 25px;
+  border-right: 2px solid #006387;
 }
 
-footer#site-footer.header-footer-group div.footer-content > * h1, footer#site-footer.header-footer-group div.footer-content > * h2, footer#site-footer.header-footer-group div.footer-content > * h3, footer#site-footer.header-footer-group div.footer-content > * h4, footer#site-footer.header-footer-group div.footer-content > * h5, footer#site-footer.header-footer-group div.footer-content > * h6 {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+footer#site-footer.header-footer-group div.footer-content .footer-column:last-child {
+  border-right: none;
+}
+
+footer#site-footer.header-footer-group div.footer-content .footer-column > h1:first-child, footer#site-footer.header-footer-group div.footer-content .footer-column h2:first-child, footer#site-footer.header-footer-group div.footer-content .footer-column h3:first-child, footer#site-footer.header-footer-group div.footer-content .footer-column h4:first-child, footer#site-footer.header-footer-group div.footer-content .footer-column h5:first-child, footer#site-footer.header-footer-group div.footer-content .footer-column h6:first-child, footer#site-footer.header-footer-group div.footer-content .footer-column p:first-child, footer#site-footer.header-footer-group div.footer-content .footer-column a:first-child {
+  margin-top: 0;
+}
+
+footer#site-footer.header-footer-group div.footer-content .footer-column > h1:last-child, footer#site-footer.header-footer-group div.footer-content .footer-column h2:last-child, footer#site-footer.header-footer-group div.footer-content .footer-column h3:last-child, footer#site-footer.header-footer-group div.footer-content .footer-column h4:last-child, footer#site-footer.header-footer-group div.footer-content .footer-column h5:last-child, footer#site-footer.header-footer-group div.footer-content .footer-column h6:last-child, footer#site-footer.header-footer-group div.footer-content .footer-column p:last-child, footer#site-footer.header-footer-group div.footer-content .footer-column a:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1200px) {
+  footer#site-footer.header-footer-group div.footer-content .footer-column {
+    border-right: none;
+    border-bottom: 2px solid #006387;
+  }
+  footer#site-footer.header-footer-group div.footer-content .footer-column:last-child {
+    border-bottom: none;
+  }
+}
+
+footer#site-footer.header-footer-group div.footer-content .footer-column h1, footer#site-footer.header-footer-group div.footer-content .footer-column h2, footer#site-footer.header-footer-group div.footer-content .footer-column h3, footer#site-footer.header-footer-group div.footer-content .footer-column h4, footer#site-footer.header-footer-group div.footer-content .footer-column h5, footer#site-footer.header-footer-group div.footer-content .footer-column h6 {
   font-weight: normal;
-  text-transform: uppercase;
   letter-spacing: 2px;
-  margin: .5em 0;
-}
-
-footer#site-footer.header-footer-group div.footer-content > * p {
-  margin-right: 2em;
-  opacity: .8;
 }
 
 footer#site-footer.header-footer-group div.footer-copyright {
-  padding: 2em 8em;
+  max-width: 1000px;
+  margin: auto;
+  padding: 25px;
+  border-top: 2px solid #006387;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #00425a;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -926,7 +957,7 @@ div.frontpage-main-boxes div.category-boxes > div, div.frontpage-minor-boxes div
   width: 100%;
   height: 100%;
   font-size: 2rem;
-  color: #f0f0f0;
+  color: #e0e0e0;
 }
 
 div.frontpage-minor-boxes {
@@ -1005,14 +1036,14 @@ div.page-main-thread > a {
   /* @todo - make unique first item later
         &:first-child { // unique first item
             flex-basis: 100%;
-            background-color: $broen-theme-grey;
+            background-color: $black;
             div.page-main-boxes {
                 display: flex;
                 
                 > img {width: 50%;}
 
                 h1, h2, h3, h4, h5, h6, p {
-                    color: $background-white;
+                    color: $white;
                 }
             }
         }*/

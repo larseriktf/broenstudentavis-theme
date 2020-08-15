@@ -18,14 +18,14 @@ div.page-main-thread {
         /* @todo - make unique first item later
         &:first-child { // unique first item
             flex-basis: 100%;
-            background-color: $broen-theme-grey;
+            background-color: $black;
             div.page-main-boxes {
                 display: flex;
                 
                 > img {width: 50%;}
 
                 h1, h2, h3, h4, h5, h6, p {
-                    color: $background-white;
+                    color: $white;
                 }
             }
         }*/
@@ -39,13 +39,13 @@ div.page-main-thread {
     
             overflow: hidden;
             h2 {
-                color: $broen-base-blue;
+                color: $blue-base;
                 margin: 0; padding: 0;
             }
             
             img {
                 width: 100%;
-                border: 1px solid $background-grey;
+                border: 1px solid $grey-light;
             }
         }
     }

@@ -4,16 +4,37 @@
 
 footer#site-footer.header-footer-group {
     overflow: hidden;
-    background: $broen-base-blue;
+    background: $blue-dark;
     position: relative;
     padding: 0;
 
     div.footer-content {
-        padding: 4em 8em;
+        padding: $std-medium 0;
         display: flex;
-        @include for-screen-max($bp-laptop) { flex-direction: column; }
-        @include for-screen-max($bp-phones) { padding: 1em 2em; }
+        @include for-screen-max($bp-laptop) {
+            flex-direction: column;
+            padding: 0 $std-small;
+        }
 
+        .footer-column {
+            width: 100%;
+            box-sizing: border-box;
+            padding: $std-small;
+            border-right: 2px solid $blue-base;
+            &:last-child { border-right: none;}
+
+            @include remove-outer-text-margin();
+            @include for-screen-max($bp-laptop) {
+                border-right: none;
+                border-bottom: 2px solid $blue-base;
+                &:last-child { border-bottom: none;}
+            }
+
+            h1, h2, h3, h4, h5, h6 {
+                @include letters-spaced();
+            }
+        }
+        /*
         > * {
             min-width: 300px;
             width: 100%;
@@ -31,12 +52,16 @@ footer#site-footer.header-footer-group {
                 opacity: .8;
             }
         }
+        */
     }
 
     div.footer-copyright {
-        padding: 2em 8em;
+        max-width: $content-size;
+        margin: auto;
+        padding: $std-small;
+        border-top: 2px solid $blue-base;
+        box-sizing: border-box;
         display: flex;
-        background: $broen-blue-dark;
         justify-content: space-between;
         
         @include for-screen-max($bp-laptop) {

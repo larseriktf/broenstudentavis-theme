@@ -1,24 +1,21 @@
 // File: _base.scss
 
-// Containing resets, variables, mixins etc.
-// @todo - fix variable names
+// variables and base values
 
-$broen-base-blue:               #006387; // previusly #487c81 and #36a7f7
-$broen-blue-light:              #47ceff;
-$broen-blue-dark:               #00425a;
-$broen-base-hover:              lighten($broen-base-blue, 10);
-$background-white:              #f9f9f9;
-$background-grey:				#e0e0e0;
-$broen-base-white:				#f0f0f0;
-$container-white:				lighten($background-white, 20);
-$box-grey:						#d1d1d1;
-$box-gray:						#d1d1d1;
-$text-color-black:              #252626;
-$placeholder-color:				#a8329e;
-$broen-theme-grey:              #545454;
 
-// situational
-$category-grey:                 $box-grey;
+// theme colors
+$blue-base:         #006387; // previusly #487c81 and #36a7f7
+$blue-light:        #47ceff;
+$blue-dark:         #00425a;
+$white:             #f9f9f9;
+$grey-light:        #e0e0e0;
+$grey:              #545454;
+$grey-dark:         #313336;
+$black:             #252626;
+$placeholder:       #a8329e;
+
+// situational colors
+$category-grey:                 #d1d1d1;
 $category-green:                #2bb169;
 $category-blue:                 #18b1cf;
 $category-orange:               #f08b08;
@@ -47,7 +44,7 @@ $bp-phones:     600px; // smaller phones
 h6, h5, h4, h3, h2, h1 {
     a {
         text-decoration: none;
-	    color: $text-color-black;
+	    color: $black;
     }
 }
 

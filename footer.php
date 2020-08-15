@@ -14,15 +14,17 @@
 ?>
             <footer id="site-footer" role="contentinfo" class="header-footer-group">
                 <div class="footer-content">
-                    <div>
+                    <div class="footer-column">
                         <h3>Om oss</h3>
                         <p>Broen er en studentavis ved  Høgskolen i Østfold den ble lansert 3. Februar 2020.</p>
                         <p>Broen Studentavis har som mål å gi Studentene ved HiØ en fri taleplattform for å uttrykke meningene, sakene, verdiene og idealene våre.</p>
                         <p>Broen Studentavis følger retningslinjene for pressefrihet, ytringsfrihet, tale- og informasjonsfrihet stipulert i Vær varsom plakaten.</p>
                     </div>
-                    <div>
-                        <h3>Kontakt oss</h3>
-                        <p>E-post: Broen@broenstudentavis.no</p>
+                    <div class="footer-column">
+                    </div>
+                    <div class="footer-column">
+                    </div>
+                    <div class="footer-column">
                     </div>
                 </div>
 
@@ -66,3 +68,21 @@
 
 	</body>
 </html>
+
+
+
+
+<!--
+
+<div>
+    <h3>Om oss</h3>
+    <p>Broen er en studentavis ved  Høgskolen i Østfold den ble lansert 3. Februar 2020.</p>
+    <p>Broen Studentavis har som mål å gi Studentene ved HiØ en fri taleplattform for å uttrykke meningene, sakene, verdiene og idealene våre.</p>
+    <p>Broen Studentavis følger retningslinjene for pressefrihet, ytringsfrihet, tale- og informasjonsfrihet stipulert i Vær varsom plakaten.</p>
+</div>
+<div>
+    <h3>Kontakt oss</h3>
+    <p>E-post: Broen@broenstudentavis.no</p>
+</div>
+
+-->

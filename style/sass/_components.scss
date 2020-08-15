@@ -23,11 +23,11 @@ input[type="submit"],
 .bg-accent-hover:focus,
 :root .has-accent-background-color,
 .comment-reply-link {
-	background: $broen-base-blue;
+	background: $blue-base;
 	transition: .2s;
 
 	&:hover {
-		background: $broen-base-hover;
+		background: lighten($blue-base, 10);
 		text-decoration: none;
 		border-radius: 2em;
 	}
@@ -35,9 +35,9 @@ input[type="submit"],
 
 .button-border-white {
     display: inline-block;
-    border: 0.2em solid $background-white;
+    border: 0.2em solid $white;
     border-radius: $border-base;
-    color: $background-white;
+    color: $white;
     padding: 1em;
     width: auto;
     text-align: center;
@@ -45,8 +45,8 @@ input[type="submit"],
     @include letters-spaced();
 
     &:hover {
-        background-color: $background-white;
-        color: $broen-theme-grey;
+        background-color: $white;
+        color: $black;
     }
 }
 
@@ -64,7 +64,7 @@ main#main {
 
 /* titlebox */
 .titlebox {
-	border-left: 6px solid $broen-base-blue;
+	border-left: 6px solid $blue-base;
 	padding: 10px;
 	background-color: #dedede;
 }
@@ -82,16 +82,16 @@ div.textwidget {
         max-width: 16em;
         margin: auto;
         padding: 1em;
-        background: $background-white;
-        border: solid $broen-base-blue;
+        background: $white;
+        border: solid $blue-base;
         border-radius: 1em;
         border-width: thin;
         text-align: center;
-        color: $broen-base-blue;
+        color: $blue-base;
 
         &:hover {
-            background: $broen-base-blue;
-            color: $background-white;
+            background: $blue-base;
+            color: $white;
             cursor: pointer;
         }
     }
@@ -99,13 +99,13 @@ div.textwidget {
 
 // body
 
-body#site-body { background-color: $background-grey; }
+body#site-body { background-color: $grey-light; }
 
 
 // header styles
 
 div.header-swift {
-    background: linear-gradient(to left, $broen-base-blue, $broen-base-blue) no-repeat left;
+    background: linear-gradient(to left, $blue-base, $blue-base) no-repeat left;
     background-size: 8px 100%;
     margin-bottom: 2em;
     padding: 0.25em 1em;
@@ -113,17 +113,17 @@ div.header-swift {
     text-overflow: ellipsis;
 
     @include for-screen-max($bp-phones) {
-        background: $broen-base-blue;
+        background: $blue-base;
     }
 
     h2 {
-        color: $broen-base-blue;
+        color: $blue-base;
         margin: 0;
         font-size: 32px;
         letter-spacing: 0.5px;
         
         @include for-screen-max($bp-phones) {
-            color: $background-white;
+            color: $white;
         }
     }
 }
@@ -134,7 +134,7 @@ div.header-category {
     text-overflow: ellipsis;
 
     h2 {
-        color: $broen-base-blue;
+        color: $blue-base;
         margin: 0;
         font-size: 32px;
         letter-spacing: 0.5px;
@@ -175,16 +175,16 @@ div.post-category-27 { background: $category-lightgreen; }
 // box styles
 div.style-info-box {
     position: relative;
-    background-color: $broen-theme-grey;
+    background-color: $black;
     width:100%;
     padding: $std-medium;
     @include for-screen-max($bp-phones) {
         padding: $std-small;
     }
 
-    > * { color: $background-white; }
+    > * { color: $white; }
     p > a {
-        color: $broen-blue-light;
+        color: $blue-light;
         text-decoration: underline;
     }
     > h1, h2, h3, h4, h5, h6 { @include letters-spaced(); }

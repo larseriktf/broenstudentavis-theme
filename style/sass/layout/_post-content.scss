@@ -11,13 +11,13 @@ header.entry-header.header-footer-group {
     
     div.entry-header-inner {
         h1, h2, h3, h4, h5, h6, p {
-            color: $broen-base-blue;
+            color: $blue-base;
         }
         
         div.entry-categories { display: none; }
     
         ul.post-meta {
-            span, span.meta-text > a { color: $broen-base-blue; }
+            span, span.meta-text > a { color: $blue-base; }
             li.post-author { display: none; }
         }
     }
@@ -32,7 +32,7 @@ div.entry-content {
         width: calc(100% - 4rem);
     }
 
-    a { color: $broen-base-blue; }
+    a { color: $blue-base; }
 
     > figure.wp-block-image {
         max-width: 35em;
@@ -42,7 +42,7 @@ div.entry-content {
 
 nav.pagination-single {
     a, span {
-        color: $broen-base-blue;
+        color: $blue-base;
     }
 }
 
