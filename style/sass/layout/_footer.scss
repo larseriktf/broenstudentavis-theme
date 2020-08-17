@@ -8,6 +8,19 @@ footer#site-footer.header-footer-group {
     position: relative;
     padding: 0;
 
+    a { // @todo - rydd opp
+        color: $white;
+        &.button-round-blue {
+            color: $blue-dark;
+            &:hover { text-decoration: none; }
+        }
+        
+    }
+
+    h1, h2, h3, h4, h5, h6, p, a {
+        z-index: 1;
+    }
+
     @include for-screen-min($bp-tablet) {
         // broen grafikk kun for størrelser over tablets
         &::before {
@@ -22,6 +35,7 @@ footer#site-footer.header-footer-group {
             left: 0;
             background-position: bottom;
             opacity: .05;
+            z-index: 0;
         }
     }
     
@@ -60,13 +74,35 @@ footer#site-footer.header-footer-group {
             bottom: 0;
             right: 0;
         }
+
+        div.footer-showcase-item {
+            z-index: 1;
+            position: relative;
+            height: 100%;
+            max-width: $outer-size;
+            margin: auto;
+            padding: $std-large $std-small;
+
+            @include remove-outer-text-margin();
+
+            > h1, h2, h3, h4, h5, h6 {
+                font-size: 50px;
+                @include letters-spaced();
+            }
+            p {
+                font-size: 20px;
+            }
+        }
     }
 
     div.footer-content {
         position: relative;
         padding: $std-medium 0;
         display: flex;
-        @include for-screen-max($bp-laptop) {
+        max-width: $outer-size;
+        margin: auto;
+
+        @include for-screen-max($bp-tablet) {
             flex-direction: column;
             padding: 0 $std-small;
         }
@@ -82,7 +118,7 @@ footer#site-footer.header-footer-group {
             &:last-child { border-right: none;}
 
             @include remove-outer-text-margin();
-            @include for-screen-max($bp-laptop) {
+            @include for-screen-max($bp-tablet) {
                 border-right: none;
                 border-bottom: 2px solid $blue-base;
                 &:last-child { border-bottom: none;}

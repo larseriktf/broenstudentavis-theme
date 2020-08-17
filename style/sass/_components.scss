@@ -50,6 +50,23 @@ input[type="submit"],
     }
 }
 
+.button-round-blue {
+    display: inline-block;
+    background-color: $blue-light;
+    border-radius: 1em;
+    color: $blue-dark;
+    padding: 1em;
+    width: auto;
+    text-align: center;
+    transition: .2s;
+    @include letters-spaced();
+    font-weight: bold;
+
+    &:hover {
+        background-color: $white;
+    }
+}
+
 // noe annet
 main#main {
 	font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;

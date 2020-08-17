@@ -110,6 +110,25 @@ input[type="submit"]:hover,
   color: #252626;
 }
 
+.button-round-blue {
+  display: inline-block;
+  background-color: #47ceff;
+  border-radius: 1em;
+  color: #00425a;
+  padding: 1em;
+  width: auto;
+  text-align: center;
+  -webkit-transition: .2s;
+  transition: .2s;
+  font-weight: normal;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.button-round-blue:hover {
+  background-color: #f9f9f9;
+}
+
 main#main {
   font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
   text-align: center;
@@ -336,6 +355,10 @@ div.style-info-box::before {
 
 .text-centered {
   text-align: center;
+}
+
+.noHover {
+  pointer-events: none;
 }
 
 body {
@@ -692,6 +715,22 @@ footer#site-footer.header-footer-group {
   padding: 0;
 }
 
+footer#site-footer.header-footer-group a {
+  color: #f9f9f9;
+}
+
+footer#site-footer.header-footer-group a.button-round-blue {
+  color: #00425a;
+}
+
+footer#site-footer.header-footer-group a.button-round-blue:hover {
+  text-decoration: none;
+}
+
+footer#site-footer.header-footer-group h1, footer#site-footer.header-footer-group h2, footer#site-footer.header-footer-group h3, footer#site-footer.header-footer-group h4, footer#site-footer.header-footer-group h5, footer#site-footer.header-footer-group h6, footer#site-footer.header-footer-group p, footer#site-footer.header-footer-group a {
+  z-index: 1;
+}
+
 @media (min-width: 1001px) {
   footer#site-footer.header-footer-group::before {
     content: '';
@@ -705,6 +744,7 @@ footer#site-footer.header-footer-group {
     left: 0;
     background-position: bottom;
     opacity: .05;
+    z-index: 0;
   }
 }
 
@@ -736,12 +776,41 @@ footer#site-footer.header-footer-group div.footer-showcase img#footer-showcase-p
   right: 0;
 }
 
+footer#site-footer.header-footer-group div.footer-showcase div.footer-showcase-item {
+  z-index: 1;
+  position: relative;
+  height: 100%;
+  max-width: 1280px;
+  margin: auto;
+  padding: 125px 25px;
+}
+
+footer#site-footer.header-footer-group div.footer-showcase div.footer-showcase-item > h1:first-child, footer#site-footer.header-footer-group div.footer-showcase div.footer-showcase-item h2:first-child, footer#site-footer.header-footer-group div.footer-showcase div.footer-showcase-item h3:first-child, footer#site-footer.header-footer-group div.footer-showcase div.footer-showcase-item h4:first-child, footer#site-footer.header-footer-group div.footer-showcase div.footer-showcase-item h5:first-child, footer#site-footer.header-footer-group div.footer-showcase div.footer-showcase-item h6:first-child, footer#site-footer.header-footer-group div.footer-showcase div.footer-showcase-item p:first-child, footer#site-footer.header-footer-group div.footer-showcase div.footer-showcase-item a:first-child {
+  margin-top: 0;
+}
+
+footer#site-footer.header-footer-group div.footer-showcase div.footer-showcase-item > h1:last-child, footer#site-footer.header-footer-group div.footer-showcase div.footer-showcase-item h2:last-child, footer#site-footer.header-footer-group div.footer-showcase div.footer-showcase-item h3:last-child, footer#site-footer.header-footer-group div.footer-showcase div.footer-showcase-item h4:last-child, footer#site-footer.header-footer-group div.footer-showcase div.footer-showcase-item h5:last-child, footer#site-footer.header-footer-group div.footer-showcase div.footer-showcase-item h6:last-child, footer#site-footer.header-footer-group div.footer-showcase div.footer-showcase-item p:last-child, footer#site-footer.header-footer-group div.footer-showcase div.footer-showcase-item a:last-child {
+  margin-bottom: 0;
+}
+
+footer#site-footer.header-footer-group div.footer-showcase div.footer-showcase-item > h1, footer#site-footer.header-footer-group div.footer-showcase div.footer-showcase-item h2, footer#site-footer.header-footer-group div.footer-showcase div.footer-showcase-item h3, footer#site-footer.header-footer-group div.footer-showcase div.footer-showcase-item h4, footer#site-footer.header-footer-group div.footer-showcase div.footer-showcase-item h5, footer#site-footer.header-footer-group div.footer-showcase div.footer-showcase-item h6 {
+  font-size: 50px;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+
+footer#site-footer.header-footer-group div.footer-showcase div.footer-showcase-item p {
+  font-size: 20px;
+}
+
 footer#site-footer.header-footer-group div.footer-content {
   position: relative;
   padding: 75px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 1280px;
+  margin: auto;
   /*
         > * {
             min-width: 300px;
@@ -763,7 +832,7 @@ footer#site-footer.header-footer-group div.footer-content {
         */
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
   footer#site-footer.header-footer-group div.footer-content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -794,7 +863,7 @@ footer#site-footer.header-footer-group div.footer-content .footer-column > h1:la
   margin-bottom: 0;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
   footer#site-footer.header-footer-group div.footer-content .footer-column {
     border-right: none;
     border-bottom: 2px solid #006387;
@@ -857,10 +926,6 @@ footer#site-footer.header-footer-group div.footer-copyright p, footer#site-foote
 
 #site-content {
   background: #e0e0e0;
-}
-
-.noHover {
-  pointer-events: none;
 }
 
 section.section-frontpage {
