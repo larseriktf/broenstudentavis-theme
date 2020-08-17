@@ -175,7 +175,7 @@ div.post-category-27 { background: $category-lightgreen; }
 // box styles
 div.style-info-box {
     position: relative;
-    background-color: $black;
+    background-color: $grey;
     width:100%;
     padding: $std-medium;
     @include for-screen-max($bp-phones) {

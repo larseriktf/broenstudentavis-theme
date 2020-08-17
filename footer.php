@@ -13,6 +13,9 @@
 
 ?>
             <footer id="site-footer" role="contentinfo" class="header-footer-group">
+                <div class="footer-showcase">
+                    <img id="footer-showcase-photo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/photos/photos_hiof_bygning.JPG" alt="hiof">
+                </div>
                 <div class="footer-content">
                     <div class="footer-column">
                         <h3>Om oss</h3>

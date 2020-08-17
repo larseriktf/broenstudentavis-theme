@@ -8,7 +8,62 @@ footer#site-footer.header-footer-group {
     position: relative;
     padding: 0;
 
+    @include for-screen-min($bp-tablet) {
+        // broen grafikk kun for størrelser over tablets
+        &::before {
+            content: '';
+            background-image: url("images/graphics/graphics_svinesundbro.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-position: bottom;
+            opacity: .05;
+        }
+    }
+    
+
+    div.footer-showcase {
+        $showcase-height:   600px;
+        $showcase-width:    1500px;
+
+        position: relative;
+        background-color: $blue-dark;
+        height: $showcase-height;
+        overflow: hidden;
+
+        &::before { // gradient for showcase bildet
+            content: '';
+            width: $showcase-width;
+            height: $showcase-height;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+            background:
+                radial-gradient(
+                    circle at top right,
+                    transparent,
+                    $blue-dark 80%
+                );
+            
+        }
+
+        img#footer-showcase-photo {
+            object-fit: cover;
+            width: $showcase-width;
+            min-height: $showcase-height;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
     div.footer-content {
+        position: relative;
         padding: $std-medium 0;
         display: flex;
         @include for-screen-max($bp-laptop) {
@@ -16,7 +71,10 @@ footer#site-footer.header-footer-group {
             padding: 0 $std-small;
         }
 
+        
+
         .footer-column {
+            position: relative;
             width: 100%;
             box-sizing: border-box;
             padding: $std-small;
@@ -58,8 +116,7 @@ footer#site-footer.header-footer-group {
     div.footer-copyright {
         max-width: $content-size;
         margin: auto;
-        padding: $std-small;
-        border-top: 2px solid $blue-base;
+        padding: $std-medium;
         box-sizing: border-box;
         display: flex;
         justify-content: space-between;

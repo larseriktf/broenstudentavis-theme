@@ -272,7 +272,7 @@ div.post-category-27 {
 
 div.style-info-box {
   position: relative;
-  background-color: #252626;
+  background-color: #545454;
   width: 100%;
   padding: 75px;
 }
@@ -692,7 +692,52 @@ footer#site-footer.header-footer-group {
   padding: 0;
 }
 
+@media (min-width: 1001px) {
+  footer#site-footer.header-footer-group::before {
+    content: '';
+    background-image: url("images/graphics/graphics_svinesundbro.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-position: bottom;
+    opacity: .05;
+  }
+}
+
+footer#site-footer.header-footer-group div.footer-showcase {
+  position: relative;
+  background-color: #00425a;
+  height: 600px;
+  overflow: hidden;
+}
+
+footer#site-footer.header-footer-group div.footer-showcase::before {
+  content: '';
+  width: 1500px;
+  height: 600px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background: radial-gradient(circle at top right, transparent, #00425a 80%);
+}
+
+footer#site-footer.header-footer-group div.footer-showcase img#footer-showcase-photo {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 1500px;
+  min-height: 600px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
 footer#site-footer.header-footer-group div.footer-content {
+  position: relative;
   padding: 75px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -729,6 +774,7 @@ footer#site-footer.header-footer-group div.footer-content {
 }
 
 footer#site-footer.header-footer-group div.footer-content .footer-column {
+  position: relative;
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -766,8 +812,7 @@ footer#site-footer.header-footer-group div.footer-content .footer-column h1, foo
 footer#site-footer.header-footer-group div.footer-copyright {
   max-width: 1000px;
   margin: auto;
-  padding: 25px;
-  border-top: 2px solid #006387;
+  padding: 75px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
