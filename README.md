@@ -20,16 +20,16 @@ Det er viktig at man aldri jobber direkte i Master branchen, siden det er der ne
     - Klikk deg inn på mappen og videre -> app/public/wp-content/themes/twentytwenty-child
 4. Høyreklikk mappen åpne *Git Bash*
 5. Skriv følgende kommandoer i Git Bash:
-    git init
-    git remote add origin https://github.com/42-Broenstudentavis/broenstudentavis-theme.git
-    git fetch --all
-    git pull --all
+    - git init
+    - git remote add origin https://github.com/42-Broenstudentavis/broenstudentavis-theme.git
+    - git fetch --all
+    - git pull --all
 6. Lag en ny branch for den issuen som jobbes med:
-    git checkout -e problem-*Issue nummer*
+    - git checkout -e problem-*Issue nummer*
 
 ## Opplasting til GitHub
 1. Åpne Git Bash i mappevinduet
 2. Skriv følgende kommandoer
-    git add .
-    git commit -m "*Din melding*"
-    git push origin *branch-navn*
+    - git add .
+    - git commit -m "*Din melding*"
+    - git push origin *branch-navn*
