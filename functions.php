@@ -8,7 +8,7 @@ function my_theme_enqueue_styles() {
     wp_enqueue_style( 'broen-style', get_stylesheet_directory_uri() . '/style.css', array( $parent_style ), wp_get_theme()->get('Version') );
 }
 
-
+// enqueue custom scripts
 function my_theme_enqueue_scripts() {
     // jquery
     wp_enqueue_script( 'jquery' );
