@@ -1,18 +1,18 @@
 # Broenstudentavis
 
-## Arbeidsflyt
+# Arbeidsflyt
 - Arbeidsoppgaver ligger under Issues og Project
 - For hver Issue lages en ny branch i git kalt 'Problem-[Issue nummer]', for eksempel *Problem-15*
 - Når arbeidet i branch er ferdig, merge til develop branchen.
 
 Det er viktig at man aldri jobber direkte i Master branchen, siden det er der nettsiden henter koden fra!
 
-## Opprette nytt arbeidsmiljø
-# Programvare
+# Opprette nytt arbeidsmiljø
+## Programvare
 - Git Bash (Git)
 - Local By Flywheel
 
-# Prosess
+## Prosess
 1. Last ned *broen-temlate.zip* fra Google Drive
 2. Dra filen inn i Local By Flywheel, gi det et navn og velg "Preferred" på innstillingen
 3. Åpne filstien til den nyopprettede lokale nettsiden
