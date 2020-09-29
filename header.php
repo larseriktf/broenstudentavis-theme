@@ -67,7 +67,7 @@
 
                 <?php // bruk dette til å bestemme email for knapp
                     // @todo - display email i knappen
-                    $receiving_email = "Kasper.lislevand@gmail.com";
+                    $receiving_email = "broen@broenstudentavis.no";
                 ?>
 
                 <a href="mailto:<?php echo $receiving_email; ?>?subject=Tips%20til%20artikkel" class="header-tips-oss">
