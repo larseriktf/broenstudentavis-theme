@@ -10,7 +10,6 @@
  * @subpackage Twenty_Twenty
  * @since 1.0.0
  */
-
 ?>
             <footer id="site-footer" role="contentinfo" class="header-footer-group">
                 <div class="footer-showcase">
@@ -32,8 +31,6 @@
                     <div class="footer-column">
                         <h3>Redaktør, Daglig Leder</h3>
                         <p>Kawser Mudey</p>
-                        <h3>Redaktør</h3>
-                        <p>Sarah Lunner</p>
                     </div>
                     <div class="footer-column">
                         <h3>Kontakt oss</h3>
