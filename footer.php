@@ -30,7 +30,7 @@
                     </div>
                     <div class="footer-column">
                         <h3>Redaktør, Daglig Leder</h3>
-                        <p>Kawser Mudey</p>
+                        <p>Anel Hadzic</p>
                     </div>
                     <div class="footer-column">
                         <h3>Kontakt oss</h3>
