@@ -1103,6 +1103,7 @@ div.frontpage-boxes .category-boxes > div {
 div.frontpage-boxes .thumbnail-imageee {
   background-color: #e4e4e4;
   max-height: 400px;
+  overflow: hidden;
 }
 
 div.frontpage-minor-boxes {
