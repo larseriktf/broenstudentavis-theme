@@ -5,17 +5,17 @@
  Template:     twentytwenty
 */
 
-@import 'mixins';
-@import 'base';
-@import 'components';
-@import 'attributes';
 
-// layout files
+@import "utilities/variables";
+@import "utilities/attributes";
+@import "utilities/mixins";
 
-@import 'layout/layout';
-@import 'layout/header';
-@import 'layout/footer';
-@import 'layout/content';
-@import 'layout/main-feed';
-@import 'layout/page-feed';
-@import 'layout/post-content';
+@import "base";
+@import "components";
+
+@import "layout/layout";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/content";
+@import "layout/feed";
+@import "layout/post-content";

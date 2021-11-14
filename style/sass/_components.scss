@@ -4,10 +4,14 @@
 
 // @todo: clean this file
 
-#site-title { display: none; }
+#site-title {
+    display: none;
+}
 
 // for tips-oss animasjonen
-.mail-animation { animation: mailshift .5s ease-in-out forwards; }
+.mail-animation {
+    animation: mailshift 0.5s ease-in-out forwards;
+}
 
 // buttons
 button:not(.toggle),
@@ -23,14 +27,14 @@ input[type="submit"],
 .bg-accent-hover:focus,
 :root .has-accent-background-color,
 .comment-reply-link {
-	background: $blue-base;
-	transition: .2s;
+    background: $blue-base;
+    transition: 0.2s;
 
-	&:hover {
-		background: lighten($blue-base, 10);
-		text-decoration: none;
-		border-radius: 2em;
-	}
+    &:hover {
+        background: lighten($blue-base, 10);
+        text-decoration: none;
+        border-radius: 2em;
+    }
 }
 
 .button-border-white {
@@ -41,7 +45,7 @@ input[type="submit"],
     padding: 1em;
     width: auto;
     text-align: center;
-    transition: .2s;
+    transition: 0.2s;
     @include letters-spaced();
 
     &:hover {
@@ -58,7 +62,7 @@ input[type="submit"],
     padding: 1em;
     width: auto;
     text-align: center;
-    transition: .2s;
+    transition: 0.2s;
     @include letters-spaced();
     font-weight: bold;
 
@@ -69,29 +73,32 @@ input[type="submit"],
 
 // noe annet
 main#main {
-	font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
-	text-align: center;
-	font-size: 1.9rem;
+    font-family: "Inter var", -apple-system, BlinkMacSystemFont,
+        "Helvetica Neue", Helvetica, sans-serif;
+    text-align: center;
+    font-size: 1.9rem;
 
-	h1 { font-size: 5rem; }
-    h2 { font-size: 3.7rem }
-
-    
+    h1 {
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 3.7rem;
+    }
 }
 
 /* titlebox */
 .titlebox {
-	border-left: 6px solid $blue-base;
-	padding: 10px;
-	background-color: #dedede;
+    border-left: 6px solid $blue-base;
+    padding: 10px;
+    background-color: #dedede;
 }
 
-
 div.textwidget {
-	p {
-		font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
-		font-size: 1.9rem;
-	}
+    p {
+        font-family: "Inter var", -apple-system, BlinkMacSystemFont,
+            "Helvetica Neue", Helvetica, sans-serif;
+        font-size: 1.9rem;
+    }
 }
 
 .btn {
@@ -116,8 +123,9 @@ div.textwidget {
 
 // body
 
-body#site-body { background-color: $grey-light; }
-
+body#site-body {
+    background-color: $grey-light;
+}
 
 // header styles
 
@@ -126,7 +134,7 @@ div.header-swift {
     background-size: 8px 100%;
     margin-bottom: 2em;
     padding: 0.25em 1em;
-    white-space: nowrap; 
+    white-space: nowrap;
     text-overflow: ellipsis;
 
     @include for-screen-max($bp-phones) {
@@ -138,7 +146,7 @@ div.header-swift {
         margin: 0;
         font-size: 32px;
         letter-spacing: 0.5px;
-        
+
         @include for-screen-max($bp-phones) {
             color: $white;
         }
@@ -147,7 +155,7 @@ div.header-swift {
 
 div.header-category {
     padding: 2em 1em;
-    white-space: nowrap; 
+    white-space: nowrap;
     text-overflow: ellipsis;
 
     h2 {
@@ -162,7 +170,7 @@ div.header-category {
         }
 
         > div {
-            padding: 0 .25em;
+            padding: 0 0.25em;
             border-radius: $border-base;
             color: white;
         }
@@ -172,45 +180,89 @@ div.header-category {
 // categories
 
 // gamle
-div.post-category-1 { background: $category-grey; } // uncategorized
-div.post-category-41 { background: $category-grey; } // leserinnlegg
-div.post-category-46 { background: $category-grey; } // meninger
-div.post-category-44 { background: $category-grey; } // nyheter
-div.post-category-42 { background: $category-grey; } // kultur
-div.post-category-45 { background: $category-grey; } // spisekammeret
+div.post-category-1 {
+    background: $category-grey;
+} // uncategorized
+div.post-category-41 {
+    background: $category-grey;
+} // leserinnlegg
+div.post-category-46 {
+    background: $category-grey;
+} // meninger
+div.post-category-44 {
+    background: $category-grey;
+} // nyheter
+div.post-category-42 {
+    background: $category-grey;
+} // kultur
+div.post-category-45 {
+    background: $category-grey;
+} // spisekammeret
 
 // nye
-div.post-category-61 { background: $category-blue; }
-div.post-category-66 { background: $category-orange; }
-div.post-category-10 { background: $category-green; }
-div.post-category-18 { background: $category-yellow; }
-div.post-category-9 { background: $category-brown; }
-div.post-category-18 { background: $category-grey; }
-div.post-category-27 { background: $category-lightgreen; }
-
+div.post-category-61 {
+    background: $category-blue;
+}
+div.post-category-66 {
+    background: $category-orange;
+}
+div.post-category-10 {
+    background: $category-green;
+}
+div.post-category-18 {
+    background: $category-yellow;
+}
+div.post-category-9 {
+    background: $category-brown;
+}
+div.post-category-18 {
+    background: $category-grey;
+}
+div.post-category-27 {
+    background: $category-lightgreen;
+}
 
 // box styles
 div.style-info-box {
     position: relative;
     background-color: $grey;
-    width:100%;
+    width: 100%;
     padding: $std-medium;
     @include for-screen-max($bp-phones) {
         padding: $std-small;
     }
 
-    > * { color: $white; }
+    > * {
+        color: $white;
+    }
     p > a {
         color: $blue-light;
         text-decoration: underline;
     }
-    > h1, h2, h3, h4, h5, h6 { @include letters-spaced(); }
-    h1, h2, h3, h4, h5, h6, p, a { position: relative; }
-    
+    > h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @include letters-spaced();
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a {
+        position: relative;
+    }
+
     @include remove-outer-text-margin();
 
-    &::before { // the exclamation mark
-        content: '';
+    &::before {
+        // the exclamation mark
+        content: "";
         background-image: url("images/icons/icons_exclamation_mark.svg");
         background-repeat: no-repeat;
         background-size: contain;

@@ -41,7 +41,7 @@ $mainPosts = new WP_Query(array(
         <div class="header-category">
             <h2>Kategori - <div class="post-category-<?php echo $cat_slug_id ?>"><?php echo $post->post_name ?></div></h2>
         </div>
-        <div class="page-main-thread">
+        <div class="page-thread">
             <?php // the loop
                 if ($mainPosts->have_posts()) :
                     while ($mainPosts->have_posts()) :
@@ -51,7 +51,7 @@ $mainPosts = new WP_Query(array(
 
                         <!-- html boxes -->
                         <a href="<?php echo the_permalink() ?>">
-                            <div class="page-main-boxes">
+                            <div class="page-boxes">
                                 <?php // display image if exists, or replace
                                 if (has_post_thumbnail()) {
                                     the_post_thumbnail('medium_large');

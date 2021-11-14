@@ -6,35 +6,6 @@
 // This function and mixin is stolen from the internet, google search 'Sass Stroke the right way'
 // : https://codepen.io/hudochenkov/pen/RPKBoO?editors=1100
 // vscode shows errors but it does work
-/*
-    @todo: figure out what to do with this pretty handsome code
-    
--- Just hiding the code because all visual sees are errors --
-
-@function text-stroke($size: 2, $color: #fff, $correction: 0) {
-	$radius: $size - $correction;
-	$stroke: ();
-
-	@for $i from -$size through $size {
-		@for $k from -$size through $size {
-
-			$x: $k;
-			$y: $i;
-
-			@if $k > 0 { $x: $k - 0.5; }
-            @elseif $k < 0 { $x: $k + 0.5; }
-
-			@if $i > 0 { $y: $i - 0.5; }
-            @elseif $i < 0 { $y: $i + 0.5; }
-
-			@if ($x*$x + $y*$y <= $radius*$radius) {
-				$stroke: append($stroke, $i*1px $k*1px 0 $color, comma);
-			}
-		}
-	}
-
-	@return $stroke;
-}*/
 
 // replace part of string
 // str-replace( [original string], [part to replace], [string to insert] )

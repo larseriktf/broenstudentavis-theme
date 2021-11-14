@@ -2,46 +2,6 @@
 
 // variables and base values
 
-
-// theme colors
-$blue-base:         #006387; // previusly #487c81 and #36a7f7
-$blue-light:        #47ceff;
-$blue-dark:         #00425a;
-$white:             #f9f9f9;
-$grey-light:        #e0e0e0;
-$grey:              #545454;
-$grey-dark:         #313336;
-$black:             #252626;
-$placeholder:       #a8329e;
-
-// situational colors
-$category-grey:                 #d1d1d1;
-$category-green:                #2bb169;
-$category-blue:                 #18b1cf;
-$category-orange:               #f08b08;
-$category-lightgreen:           #8fb91a;
-$category-brown:                #ad3d14;
-$category-yellow:               #fcba03;
-
-
-
-// other
-$content-size:      1000px;
-$outer-size:        1280px; // to tredeler av 1920px
-$border-base:       .25em;
-
-// standard sizes
-$std-large:         125px;
-$std-medium:        75px;
-$std-small:         25px;
-
-// breakpoints in px
-$bp-laptop:     1200px; // laptops or tablets in landscape
-$bp-tablet:     1000px; // tablets or phones in landscape
-$bp-phones:     600px; // smaller phones
-
-// 600px, 900px, 1200px, and 1800px
-
 /*Fjerner underline og endrer fargen på linker som er overskrifter*/
 h6, h5, h4, h3, h2, h1 {
     a {
@@ -56,4 +16,5 @@ body {
 	min-height: 100vh;
 	padding-bottom: 113px;
 	background: black;
+    padding: 0;
 }

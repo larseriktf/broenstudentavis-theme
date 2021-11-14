@@ -9,6 +9,7 @@ section.section-frontpage {
     box-sizing: border-box;
     display: flex;
 	flex-direction: row;
+    flex-wrap: wrap;
 	width: $content-size;
 	background-color: $white;
     margin:0 auto;
